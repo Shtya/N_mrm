@@ -1699,6 +1699,7 @@ footer .container .bottom .last a {
 }
 .contact-us .container .contact-form form {
   background-color: rgba(46, 46, 46, 0.8509803922);
+  background-image: url("../assets/bg/23.webp");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1707,8 +1708,7 @@ footer .container .bottom .last a {
   height: 100%;
   padding: 30px 20px;
   border: 1px dashed var(--text-color);
-  outline: 3px dashed var(--text-color);
-  border-radius: 0 100px;
+  outline: 1px dashed var(--text-color);
 }
 .contact-us .container .contact-form form .h2, .contact-us .container .contact-form form .h {
   text-align: center;

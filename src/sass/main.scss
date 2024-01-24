@@ -1633,6 +1633,7 @@ footer {
 
       form{
         background-color: #2e2e2ed9;
+        background-image: url("../assets/bg/23.webp");
         display: flex; 
         flex-direction: column;
         justify-content: center;
@@ -1641,8 +1642,8 @@ footer {
         height: 100%;
         padding: 30px 20px;
         border: 1px dashed var(--text-color);
-        outline: 3px dashed var(--text-color);
-        border-radius: 0 100px;
+        outline: 1px dashed var(--text-color);
+        // border-radius: 0 100px;
         .h2 , .h { text-align: center;}
         .h{margin-bottom: 20px;}
         input , .bt , textarea{
