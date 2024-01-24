@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react'
+import {Routes , Route} from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Home from "./pages/Home.jsx"
+import UP from './components/UP.jsx'
+import Navbar from "./components/Navbar.jsx"
+import Footer from "./components/Footer.jsx"
+
+export const Social_Media = ["https://www.facebook.com/MRMadvertisingDubai" , "https://www.instagram.com/mrmadvertising/" , "https://www.linkedin.com/company/mrm-advertising-media" , "https://api.whatsapp.com/send?phone=+971561384496&text=Hello%2C%20world!"]
+export const Animate = "zoom-in"
+
+
+const App = () => {
+
+  return ( 
+    <div className='App'>
+      <UP  />
+      <Navbar />
+      <Routes>
+        <Route index   path='/'    element={<Home />} />                           
+        
+      </Routes>
+      <Footer />
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default App
+
+
+
+
