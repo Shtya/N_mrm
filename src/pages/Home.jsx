@@ -8,7 +8,8 @@ import { AnimatePresence } from 'framer-motion'
 import Testimonials from '../components/home/Testimonials'
 import Contact from '../components/home/Contact-us'
 
-import FixedImg from "../assets/bg/21.webp"
+// import FixedImg from "../assets/bg/21.webp"
+import FixedImg from "../assets/bg/36.jpg"
 
 
 const Home = () => {

@@ -1731,7 +1731,6 @@ footer .container .bottom .last a {
   }
 }
 .contact-us .container .contact-form form {
-  background-color: rgba(46, 46, 46, 0.8509803922);
   background-image: url("../assets/bg/23.webp");
   display: flex;
   flex-direction: column;
@@ -1777,6 +1776,197 @@ footer .container .bottom .last a {
 }
 .contact-us .container .contact-form form .bt {
   background: var(--text-color) !important;
+}
+
+.blogs {
+  min-height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0 50px 0;
+}
+.blogs .coverIntro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+.blogs .coverIntro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blogs .h1-head {
+  margin-top: 50px;
+}
+.blogs .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 950px) {
+  .blogs .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .blogs .container {
+    grid-template-columns: 1fr;
+  }
+}
+.blogs .container .box {
+  width: 100%;
+  padding: 2px;
+  background: #1f1f1f;
+  box-shadow: inset 0 0 50px 10px #000 !important;
+  position: relative;
+  overflow: hidden;
+}
+.blogs .container .box:hover .text {
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.blogs .container .box:hover .coverImg .second {
+  height: 30px;
+  opacity: 1;
+}
+.blogs .container .box .coverImg {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.blogs .container .box .coverImg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3215686275);
+  left: 0;
+  transition: 0.3s;
+}
+.blogs .container .box .coverImg .main {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.blogs .container .box .coverImg .second {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  opacity: 0;
+  height: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+.blogs .container .box .coverImg .box-data {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background: var(--text-color);
+  top: 0;
+  left: 0;
+  text-align: center;
+  box-shadow: 0 0 10px 1px black;
+}
+.blogs .container .box .coverImg .box-data .num {
+  padding: 5px 10px;
+  font-family: "Noto Sans", Arial;
+  background-color: black;
+}
+.blogs .container .box .coverImg .box-data .month {
+  padding: 5px 10px;
+  font-family: "Noto Sans", Arial;
+  color: white;
+  text-transform: uppercase;
+}
+.blogs .container .box .text {
+  position: absolute;
+  bottom: -62px;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+  text-align: center;
+  border: 1px solid var(--text-color);
+  border-bottom: unset;
+  border-top: unset;
+  padding: 10px 10px 20px;
+}
+.blogs .container .box .text .h3 {
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.blogs .container .box .text .p {
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+.blogs .pagination, .blogs .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.blogs .pagination *, .blogs .page-numbers * {
+  font-family: "Noto Sans", Arial;
+}
+.blogs .pagination {
+  margin-top: 50px;
+}
+.blogs .pagination .btn-nav,
+.blogs .pagination .btn-page {
+  border-radius: 50%;
+  background-color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+.blogs .pagination .btn-nav {
+  padding: 8px;
+  transition: 0.3s;
+  rotate: 180deg;
+}
+.blogs .pagination .btn-nav {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  color: white;
+  transition: 0.3s;
+}
+.blogs .pagination .btn-nav:hover,
+.blogs .pagination .btn-page:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+  color: white;
+}
+.blogs .pagination .btn-page {
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+.blogs .pagination .btn-selected {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+  font-weight: 600;
 }
 
 .skeleton .card {
