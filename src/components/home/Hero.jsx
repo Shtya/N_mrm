@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Intro from '../../assets/bg/30.jpg'
+import Intro from '../../assets/bg/30.webp'
 import Intro1 from '../../assets/bg/3.webp'
 import Intro2 from '../../assets/bg/2.webp'
 import Intro3 from '../../assets/bg/3.webp'
