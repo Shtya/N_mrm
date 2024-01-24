@@ -8,17 +8,19 @@ import { AnimatePresence } from 'framer-motion'
 import Testimonials from '../components/home/Testimonials'
 import Contact from '../components/home/Contact-us'
 
+import FixedImg from "../assets/bg/21.webp"
+
 
 const Home = () => {
   return (
     <div className='Home'>
       <Hero />
       <About />
-      <Services />
+      <Services FixedImg={FixedImg} />
       <AnimatePresence> <Gallery /> </AnimatePresence>
-      <Testimonials />
+      <Testimonials FixedImg={FixedImg} />
       <Blog />
-      <Contact />
+      <Contact FixedImg={FixedImg} />
     </div>
   )
 }

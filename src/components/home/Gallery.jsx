@@ -72,7 +72,7 @@ settype(ele)
   return (
     <div className='gallery'>
         <div className="container">
-
+        <div className="h1-head">OUR GAllery</div>
         <ul className="header" >  {header?.map((e,index)=> (<li className={type == e.type ? "active p" : "p"}  onClick={_=>handleFilter(e.type)} key={index}>{e.name}</li>))}  </ul>
         
         <div className="images">

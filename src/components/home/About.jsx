@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutImg from "../../assets/home/why.webp"
-import FixedImg from "../../assets/bg/23.webp"
+import FixedImg from "../../assets/bg/34.jpg"
 
 
 const data = [

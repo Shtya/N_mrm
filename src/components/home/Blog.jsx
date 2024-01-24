@@ -47,8 +47,8 @@ const Blog = () => {
   const Navigate = useNavigate() ;
   
   return (
-    <div className="blog f-dir">
-    <div className="h1"> Latest Blogs</div>
+    <div className="blog ">
+    <div className="h1-head"> Latest Blogs</div>
     <Slider  className="container" {...settings}>
       {
         blog.map((e,index)=> (

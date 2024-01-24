@@ -1,5 +1,5 @@
 import React from 'react'
-import FixedImg from "../../assets/bg/20.webp"
+// import FixedImg from "../../assets/bg/33.jpg"
 import photoImg1 from '../../assets/home/video/  (1).webp'
 import photoImg2 from '../../assets/home/video/  (2).webp'
 import photoImg3 from '../../assets/home/video/  (3).webp'
@@ -26,7 +26,7 @@ import photoImg8 from '../../assets/home/video/  (3).webp'
 
 
 
-const Services = () => {
+const Services = ({FixedImg}) => {
   return (
     <div className='services'>
         <div className="bgCover2"><img src={FixedImg} alt="" /></div>

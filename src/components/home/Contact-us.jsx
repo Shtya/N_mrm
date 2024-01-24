@@ -1,16 +1,15 @@
 import React from 'react'
 import ContactImg from "../../assets/home/contact.webp"
 import { useTranslation } from 'react-i18next'
-import FixedImg from "../../assets/bg/21.webp"
 
 
-const Contact = () => {
+const Contact = ({FixedImg}) => {
     const {t} = useTranslation()
 
   return (
     <div className='contact'>
               <div className="bgCover2"><img src={FixedImg} alt="" /></div>
-
+        <div className="h1-head">Contact US</div>
         <div className="container">
             <div className="coverImg"> <img src={ContactImg} alt="" /> </div>
             <div className="box">

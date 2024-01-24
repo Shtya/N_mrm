@@ -1,5 +1,4 @@
 import React from 'react'
-import FixedImg from "../../assets/bg/21.webp"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -31,11 +30,12 @@ const data = [
             {desc : "My style is a combination between photojournalism and fine-art photography with a touch of fashion and creative lighting. My photos are inspired by light, color, techniques from black & white processing, vintage photos, creative perspective, and of course, most importantly, the personalities of the people I photograph!" , name:"Marta Knowly" , job:"Senior Full Stack"},
     
 ]
-const Testimonials = () => {
+const Testimonials = ({FixedImg}) => {
   return (
     <div className='Testimonials'>
       <div className="bgCover2"><img src={FixedImg} alt="" /></div>
         <div className="container">
+          <div className="h1-head"> Testimonials</div>
         <Slider  className="container" {...settings}>
         {
             data.map((e,index)=> (

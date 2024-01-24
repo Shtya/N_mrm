@@ -1,9 +1,9 @@
 import Logo from "../assets/Logo1.webp"
 import { Link, useLocation } from 'react-router-dom'
 import { Social_Media } from "../App"
-import { memo, useRef } from "react"
+import { memo } from "react"
 import { useTranslation } from "react-i18next"
-
+import FixedImg from "../assets/bg/30.jpg"
 
 const Footer = memo(() => {
 
@@ -13,7 +13,7 @@ const Footer = memo(() => {
   return (
     <>
     <footer id="footer" >
-    {/* <div className="bgCover" style={{zIndex:"1"}}  >  <img  src={IMG3} alt="footer"  /> </div> */}
+    <div className="bgCover2" >  <img  src={FixedImg} alt="footer"  /> </div>
       <div className="container" >
 
       <div className="top">
