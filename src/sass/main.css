@@ -1836,6 +1836,14 @@ footer .container .bottom .last a {
   cursor: pointer;
   padding-bottom: 10px;
 }
+@media (max-width: 650px) {
+  .blogs .container .box .coverImg {
+    height: 350px !important;
+  }
+  .blogs .container .box .coverImg .main {
+    height: 350px !important;
+  }
+}
 .blogs .container .box .coverImg::after {
   content: "";
   position: absolute;
