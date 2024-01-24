@@ -1618,7 +1618,7 @@ footer .container .bottom .last a {
   grid-template-columns: 1fr 1fr;
   gap: 100px;
   align-items: center;
-  padding: 90px 20px 20px;
+  padding: 90px 10px 40px 10px;
 }
 @media (max-width: 1000px) {
   .contact-us .container .contact-form {
@@ -1629,14 +1629,46 @@ footer .container .bottom .last a {
     order: -1;
     max-width: 700px;
     margin: auto;
+    gap: 5px !important;
+    padding: 20px !important;
   }
-  .contact-us .container .contact-form ul .h1-head, .contact-us .container .contact-form ul .phead {
-    text-align: center !important;
+  .contact-us .container .contact-form form input {
+    padding: 5px !important;
   }
-  .contact-us .container .contact-form ul .h1-head {
+  .contact-us .container .contact-form ul .h1-he {
     width: -moz-fit-content !important;
     width: fit-content !important;
+    margin: auto;
   }
+  .contact-us .container .contact-form ul .phead {
+    text-align: center !important;
+    margin-bottom: -5px !important;
+  }
+}
+.contact-us .container .contact-form .h1-he {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 5px 15px 10px;
+}
+.contact-us .container .contact-form .h1-he::after, .contact-us .container .contact-form .h1-he::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background-color: gold;
+}
+.contact-us .container .contact-form .h1-he::before {
+  left: 115px;
+  width: 30px;
+  background-color: rgba(255, 217, 0, 0.624);
 }
 .contact-us .container .contact-form ul {
   display: flex;
@@ -1644,7 +1676,8 @@ footer .container .bottom .last a {
   flex-direction: column;
 }
 .contact-us .container .contact-form ul .h1-head {
-  margin-bottom: -40px;
+  margin-bottom: 40px;
+  position: relative !important;
   width: 100%;
   text-align: left;
 }
@@ -1707,8 +1740,9 @@ footer .container .bottom .last a {
   gap: 10px;
   height: 100%;
   padding: 30px 20px;
-  border: 1px dashed var(--text-color);
-  outline: 1px dashed var(--text-color);
+  border: 1px dashed #333;
+  outline: 1px dashed #555;
+  border-radius: 2px;
 }
 .contact-us .container .contact-form form .h2, .contact-us .container .contact-form form .h {
   text-align: center;
@@ -1726,8 +1760,8 @@ footer .container .bottom .last a {
   color: #fff;
   font-size: 18px;
   margin-bottom: 20px;
-  outline: none;
-  outline: 2px solid rgba(52, 50, 50, 0.569);
+  border: 1px solid #333;
+  outline: 1px solid #555;
   padding: 15px 30px 15px 15px !important;
   width: 100% !important;
   font-family: "Montserrat", Arial !important;

@@ -30,7 +30,7 @@ const Contact = () => {
               </form>
 
               <ul >
-                    <div className="h1-head"> Contact us</div>
+                    <div className="h1-he"> Contact us</div>
                     <div className="phead"> turn your dreams into digital realities </div>
                     <li > <Link to="" >  <i className="fa-solid fa-phone"></i>       </Link>  <div className='p'>+971561384496</div></li>
                     <li > <Link to="" >  <i className="fa-solid fa-envelope"></i>    </Link>  <div className='p'>info@mrmadvertisingdubai.com</div> </li>

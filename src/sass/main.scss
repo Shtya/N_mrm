@@ -1571,20 +1571,50 @@ footer {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 100px;
       align-items: center;
-      padding: 90px 20px 20px;
+      padding: 90px 10px 40px 10px;
       @media (max-width:1000px) {
         grid-template-columns: 1fr;
         gap: 40px;
-        form{order: -1; max-width: 700px ; margin: auto;}
+        form{
+          order: -1; max-width: 700px ; margin: auto;
+          gap: 5px !important;
+          padding: 20px !important;
+          input{ padding: 5px !important; }
+        }
         ul{
-        .h1-head , .phead{text-align: center !important; }
-        .h1-head{width: fit-content !important;}
+        .h1-he{width: fit-content !important ; margin: auto;}
+        .phead{text-align: center !important; margin-bottom: -5px !important;}
+        }
+      }
+      .h1-he{
+        position: relative;
+        width: fit-content;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--text-color);
+        padding: 5px 15px 10px;
+        &::after , &::before{
+          content: "";
+          position: absolute;
+          left: 30px;
+          bottom: 0;
+          width: 80px;
+          height: 3px;
+          background-color: gold;
+        }
+        &::before{
+          left: 115px;
+          width: 30px ;
+          background-color: rgba(255, 217, 0, 0.624);
         }
       }
       ul{
         display: flex;  gap: 20px; flex-direction: column;
         .h1-head{
-          margin-bottom: -40px;
+          margin-bottom: 40px;
+          position: relative !important;
           width: 100% ;
           text-align: left;
         }
@@ -1641,9 +1671,9 @@ footer {
         gap: 10px;
         height: 100%;
         padding: 30px 20px;
-        border: 1px dashed var(--text-color);
-        outline: 1px dashed var(--text-color);
-        // border-radius: 0 100px;
+        border: 1px dashed #333;
+        outline: 1px dashed #555;
+        border-radius: 2px;
         .h2 , .h { text-align: center;}
         .h{margin-bottom: 20px;}
         input , .bt , textarea{
@@ -1655,9 +1685,9 @@ footer {
           color: #fff;
           font-size: 18px;
           margin-bottom: 20px;
-          outline: none;
-          outline: 2px solid rgba(52,50,50,.569);
-          padding: 15px 30px 15px 15px !important;
+          border: 1px solid #333;
+          outline: 1px solid #555;
+          padding: 15px 30px 15px 15px  !important;
           width: 100%!important;  
           &::placeholder{ color:white ;}
           font-family: 'Montserrat' , Arial !important;
