@@ -6,6 +6,7 @@ import UP from './components/UP.jsx'
 import Navbar from "./components/Navbar.jsx"
 import Footer from "./components/Footer.jsx"
 import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 
 export const Social_Media = ["https://www.facebook.com/MRMadvertisingDubai" , "https://www.instagram.com/mrmadvertising/" , "https://www.linkedin.com/company/mrm-advertising-media" , "https://api.whatsapp.com/send?phone=+971561384496&text=Hello%2C%20world!"]
 export const Animate = "zoom-in"
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route  path='/'    element={<Home />} />                           
         <Route  path='/about-us'    element={<About />} />                           
+        <Route  path='/contact-us'    element={<Contact />} />                           
         
       </Routes>
       <Footer />
