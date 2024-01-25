@@ -16,9 +16,7 @@ const Hero = () => {
 
   return(
     <div className="hero">
-    <div className="coverImg">
-      <img src={Intro} alt="" />
-    </div>
+    <div className="coverImg"> <img src={Intro} alt="" /> </div>
       <div className="h2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure incidunt animi recusandae. </div>
   </div>
       

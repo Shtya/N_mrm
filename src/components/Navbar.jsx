@@ -38,19 +38,20 @@ const Navbar = memo(() => {
     useEffect(_=>{
 
 
-  let navLinks = document.querySelector(" .Navbar .nav-links");
-  let menuOpenBtn = document.querySelector(" .Navbar .navbar .bx-menu");
-  let menuCloseBtn = document.querySelector(" .Navbar .nav-links .bx-x");
-  menuOpenBtn.onclick = function() {
-  navLinks.style.left = "0";
-  }
-  menuCloseBtn.onclick = function() {
-  navLinks.style.left = "-100%";
-  }
-  let htmlcssArrow = document.querySelector(".Navbar .htmlcss-arrow");
-  htmlcssArrow.onclick = function() {
-  navLinks.classList.toggle("show1");
-  }
+      let menuCloseBtn = document.querySelector(" .Navbar .nav-links .bx-x");
+      let navLinks = document.querySelector(" .Navbar .nav-links");
+      let menuOpenBtn = document.querySelector(" .Navbar .navbar .bx-menu");
+      menuOpenBtn.onclick = function() {
+      navLinks.style.left = "0";
+      }
+      menuCloseBtn.onclick = function() {
+      navLinks.style.left = "-100%";
+      }
+
+  // let htmlcssArrow = document.querySelector(".Navbar .htmlcss-arrow");
+  // htmlcssArrow.onclick = function() {
+  // navLinks.classList.toggle("show1");
+  // }
     } ,[])
 
 
@@ -66,7 +67,8 @@ const Navbar = memo(() => {
           
           <ul className="links">
             <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/")}><Link className={pathname == "/" ? "active":""} to="/">   {t("Nav.li1")}  </Link></li>
-            <li data-aos="fade-down" data-aos-delay="300" ><Link  > {t("Nav.li2")} </Link>
+            <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li>
+            {/* <li data-aos="fade-down" data-aos-delay="300" ><Link  > {t("Nav.li2")} </Link>
               <i className='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
               <ul className="htmlCss-sub-menu sub-menu">
                 <li   onClick={_=> Navigate("/web-development-company-in-dubai")}><Link className={pathname == "/web-development-company-in-dubai" ? "active":""}    to="/web-development-company-in-dubai">    {t("Nav.li3")}  </Link></li>
@@ -79,8 +81,8 @@ const Navbar = memo(() => {
                 <li   onClick={_=> Navigate("/branding-agency-in-dubai")}><Link className={pathname == "/branding-agency-in-dubai" ? "active":""}    to="/branding-agency-in-dubai">   {t("Nav.li10")}  </Link></li>
                 <li   onClick={_=> Navigate("/seo-agency-in-dubai")}><Link className={pathname == "/seo-agency-in-dubai" ? "active":""}    to="/seo-agency-in-dubai">   {t("Nav.li11")}  </Link></li>
               </ul>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="400" onClick={_=> Navigate("/blog")}><Link  className={pathname == "/blog" ? "active":""} to="/blog">   {t("Nav.li12")}  </Link></li>
+            </li> */}
+            <li data-aos="fade-down" data-aos-delay="400" onClick={_=> Navigate("/blogs")}><Link  className={pathname == "/blog" ? "active":""} to="/blog">   {t("Nav.li12")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="500" onClick={_=> Navigate("/about-us")}><Link  className={pathname == "/about-us" ? "active":""} to="/about-us">    {t("Nav.li13")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="600" onClick={_=> Navigate("/contact-us")}><Link  className={pathname == "/contact-us" ? "active":""} to="/contact-us">    {t("Nav.li14")}  </Link></li>
 
