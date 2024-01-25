@@ -18,7 +18,7 @@ const App = () => {
 
   return ( 
     <div className='App'>
-      {/* <UP  /> */}
+      <UP  />
       <Navbar />
       <Routes>
         <Route  path='/'    element={<Home />} />                           
