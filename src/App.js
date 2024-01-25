@@ -19,7 +19,7 @@ const App = () => {
   return ( 
     <div className='App'>
       <UP  />
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route  path='/'    element={<Home />} />                           
         <Route  path='/about-us'    element={<About />} />                           
