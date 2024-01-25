@@ -11,7 +11,6 @@ const Footer = memo(() => {
   const {t} = useTranslation() ;
 
   return (
-    <>
     <footer id="footer" >
     <div className="bgCover2" >  <img  src={FixedImg} alt="footer"  /> </div>
       <div className="container" >
@@ -19,7 +18,7 @@ const Footer = memo(() => {
 
         <div className="top">
           <img src={Logo} alt="footer"   />
-          <div className="phead" data-aos="fade-up" data-aos-delay="100">{t("home.footer.h1")}</div>
+          <div className="phead" >{t("home.footer.h1")}</div>
           <ul className='social last-social'>
             <li > <Link to={Social_Media[0]} >  <i className="fa-brands fa-facebook-f"></i>  </Link></li>
             <li > <Link to={Social_Media[1]} >  <i className="fa-brands fa-instagram"></i>   </Link></li>
@@ -53,7 +52,6 @@ const Footer = memo(() => {
           </div>
         </div>
     </footer>
-    </>
   )
 })
 

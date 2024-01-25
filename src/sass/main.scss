@@ -142,7 +142,11 @@ header {
   top: 0;
   left: 0;
   z-index: 10000000000000000000;
-  
+  #navbar{
+    @media (max-width:800px) {
+      top: 0 !important;
+    }
+  }
   .tran{
     height: 42px;
     width: 100%;
@@ -580,8 +584,10 @@ header {
   }
 }
 
+
 footer {
   position: relative;
+  bottom: 0;
   color: white;
   padding-top: 70px;
   width: 100%;
@@ -856,6 +862,7 @@ footer {
   .hero{
     max-height: 100vh ;
     position: relative;
+    
     .coverImg{
       width: 100%;
       height: 100vh;
@@ -930,7 +937,9 @@ footer {
     position: relative;
     padding: 70px 0;
     background-color: #222;
-    
+    .header{
+      margin-top: -30px;
+    }
     .container{
 
       .boxes{
@@ -942,8 +951,8 @@ footer {
           position: relative;
           cursor: pointer;
           overflow: hidden;
-          border: 1px solid #777;
-          outline: 1px solid #555;
+          border: 1px solid #444;
+          outline: 1px solid #333;
           .innerImg{
             width: 100%;
             height: 400px;
@@ -1015,6 +1024,13 @@ footer {
         width: 100%;
         height: 350px;
         object-fit: cover;
+        border: 1px solid #333;
+        outline: 1px solid #111;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+          scale: 1.04;
+        }
       }
     }
   }
@@ -1257,7 +1273,7 @@ footer {
       box-shadow: 0 0 30px #22222294 ;
       .coverImg{
         width: 100%;
-        height: 700px;
+        height: 100%;
         img{
           width: 100%;
           height: 100%;
@@ -1265,7 +1281,21 @@ footer {
         }
       }
       .box{
-        background-color: #2e2e2e;
+        background-color: #2e2e2e69;
+        backdrop-filter: blur(4px);
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          // width: 40px;
+          // height: 40px;
+          // background-color: red;
+          border: 30px solid black;
+          top:100px ;
+          left: -60px;
+          border-color: transparent #212020 transparent transparent;
+        // backdrop-filter: blur(4px);
+        }
         form{
           display: flex; 
           flex-direction: column;
@@ -1276,7 +1306,7 @@ footer {
           padding: 20px 50px;
           input , textarea , .bt{
             backdrop-filter: blur(5px);
-            background-color: #78787817;
+            background-color: rgb(85 83 83 / 6%);
             border: 2px dotted #0000;
             border-radius: 0!important;
             box-shadow: 0 0 10px #181818;
@@ -1988,6 +2018,25 @@ footer {
   
 }
 
+.animation_text{
+  min-height: 100vh;
+  // background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000;
+  animation: Opacity2 3s linear infinite ;
+
+  @keyframes Opacity2 {
+    0% {  background-color: black; }
+    50% { background-color: rgba(0, 0, 0, 0.528); }
+    100% {  background-color: rgba(0, 0, 0, 0.152); }
+  }
+}
+
+
 
 //================================ components ================================
 
@@ -2511,26 +2560,27 @@ footer {
   padding: 20px;
   flex-wrap: wrap;
   li{
-    padding: 10px;
+    padding: 7px 10px;
     min-width: 80px;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    font-size: 20px !important;
-    @media (max-width:1200px) { font-size: 18px !important; }
-    @media (max-width:800px) { font-size: 16px !important; }
+    font-size: 18px !important;
+    @media (max-width:1000px) { font-size: 16px !important; }
+    @media (max-width:800px) { font-size: 15px !important; }
     cursor: pointer;
     position: relative;
     &:hover{
       &::after{width: 60%;}
+      background-color: #111;
     }
     &::after{
       content: "";
       position: absolute;
       width: 0;
-      height: 3px;
+      height: 2px;
       background-color: var(--text-color);
-      bottom: -2px;
+      bottom: -1px;
       left: 50%;
       transform: translateX(-50%);
       transition: .3s;
@@ -2538,6 +2588,7 @@ footer {
     &.active{
       border: 1px solid var(--text-color);
       border-right: unset;
+      background-color: #111;
     }
   }
 }
@@ -2568,14 +2619,14 @@ footer {
     font-family: 'FontAwesome';
     left: 0;
     font-size: 15px;
-    color: white;
-    background-color: var(--text-color);
     width: 40px;
     height: 100%;
     display: flex;align-items: center; justify-content: flex-start;
     padding: 0 0 0 10px;
     clip-path: polygon(0 0, 67% 0, 100% 100%, 0% 100%);
     transition: .3s;
+    background: white;
+    color: black;
   }
   &:hover {
     transform: scale(.95);
@@ -2583,6 +2634,7 @@ footer {
       width: calc(100% - 10px);
       clip-path: unset;
       justify-content: center;
+      font-size: 25px;
     }
   }
 
@@ -2594,6 +2646,7 @@ footer {
     font-size: 17px ;
   }
 }
+
 
 
 // ====================== Head Line ======================
@@ -2625,6 +2678,10 @@ footer {
     width: 30px ;
     background-color: rgba(255, 217, 0, 0.624);
 
+  }
+
+  @media (max-width:1000px) {
+    font-size: 30px;
   }
 }
 

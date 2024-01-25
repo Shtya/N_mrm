@@ -15,18 +15,21 @@ const Navbar = memo(() => {
   }
 
   // when scroll up
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-  const [visible, setVisible] = useState(true);
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollPos > currentScrollPos;
-      setPrevScrollPos(currentScrollPos);
-      setVisible(visible);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () =>  window.removeEventListener('scroll', handleScroll); 
-  }, [prevScrollPos]);
+  let prevScrollPos = window.pageYOffset;
+  const navbar = document.getElementById('navbar');
+  const LogoSelect = document.getElementById('logo');
+
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.top = '0';
+    } else {
+      navbar.style.top = `-${navbar.offsetHeight}px`;
+    }
+    prevScrollPos = currentScrollPos;
+  }
+  
 
 
   const Navigate = useNavigate()
@@ -58,10 +61,10 @@ const Navbar = memo(() => {
   return (
   <div className="Navbar"   >
     <Animation />
-    <nav  >
+    <nav id='navbar' >
       <div className={`navbar ${top}`} >
         <i className='bx bx-menu'></i>
-        <div data-aos="fade-down" data-aos-delay="100" className="logo"><Link to="/"> <img src={Logo} alt="Navbar"  /></Link></div>
+        <div data-aos="fade-down" data-aos-delay="100" className="logo"><Link to="/"> <img src={Logo} id='logo' alt="Navbar"  /></Link></div>
         <div className="nav-links">
           <div className="sidebar-logo">   <span className="logo-name"><img src={Logo} alt="Navbar"  /></span>   <i className='bx bx-x' ></i> </div>
           

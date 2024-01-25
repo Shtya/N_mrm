@@ -3,47 +3,47 @@ import { motion , AnimatePresence } from "framer-motion";
 
 
 
-import Img1 from "../../assets/home/test/  (1).webp"
-import Img2 from "../../assets/home/test/  (2).webp"
-import Img3 from "../../assets/home/test/  (3).webp"
-import Img4 from "../../assets/home/test/  (4).webp"
-import Img5 from "../../assets/home/test/  (5).webp"
-import Img6 from "../../assets/home/test/  (6).webp"
-import Img7 from "../../assets/home/test/  (7).webp"
-import Img8 from "../../assets/home/test/  (8).webp"
-import Img9 from "../../assets/home/test/  (9).webp"
+import Img1 from "../../assets/services/_ (1).webp"
+import Img2 from "../../assets/services/_ (2).webp"
+import Img3 from "../../assets/services/_ (3).webp"
+import Img4 from "../../assets/services/_ (4).webp"
+import Img5 from "../../assets/services/_ (5).webp"
+import Img6 from "../../assets/services/_ (6).webp"
+import Img7 from "../../assets/services/_ (7).webp"
+import Img8 from "../../assets/services/_ (8).webp"
+import Img9 from "../../assets/services/_ (5).webp"
 import Header from './Header';
 
 const data = [
+    {img:Img1 , type:'all Fashion' },
+    {img:Img2 , type:'all Lifestyle' },
+    {img:Img3 , type:'all Nature' },
+    {img:Img4 , type:'all Portraits' },
+    {img:Img5 , type:'all Video' },
+    {img:Img6 , type:'all Fashion' },
+    {img:Img7 , type:'all Lifestyle' },
+    {img:Img8 , type:'all Nature' },
+    {img:Img9 , type:'all Portraits' },
+    {img:Img1 , type:'all Video' },
     {img:Img2 , type:'all Fashion' },
     {img:Img3 , type:'all Lifestyle' },
     {img:Img4 , type:'all Nature' },
     {img:Img5 , type:'all Portraits' },
     {img:Img6 , type:'all Video' },
+    {img:Img7 , type:'all Fashion' },
+    {img:Img8 , type:'all Lifestyle' },
+    {img:Img9 , type:'all Nature' },
+    {img:Img1 , type:'all Portraits' },
+    {img:Img2 , type:'all Video' },
+    {img:Img3 , type:'all Fashion' },
+    {img:Img4 , type:'all Lifestyle' },
+    {img:Img5 , type:'all Nature' },
+    {img:Img6 , type:'all Portraits' },
+    {img:Img7 , type:'all Video' },
     {img:Img8 , type:'all Fashion' },
     {img:Img9 , type:'all Lifestyle' },
     {img:Img1 , type:'all Nature' },
-    {img:Img8 , type:'all Portraits' },
-    {img:Img9 , type:'all Video' },
-    {img:Img2 , type:'all Fashion' },
-    {img:Img3 , type:'all Lifestyle' },
-    {img:Img4 , type:'all Nature' },
     {img:Img5 , type:'all Portraits' },
-    {img:Img6 , type:'all Video' },
-    {img:Img8 , type:'all Fashion' },
-    {img:Img9 , type:'all Lifestyle' },
-    {img:Img1 , type:'all Nature' },
-    {img:Img8 , type:'all Portraits' },
-    {img:Img9 , type:'all Video' },
-    {img:Img2 , type:'all Fashion' },
-    {img:Img3 , type:'all Lifestyle' },
-    {img:Img4 , type:'all Nature' },
-    {img:Img5 , type:'all Portraits' },
-    {img:Img6 , type:'all Video' },
-    {img:Img8 , type:'all Fashion' },
-    {img:Img9 , type:'all Lifestyle' },
-    {img:Img1 , type:'all Nature' },
-    {img:Img8 , type:'all Portraits' },
     {img:Img9 , type:'all Video' },
 ]
 
