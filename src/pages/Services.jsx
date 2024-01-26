@@ -1,11 +1,12 @@
 import React from 'react'
-import photoImg1 from '../assets/services/1.jpg'
-import photoImg2 from '../assets/services/2.jpg'
+import photoImg1 from '../assets/services/1.webp'
+import photoImg2 from '../assets/services/2.webp'
 
 
-import FixedImg from '../assets/bg/36.jpg'
-import Intro from "../assets/services/intro.jpg"
+import FixedImg from '../assets/bg/36.webp'
+import Intro from "../assets/services/intro.webp"
 import BlockQoute from '../components/BlockQoute'
+import Divider from '../components/Divider'
 
 
     const photo = [
@@ -32,8 +33,12 @@ import BlockQoute from '../components/BlockQoute'
 const Services = () => {
   return (
     <div className='Services-Page'>
-    <div className="coverIntro"> <img src={Intro} alt="" /> </div>
+        <div className="coverIntro"> <img src={Intro} alt="" /> </div>
+        <Divider />
+
         <BlockQoute />
+        <Divider />
+
         <div className="photography">
         <div className="bgCover2"><img src={FixedImg} alt="" /></div>
         <div className="container">
@@ -55,6 +60,7 @@ const Services = () => {
         </div>
 
         </div>
+        <Divider />
 
 
         <div className="video">
@@ -78,8 +84,6 @@ const Services = () => {
         </div>
 
         </div>
-
-        
         
     </div>
   )

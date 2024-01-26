@@ -1,13 +1,16 @@
 import React from 'react'
-import AboutIntro from "../assets/about/about.jpg"
-import Img1 from "../assets/about/1.jpg"
-import Img2 from "../assets/about/2.jpg"
-import FixedImg from "../assets/bg/36.jpg"
+import AboutIntro from "../assets/about/about.webp"
+import Img1 from "../assets/about/1.webp"
+import Img2 from "../assets/about/2.webp"
+import FixedImg from "../assets/bg/36.webp"
+import Divider from '../components/Divider'
 
 const About = () => {
   return (
     <div className='about-us'>
         <div className="coverIntro"> <img src={AboutIntro} alt="" /> </div>
+        <Divider />
+
         
         <div className="mission">
             <div className="bgCover"><img src={FixedImg} alt="" /></div>

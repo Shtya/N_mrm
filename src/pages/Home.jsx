@@ -9,18 +9,36 @@ import Testimonials from '../components/home/Testimonials'
 import Contact from '../components/home/Contact-us'
 
 // import FixedImg from "../assets/bg/21.webp"
-import FixedImg from "../assets/bg/36.jpg"
+import FixedImg from "../assets/bg/33.webp"
+import Divider from '../components/Divider'
 
 
 const Home = () => {
   return (
     <div className='Home'>
       <Hero />
+      <Divider />
+
+      
       <About />
+      <Divider />
+
       <Services FixedImg={FixedImg} />
+      <Divider />
+
+
       <AnimatePresence> <Gallery /> </AnimatePresence>
+      <Divider />
+
+
       <Testimonials FixedImg={FixedImg} />
+      <Divider />
+
+
       <Blog />
+      <Divider />
+
+      
       <Contact FixedImg={FixedImg} />
     </div>
   )

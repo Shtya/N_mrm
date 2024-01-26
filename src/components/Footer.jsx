@@ -4,6 +4,7 @@ import { Social_Media } from "../App"
 import { memo } from "react"
 import { useTranslation } from "react-i18next"
 import FixedImg from "../assets/bg/30.webp"
+import Divider from "./Divider"
 
 const Footer = memo(() => {
 
@@ -11,7 +12,10 @@ const Footer = memo(() => {
   const {t} = useTranslation() ;
 
   return (
+    <>
+    <Divider />
     <footer id="footer" >
+      
     <div className="bgCover2" >  <img  src={FixedImg} alt="footer"  /> </div>
       <div className="container" >
 
@@ -44,7 +48,7 @@ const Footer = memo(() => {
 
       </div>
 
-        <div className="bottom" >
+        <div className="bottom container1" >
           <p className='p' > {t("home.footer.ul4.name")} </p>
           <div className="last" >
             <Link className='p' to="/terms">  {t("home.footer.ul4.li1")} </Link>
@@ -52,6 +56,7 @@ const Footer = memo(() => {
           </div>
         </div>
     </footer>
+    </>
   )
 })
 

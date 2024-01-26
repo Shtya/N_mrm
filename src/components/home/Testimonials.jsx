@@ -6,7 +6,7 @@ import Slider from "react-slick";
 var settings = {
   dots: true,
   infinite: true,
-  speed: 3000,
+  speed: 1500,
   autoplaySpeed: 0 ,
   slidesToShow: 2,
   slidesToScroll: 1 , 
@@ -30,10 +30,10 @@ const data = [
             {desc : "My style is a combination between photojournalism and fine-art photography with a touch of fashion and creative lighting. My photos are inspired by light, color, techniques from black & white processing, vintage photos, creative perspective, and of course, most importantly, the personalities of the people I photograph!" , name:"Marta Knowly" , job:"Senior Full Stack"},
     
 ]
-const Testimonials = ({FixedImg}) => {
+const Testimonials = ({FixedImg , classN}) => {
   return (
     <div className='Testimonials'>
-      <div className="bgCover2"><img src={FixedImg} alt="" /></div>
+      <div className={`${classN || "bgCover2"}`}><img src={FixedImg} alt="" /></div>
         <div className="container">
           <div className="h1-head"> Testimonials</div>
         <Slider  className="container" {...settings}>

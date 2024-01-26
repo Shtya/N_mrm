@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 var settings = {
   dots: true,
   infinite: true,
-  speed: 3000,
+  speed: 1500,
   autoplaySpeed: 0 ,
   slidesToShow: 3,
   slidesToScroll: 1 , 

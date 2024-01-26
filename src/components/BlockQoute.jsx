@@ -1,5 +1,5 @@
 import React from 'react'
-import ImgQoute from "../assets/services/2.jpg"
+import ImgQoute from "../assets/services/_ (2).webp"
 import ImgFixed from "../assets/bg/34.webp"
 
 const BlockQoute = () => {

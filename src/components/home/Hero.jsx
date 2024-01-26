@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Intro from '../../assets/bg/36.jpg'
+import Intro from '../../assets/bg/36.webp'
 
 import SwiperCore from "swiper"
 import { Swiper, SwiperSlide } from 'swiper/react';

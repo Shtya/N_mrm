@@ -51,9 +51,14 @@ const Navbar = memo(() => {
       navLinks.style.left = "-100%";
       }
 
-  // let htmlcssArrow = document.querySelector(".Navbar .htmlcss-arrow");
-  // htmlcssArrow.onclick = function() {
-  // navLinks.classList.toggle("show1");
+  let htmlcssArrow = document.querySelector(".Navbar .htmlcss-arrow");
+  htmlcssArrow.onclick = function() {
+  navLinks.classList.toggle("show1");
+  }
+
+  // let PhotoArrow = document.querySelector(".Navbar .htmlcss-arrow");
+  // PhotoArrow.onclick = function() {
+  // navLinks.classList.toggle("show2");
   // }
     } ,[])
 
@@ -71,20 +76,16 @@ const Navbar = memo(() => {
           <ul className="links">
             <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/")}><Link className={pathname == "/" ? "active":""} to="/">   {t("Nav.li1")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li>
-            {/* <li data-aos="fade-down" data-aos-delay="300" ><Link  > {t("Nav.li2")} </Link>
+            
+            
+            <li data-aos="fade-down" data-aos-delay="300" ><Link  >Videography</Link>
               <i className='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
               <ul className="htmlCss-sub-menu sub-menu">
-                <li   onClick={_=> Navigate("/web-development-company-in-dubai")}><Link className={pathname == "/web-development-company-in-dubai" ? "active":""}    to="/web-development-company-in-dubai">    {t("Nav.li3")}  </Link></li>
-                <li   onClick={_=> Navigate("/Photography-In-Dubai")}><Link className={pathname == "/Photography-In-Dubai" ? "active":""}    to="/Photography-In-Dubai">    {t("Nav.li4")}  </Link></li>
-                <li   onClick={_=> Navigate("/exhibition-and-display-stand-agency-in-dubai")}><Link className={pathname == "/exhibition-and-display-stand-agency-in-dubai" ? "active":""}    to="/exhibition-and-display-stand-agency-in-dubai">   {t("Nav.li5")}  </Link></li>
-                <li   onClick={_=> Navigate("/indoor-and-outdoor-signages-agency-in-dubai")}><Link className={pathname == "/indoor-and-outdoor-signages-agency-in-dubai" ? "active":""}    to="/indoor-and-outdoor-signages-agency-in-dubai">    {t("Nav.li6")}  </Link></li>
-                <li   onClick={_=> Navigate("/social-media-marketing-agency-in-dubai")}><Link className={pathname == "/social-media-marketing-agency-in-dubai" ? "active":""}    to="/social-media-marketing-agency-in-dubai">   {t("Nav.li7")}  </Link></li>
-                <li   onClick={_=> Navigate("/Corporate-gifts-in-dubai")}><Link className={pathname == "/Corporate-gifts-in-dubai" ? "active":""}    to="/Corporate-gifts-in-dubai">   {t("Nav.li8")}  </Link></li>
-                <li   onClick={_=> Navigate("/advertising-ppc-agency-in-dubai")}><Link className={pathname == "/advertising-ppc-agency-in-dubai" ? "active":""}    to="/advertising-ppc-agency-in-dubai">   {t("Nav.li9")}  </Link></li>
-                <li   onClick={_=> Navigate("/branding-agency-in-dubai")}><Link className={pathname == "/branding-agency-in-dubai" ? "active":""}    to="/branding-agency-in-dubai">   {t("Nav.li10")}  </Link></li>
-                <li   onClick={_=> Navigate("/seo-agency-in-dubai")}><Link className={pathname == "/seo-agency-in-dubai" ? "active":""}    to="/seo-agency-in-dubai">   {t("Nav.li11")}  </Link></li>
+                <li   onClick={_=> Navigate("/food")}><Link className={pathname == "/food" ? "active":""}    to="/food">  Services 1 </Link></li>
               </ul>
-            </li> */}
+            </li>
+
+
             <li data-aos="fade-down" data-aos-delay="400" onClick={_=> Navigate("/blogs")}><Link  className={pathname == "/blog" ? "active":""} to="/blog">   {t("Nav.li12")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="500" onClick={_=> Navigate("/about-us")}><Link  className={pathname == "/about-us" ? "active":""} to="/about-us">    {t("Nav.li13")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="600" onClick={_=> Navigate("/contact-us")}><Link  className={pathname == "/contact-us" ? "active":""} to="/contact-us">    {t("Nav.li14")}  </Link></li>

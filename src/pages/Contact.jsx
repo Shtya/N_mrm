@@ -1,8 +1,5 @@
 import React from 'react'
-import ContactIntro from "../assets/contact/intro.jpg"
-import Img1 from "../assets/about/1.jpg"
-import Img2 from "../assets/about/2.jpg"
-import FixedImg from "../assets/bg/35.webp"
+import ContactIntro from "../assets/contact/intro.webp"
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
