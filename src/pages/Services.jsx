@@ -4,9 +4,13 @@ import photoImg2 from '../assets/services/2.webp'
 
 
 import FixedImg from '../assets/bg/36.webp'
+import FixedImg1 from '../assets/bg/34.webp'
 import Intro from "../assets/services/intro.webp"
 import BlockQoute from '../components/BlockQoute'
 import Divider from '../components/Divider'
+import Why from '../components/services/Why'
+import Contact from '../components/home/Contact-us'
+import Testimonials from '../components/home/Testimonials'
 
 
     const photo = [
@@ -36,7 +40,7 @@ const Services = () => {
         <div className="coverIntro"> <img src={Intro} alt="" /> </div>
         <Divider />
 
-        <BlockQoute />
+        <BlockQoute  />
         <Divider />
 
         <div className="photography">
@@ -62,7 +66,6 @@ const Services = () => {
         </div>
         <Divider />
 
-
         <div className="video">
         <div className="bgCover2"><img src={FixedImg} alt="" /></div>
         <div className="container">
@@ -84,7 +87,24 @@ const Services = () => {
         </div>
 
         </div>
+        <Divider />
         
+
+        <Why />
+        <Divider />
+
+        <BlockQoute classN="bgCover2" Img={FixedImg} />
+        <Divider />
+
+
+        <Contact FixedImg={FixedImg1} classN="bgCover" />
+        <Divider />
+
+
+        <Testimonials FixedImg={FixedImg} classN="bgCover2" />
+
+
+
     </div>
   )
 }

@@ -2,11 +2,11 @@ import React from 'react'
 import ImgQoute from "../assets/services/_ (2).webp"
 import ImgFixed from "../assets/bg/34.webp"
 
-const BlockQoute = () => {
+const BlockQoute = ({classN , Img}) => {
   return (
 
     <div className="qoutation">
-        <div className="bgCover"><img src={ImgFixed} alt="" /></div>
+        <div className={classN || "bgCover"}><img src={Img || ImgFixed} alt="" /></div>
     <div className=" container">
 
         {/* <svg className="absolute transform -left-12 -top-12" width="100" height="78" fill="none" xmlns="http://www.w3.org/2000/svg">

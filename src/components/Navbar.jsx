@@ -32,17 +32,17 @@ const Navbar = memo(() => {
   
 
 
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
   const [top , settop] = useState(false)
   useEffect(_=>{
     const handelScroll =  _=> window.scrollY > 50 ? settop("up-anything") : settop("")
     window.addEventListener("scroll" , handelScroll)
     return _=> window.removeEventListener("scroll" , handelScroll)} ,[ window])
+    let navLinks = document.querySelector(" .Navbar .nav-links");
     useEffect(_=>{
-
+      let navLinks = document.querySelector(" .Navbar .nav-links");
 
       let menuCloseBtn = document.querySelector(" .Navbar .nav-links .bx-x");
-      let navLinks = document.querySelector(" .Navbar .nav-links");
       let menuOpenBtn = document.querySelector(" .Navbar .navbar .bx-menu");
       menuOpenBtn.onclick = function() {
       navLinks.style.left = "0";
@@ -62,16 +62,27 @@ const Navbar = memo(() => {
   // }
     } ,[])
 
+    const Navigate = (path)=>{
+      navigate(path)
+      navLinks.style.left = "-100%";
+    }
 
   return (
   <div className="Navbar"   >
     <Animation />
     <nav id='navbar' >
       <div className={`navbar ${top}`} >
-        <i className='bx bx-menu'></i>
+        <i className='bx bx-menu'>
+
+          <span></span>
+          <span></span>
+          <span></span>
+        </i>
+
+        
         <div data-aos="fade-down" data-aos-delay="100" className="logo"><Link to="/"> <img src={Logo} id='logo' alt="Navbar"  /></Link></div>
         <div className="nav-links">
-          <div className="sidebar-logo">   <span className="logo-name"><img src={Logo} alt="Navbar"  /></span>   <i className='bx bx-x' ></i> </div>
+          <div className="sidebar-logo">   <span className="logo-name"><img src={Logo} alt="Navbar"  /></span>   <i className='bx bx-x' > <span/> <span/><span/> </i> </div>
           
           <ul className="links">
             <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/")}><Link className={pathname == "/" ? "active":""} to="/">   {t("Nav.li1")}  </Link></li>

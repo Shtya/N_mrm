@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Social_Media } from "../App"
 import { memo } from "react"
 import { useTranslation } from "react-i18next"
-import FixedImg from "../assets/bg/30.webp"
+import FixedImg from "../assets/bg/3.webp"
 import Divider from "./Divider"
 
 const Footer = memo(() => {

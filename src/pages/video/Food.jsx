@@ -57,8 +57,12 @@ const Food = () => {
 
         <Divider />
         <Testimonials FixedImg={FixedImg} classN="bgCover" />
+
         <Divider />
-        <Contact  FixedImg={FixedImg1}  />
+        <BlockQoute Img={FixedImg1} classN="bgCover2" />
+
+        <Divider />
+        <Contact  FixedImg={FixedImg}  />
 
 
     </div>
