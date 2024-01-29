@@ -15,17 +15,18 @@ const Navbar = memo(() => {
   }
 
   // when scroll up
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.getElementById('navbar');
-  const LogoSelect = document.getElementById('logo');
+
+  let prevScrollPos  = window.pageYOffset;
+  let navbar   = document.getElementById('navbar');
+
 
   window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos > currentScrollPos) {
-      navbar.style.top = '0';
+      navbar.style.top = '0' 
     } else {
-      navbar.style.top = `-${navbar.offsetHeight}px`;
+      navbar.style.top = `-${navbar.offsetHeight}px` 
     }
     prevScrollPos = currentScrollPos;
   }

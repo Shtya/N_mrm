@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SERVICES_INTRO from '../../assets/GALLWEY/intro.webp' 
 import BlockQoute from '../../components/BlockQoute'
+
+import IMGQoute from "../../assets/bg/33.webp"
+import IMG2 from "../../assets/bg/1.webp"
 
 import photoImg1 from '../../assets/GALLWEY/1.webp'
 import photoImg2 from '../../assets/GALLWEY/2.webp'
@@ -9,52 +12,73 @@ import Contact from '../../components/home/Contact-us'
 import Testimonials from '../../components/home/Testimonials'
 
 import FixedImg from "../../assets/bg/34.webp" ;
-import FixedImg1 from "../../assets/bg/38.webp" ;
 import Divider from '../../components/Divider'
 
 const photo = [
-    { img: photoImg1  , title:"Events photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg2  , title:"Fashion photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg1  , title:"Business Portraits & Headshots" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg2  , title:"Food photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg1  , title:"Product photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg2  , title:"Automotive photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg1  , title:"Hospitality photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg2  , title:"Real Estate photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg1  , title:"Real Estate photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
-    { img: photoImg2  , title:"Real Estate photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
   ]
 
 
 const Food = () => {
+  const [count , setcount] = useState({from : 0 , to : 10})
+
+  // showImage
+const [showImg , setshowImg] = useState()
+
   return (
     <div className='Services1 services-pages'>
         <div className="coverIntro"> <img src={SERVICES_INTRO} alt="" /> </div>
         <Divider />
-        <BlockQoute />
+        <BlockQoute Img2={IMGQoute}  />
 
         <Divider />
         <div className="photography">
-        <div className="bgCover2"><img src={FixedImg1} alt="" /></div>
+        <div className="bgCover3" style={{background:`url("${IMG2}")`}} ></div>
         <div className="container">
-            <div className="h1-head"> Our photography Services </div> 
+            <div className="h1-head"> Our Fashion Work </div> 
             <div className="boxes">
-                {photo.map((e,index)=> (
+                {photo.slice(count.from , count.to).map((e,index)=> (
                     <div className="box" key={index}> 
                     <span></span>
                     <span></span>
-                        <div className="innerImg"> <img src={e.img} alt="" /> </div>
-                        <div className="text"> 
-                            <div className="h"> {e.title} </div>
-                            <div className="p"> {e.desc} </div>
-                            <div className="bt">learn more </div>
-                        </div>
+                        <div className="innerImg"> <img onClick={_=> setshowImg(e.img)}  src={e.img} alt="" /> </div>
                         </div>
                 ))}
             </div>
         </div>
 
-        <div className="bt">see more</div>
+        {
+          showImg && <div className="showImagePreview">
+            <div className="coverImg">
+            <img className='showImage' src={showImg} alt="image" />
+            <i onClick={_=> setshowImg("")}  className="fa-solid fa-xmark close"></i>
+            </div>
+            <ul>
+            {photo.map((e,index)=> ( <img key={index} onClick={_=> setshowImg(e.img)} src={e.img} /> ))}
+            </ul>
+          </div>
+        }
+
+        {count.to == 20 ? "" : <div className="bt" onClick={_=> setcount({from:0 , to : 20})}>see more</div>}
 
         </div>
 
@@ -62,10 +86,10 @@ const Food = () => {
         <Testimonials FixedImg={FixedImg} classN="bgCover" />
 
         <Divider />
-        <BlockQoute Img={FixedImg1} classN="bgCover2" />
+        <BlockQoute Img2={IMGQoute}  Img={IMG2} classN="bgCover2" alt={true} />
 
         <Divider />
-        <Contact  FixedImg={FixedImg}  />
+        <Contact  notbg={true}   />
 
 
     </div>

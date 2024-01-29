@@ -89,7 +89,7 @@ const handleImg = (e)=>{
                 animate={{ transform: "scale(1)" }}
                 exit={{ transform: "scale(0)" }}
                   className="coverImg" key={index}> 
-                    <img src={e.img} onClick={_=> setshowImg(e.img)} alt="images" /> 
+                    <img src={e.img} key={index} onClick={_=> setshowImg(e.img)} alt="images" /> 
                 </motion.div> ))
             }
         </AnimatePresence>
@@ -102,7 +102,7 @@ const handleImg = (e)=>{
             <i onClick={_=> setshowImg("")}  className="fa-solid fa-xmark close"></i>
             </div>
             <ul>
-            {GalleryData.map((e,index)=> ( <img onClick={_=> setshowImg(e.img)} src={e.img} /> ))}
+            {GalleryData.map((e,index)=> ( <img onClick={_=> setshowImg(e.img)}key={index} src={e.img} /> ))}
             </ul>
           </div>
         }

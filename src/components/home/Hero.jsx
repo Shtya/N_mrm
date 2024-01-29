@@ -1,6 +1,6 @@
 import React from 'react'
-import Intro from '../../assets/bg/36.webp'
-import Intro2 from '../../assets/bg/35.webp'
+import Intro from '../../assets/bg/1.webp'
+import Intro2 from '../../assets/bg/9.webp'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';

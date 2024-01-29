@@ -1044,15 +1044,21 @@ footer .bottom .last a {
   background-color: var(--text-color) !important;
 }
 .Home .about {
-  min-height: 50vh;
+  height: 1000px;
   position: relative;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 980px) {
+  .Home .about .container {
+    height: 840px !important;
+  }
 }
 .Home .about .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 20px;
-  min-height: 50vh;
+  height: 700px;
 }
 @media (max-width: 980px) {
   .Home .about .container {
@@ -1062,6 +1068,7 @@ footer .bottom .last a {
   .Home .about .container .coverImg {
     order: -1;
     width: 100% !important;
+    height: 400px !important;
   }
   .Home .about .container .boxes .box {
     text-align: center !important;
@@ -1078,15 +1085,48 @@ footer .bottom .last a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.Home .about .container .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .Home .about .container .boxes {
+    grid-template-columns: 1fr;
+  }
+}
 .Home .about .container .boxes .box {
   text-align: left;
   position: relative;
+  margin-bottom: 30px;
+}
+.Home .about .container .boxes .box .h2 {
+  color: var(--text-color);
   margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.Home .about .container .boxes .box .p {
+  line-height: 1.4;
+  font-size: 18px !important;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.Home .about .swiper-pagination span {
+  width: 8px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--text-color);
 }
 .Home .services {
-  min-height: 100vh;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
   position: relative;
-  padding: 70px 0;
   background-color: #222;
 }
 .Home .services .header {
@@ -1166,11 +1206,12 @@ footer .bottom .last a {
   transform: scale(1.07) rotate(1deg);
 }
 .Home .gallery {
-  min-height: 80vh;
+  min-height: 1000px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  padding: 80px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
 }
 .Home .gallery .h1-head {
   margin-bottom: -30px;
@@ -1201,12 +1242,12 @@ footer .bottom .last a {
   scale: 1.04;
 }
 .Home .blog {
-  min-height: 30vh;
-  position: relative;
+  min-height: 800px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  padding: 80px 0;
+  justify-content: center;
+  padding: 100px 0;
+  position: relative;
 }
 .Home .blog .slick-slide > div {
   width: calc(100% - 10px);
@@ -1702,9 +1743,24 @@ footer .bottom .last a {
   gap: 10px;
   height: 100%;
   padding: 30px 20px;
-  border: 1px dashed #333;
-  outline: 1px dashed #555;
   border-radius: 2px;
+  position: relative;
+}
+.contact-us .container .contact-form form::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.419);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  box-shadow: 0 0 10px #333 inset, 0 0 10px #222;
+}
+.contact-us .container .contact-form form * {
+  position: relative;
+  z-index: 10;
 }
 .contact-us .container .contact-form form .h2, .contact-us .container .contact-form form .h {
   text-align: center;
@@ -2111,11 +2167,8 @@ footer .bottom .last a {
   }
 }
 .Services-Page .why {
-  min-height: 40vh;
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  min-height: 200px;
+  padding: 150px 0;
 }
 .Services-Page .why .container {
   display: grid;
@@ -2222,7 +2275,8 @@ footer .bottom .last a {
   outline: 3px solid #111;
   height: 600px !important;
   border: 30px solid rgba(255, 255, 255, 0.78);
-  border-width: 30px 10px;
+  border-width: 40px 10px;
+  outline: 2px solid var(--text-color);
 }
 @media (max-width: 700px) {
   .services-pages .photography .container .boxes .box {
@@ -2239,7 +2293,7 @@ footer .bottom .last a {
 }
 .services-pages .photography .container .boxes .box .innerImg {
   width: 100%;
-  height: 500px;
+  height: 600px;
   position: relative;
 }
 .services-pages .photography .container .boxes .box .innerImg img {
@@ -2568,7 +2622,7 @@ footer .bottom .last a {
 }
 
 .Testimonials {
-  min-height: 90vh;
+  min-height: 1000px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -2886,6 +2940,24 @@ footer .bottom .last a {
   display: flex !important;
 }
 
+.bgCover3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.bgCover3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.379);
+}
+
 .bgCover2 {
   position: absolute;
   top: 0;
@@ -2935,7 +3007,7 @@ footer .bottom .last a {
 }
 
 .qoutation {
-  min-height: 90vh;
+  min-height: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;

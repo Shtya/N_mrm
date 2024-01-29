@@ -1085,17 +1085,23 @@ footer {
   }
 
   .about{
-    min-height: 50vh;
+    height: 1000px;
     position: relative;
+    padding: 50px 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    @media (max-width:980px) {
+      .container{height: 840px !important;}
+    }
     .container{
-      display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 20px; 
-      min-height: 50vh;
+      
+      height: 700px;
       @media (max-width:980px) {
         grid-template-columns: 1fr;
         padding: 30px 0;
         .coverImg{
           order: -1;
           width: 100% !important;
+          height: 400px !important;
         }
         .boxes .box{
           text-align: center !important;
@@ -1112,20 +1118,47 @@ footer {
         }
       }
       .boxes{
+        display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 20px; 
+        @media (max-width:980px) {
+          grid-template-columns: 1fr;
+        }
         .box{
           text-align: left;
           position: relative;
-          margin-bottom: 10px;
+          margin-bottom: 30px;
+
+          .h2{
+            color: var(--text-color);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+          .p{
+            line-height: 1.4;
+            font-size: 18px !important;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+          }
         }
+      }
+    }
+    .swiper-pagination{
+      span{
+        width: 8px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: var(--text-color);
       }
     }
   }
 
   .services{
-    min-height: 100vh;
+    min-height: 1000px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 100px 0;
     position: relative;
-    padding: 70px 0;
     background-color: #222;
+    
     .header{
       margin-top: -30px;
     }
@@ -1201,9 +1234,9 @@ footer {
   }
 
   .gallery{
-    min-height: 80vh;
-    display: flex; align-items: center; flex-direction: column;
-    padding: 80px 0;
+    min-height: 1000px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 100px 0;
     .h1-head{margin-bottom: -30px;}
     .images{
       display: grid;
@@ -1230,10 +1263,10 @@ footer {
   }
 
   .blog {
-    min-height: 30vh;
+    min-height: 800px;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 100px 0;
     position: relative;
-    display: flex;  justify-content: center; flex-direction: column;
-    padding: 80px 0;
 
     .slick-slide > div {
       width: calc(100% - 10px);
@@ -1660,9 +1693,20 @@ footer {
         gap: 10px;
         height: 100%;
         padding: 30px 20px;
-        border: 1px dashed #333;
-        outline: 1px dashed #555;
         border-radius: 2px;
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.419);
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(1px);
+          box-shadow: 0 0 10px #333 inset , 0 0 10px #222 ;
+        }
+        & * {position: relative; z-index: 10;}
         .h2 , .h { text-align: center;}
         .h{margin-bottom: 20px;}
         input , .bt , textarea{
@@ -2053,9 +2097,9 @@ footer {
   }
   
   .why{
-    min-height: 40vh;
-    padding: 60px 0;
-    display: flex;  justify-content: center;  flex-direction: column;
+    min-height: 200px;
+    // display: flex; flex-direction: column; justify-content: center;
+    padding: 150px 0;
 
     .container{
       display: grid;
@@ -2114,6 +2158,7 @@ footer {
 
 .services-pages {
   position: relative;
+  
   .coverIntro{
     width: 100%;
     height: 100vh;
@@ -2147,7 +2192,8 @@ footer {
         outline: 3px solid #111;
         height: 600px !important;
         border: 30px solid rgba(255, 255, 255, 0.78);
-        border-width: 30px 10px;
+        border-width: 40px 10px;
+        outline: 2px solid var(--text-color);
         @media (max-width:700px) {
           border-width: 15px 5px ;
         }
@@ -2157,7 +2203,7 @@ footer {
         }
         .innerImg{
           width: 100%;
-          height: 500px;
+          height: 600px;
           position: relative;
           img{
             width: 100%;
@@ -2449,7 +2495,7 @@ footer {
 
 
 .Testimonials{
-  min-height: 90vh;
+  min-height: 1000px;
   display: flex; align-items: center; flex-direction: column;
   padding: 60px 0;
   position: relative;
@@ -2755,6 +2801,23 @@ footer {
     display: flex !important;
   }
 }
+.bgCover3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.379);
+  }
+}
 
 .bgCover2{
   position: absolute;
@@ -2804,7 +2867,7 @@ footer {
 }
 
 .qoutation{
-  min-height: 90vh;
+  min-height: 1000px;
   display: flex; align-items: center; justify-content: center; flex-direction: column;
   padding: 50px 0;
   position: relative;
