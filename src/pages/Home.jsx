@@ -27,7 +27,7 @@ const Home = () => {
       <Divider />
 
 
-      <AnimatePresence> <Gallery /> </AnimatePresence>
+      <Gallery /> 
       <Divider />
 
 

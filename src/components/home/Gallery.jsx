@@ -58,8 +58,6 @@ const header = [
 
 const Gallery = () => {
 
-
-
 const [GalleryData , setGallery] = useState(data)
 const [type , settype] = useState("all")
 
@@ -67,6 +65,14 @@ const handleFilter = (ele) => {
 setGallery(data.filter(e => e.type?.includes(ele))) 
 settype(ele)
 }
+
+
+// showImage
+const [showImg , setshowImg] = useState()
+const handleImg = (e)=>{
+    setshowImg(e)
+}
+
 
 
   return (
@@ -78,16 +84,30 @@ settype(ele)
         <div className="images">
         <AnimatePresence>
             {
-                GalleryData.slice(0,6).map((e,index)=> ( 
+                GalleryData.slice(0,9).map((e,index)=> ( 
                 <motion.div layout transition={{duration:.9}} initial={{ transform: "scale(0)" }}
                 animate={{ transform: "scale(1)" }}
                 exit={{ transform: "scale(0)" }}
                   className="coverImg" key={index}> 
-                    <img src={e.img} alt="images" /> 
+                    <img src={e.img} onClick={_=> setshowImg(e.img)} alt="images" /> 
                 </motion.div> ))
             }
         </AnimatePresence>
         </div>
+
+        {
+          showImg && <div className="showImagePreview">
+            <div className="coverImg">
+            <img className='showImage' src={showImg} alt="image" />
+            <i onClick={_=> setshowImg("")}  className="fa-solid fa-xmark close"></i>
+            </div>
+            <ul>
+            {GalleryData.map((e,index)=> ( <img onClick={_=> setshowImg(e.img)} src={e.img} /> ))}
+            </ul>
+          </div>
+        }
+
+
         </div>
     </div>
   )
