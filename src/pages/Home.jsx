@@ -4,12 +4,11 @@ import About from '../components/home/About'
 import Services from '../components/home/Services'
 import Blog from '../components/home/Blog'
 import Gallery from '../components/home/Gallery'
-import { AnimatePresence } from 'framer-motion'
 import Testimonials from '../components/home/Testimonials'
 import Contact from '../components/home/Contact-us'
 
 // import FixedImg from "../assets/bg/21.webp"
-import FixedImg from "../assets/bg/33.webp"
+import FixedImg from "../assets/bg/3.webp"
 import Divider from '../components/Divider'
 
 
@@ -39,7 +38,7 @@ const Home = () => {
       <Divider />
 
       
-      <Contact FixedImg={FixedImg} />
+      <Contact notbg={false} FixedImg={FixedImg} />
     </div>
   )
 }

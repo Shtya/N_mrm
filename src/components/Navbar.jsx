@@ -4,6 +4,30 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Animation from './Animation';
 import { useTranslation } from 'react-i18next';
 
+
+
+// Vediography
+// title:"Exhibitions, Conference & Trade Show Filming" 
+// title:"Corporate Films"                              
+// title:"Event Filming"                                
+// title:"Behind-the Scene Videos"                      
+// title:"Fashion Videography"                          
+// title:"Promotional Videos for Product & Brand"       
+// title:"YouTube/Facebook/Instagram Short Ads"         
+// title:"Real Estate Product Demo"     
+
+
+// photography 
+// events-photography
+// fashion-photography
+// business-Portraits&Headshots
+// food-photography
+// product-photography
+// automotive-photography
+// hospitality-photography
+// real Estate-photography
+// trade Shows-photography
+
 const Navbar = memo(() => {
   const {pathname} =useLocation() ;
 
@@ -90,10 +114,19 @@ const Navbar = memo(() => {
             <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li>
             
             
-            <li data-aos="fade-down" data-aos-delay="300" ><Link  >Videography</Link>
+            <li data-aos="fade-down" data-aos-delay="300" ><Link  >Photography</Link>
               <i className='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
               <ul className="htmlCss-sub-menu sub-menu">
-                <li   onClick={_=> Navigate("/food")}><Link className={pathname == "/food" ? "active":""}    to="/food">  Services 1 </Link></li>
+                <li   onClick={_=> Navigate("/events-photography")}><Link className={pathname == "/events-photography" ? "active":""}    to="/events-photography">  events photography </Link></li>
+                <li   onClick={_=> Navigate("/fashion-photography")}><Link className={pathname == "/fashion-photography" ? "active":""}    to="/fashion-photography">  fashion photography </Link></li>
+                <li   onClick={_=> Navigate("/business-Portraits&Headshots")}><Link className={pathname == "/business-Portraits&Headshots" ? "active":""}    to="/business-Portraits&Headshots">  business Portraits & Headshots </Link></li>
+                <li   onClick={_=> Navigate("/food-photography")}><Link className={pathname == "/food-photography" ? "active":""}    to="/food-photography">  food photography </Link></li>
+                <li   onClick={_=> Navigate("/product-photography")}><Link className={pathname == "/product-photography" ? "active":""}    to="/product-photography">  product photography </Link></li>
+                <li   onClick={_=> Navigate("/automotive-photography")}><Link className={pathname == "/automotive-photography" ? "active":""}    to="/automotive-photography">  automotive photography </Link></li>
+                <li   onClick={_=> Navigate("/hospitality-photography")}><Link className={pathname == "/hospitality-photography" ? "active":""}    to="/hospitality-photography">  hospitality photography </Link></li>
+                <li   onClick={_=> Navigate("/real-Estate-photography")}><Link className={pathname == "/real-Estate-photography" ? "active":""}    to="/real-Estate-photography">  real Estate photography </Link></li>
+                <li   onClick={_=> Navigate("/trade-Shows-photography")}><Link className={pathname == "/trade-Shows-photography" ? "active":""}    to="/trade-Shows-photography">  trade Shows photography </Link></li>
+
               </ul>
             </li>
 

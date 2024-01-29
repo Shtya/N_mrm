@@ -30,7 +30,15 @@ const App = () => {
         <Route  path='/services'    element={<Services />} />                           
         <Route  path='*'    element={<Error />} />                           
 
-        <Route  path='/food'    element={<Food />} />                           
+        <Route  path='/events-photography'    element={<Food />} />                           
+        <Route  path='/fashion-photography'    element={<Food />} />                           
+        <Route  path='/business-Portraits&Headshots'    element={<Food />} />                           
+        <Route  path='/food-photography'    element={<Food />} />                           
+        <Route  path='/product-photography'    element={<Food />} />                           
+        <Route  path='/automotive-photography'    element={<Food />} />                           
+        <Route  path='/hospitality-photography'    element={<Food />} />                           
+        <Route  path='/real-Estate-photography'    element={<Food />} />                           
+        <Route  path='/trade-Shows-photography'    element={<Food />} />                           
 
       </Routes>
       <Footer />

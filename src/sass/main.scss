@@ -291,12 +291,15 @@ header {
     transition: .3s;
     left: 0;
     line-height: 40px;
-    background-color: #181818;
+    background-color: #1818185e;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 2;
     transition: .3s;
     top: 70px;
+    @media (min-width:800px){
+      background-color: #1b1b18;
+    }
 
   }
 
@@ -320,11 +323,14 @@ header {
   }
 
   .navbar .links li .sub-menu a {
-    color: #fff;
+    color: #e3e1e1 ;
     font-size: 20px;
     text-transform: capitalize;
     cursor: pointer;
     width: 100%;
+    text-align: left;
+    font-family: 'Montserrat';
+    &::first-letter{color: #fff !important; font-size: 21px; margin-right: 2px;}
   }
 
   .navbar .links li .sub-menu .more-arrow {
@@ -486,30 +492,34 @@ header {
       padding: 20px 0;
       background-color: #22222267;
       box-shadow: 0 0 2px 1px var(--text-color) inset;
-      backdrop-filter: blur(4px);
-      &::after , &::before{
-        content: "";
-        position: absolute;
-        width: 1px;
-        height: calc(100% - 20px);
-        background-color: var(--text-color);
-        top: 50%;
-        transform: translateY(-50%);
-        right: 5px;
-        opacity: .7;
+      backdrop-filter: blur(10px);
+      @media (max-width:700px) {
+        box-shadow: unset;
+        background-color: unset;
       }
-      &::before{right: 10px; height: calc(100% - 40px); opacity: .5;}
     }
     .nav-links{
       background-color: unset !important;
       background-image: url("../assets//bg//23.webp") !important ;
+
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.493);
+        z-index: -1;
+        backdrop-filter: blur(3px);
+      }
     }
 
     nav .navbar .links li .arrow {
       line-height: 40px;
       font-size: 20px;
       position: relative;
-      right: -61%;
+      right: -53%;
       top: 3px;
       cursor: pointer;
       transition: .3s;
@@ -527,11 +537,20 @@ header {
     cursor: pointer;
     font-size: 40px;
     padding: 15px 50px;
-      transition: .3s;
-      &:hover {
-        background: rgb(34 34 34 / 51%);
-        width: 98%;
-        transform: translateX(1%);
+    transition: .3s;
+      @media (max-width: 600px) {
+        padding: 5px !important;
+        font-size: 20px !important;
+        a{
+          font-size: 16px !important;
+        }
+      }
+      @media (min-width:600px) {
+        &:hover {
+          background: rgb(34 34 34 / 51%);
+          width: 98%;
+          transform: translateX(1%);
+        }
       }
     }
 
@@ -544,7 +563,7 @@ header {
 
     nav .navbar .links li .sub-menu li {
       border-bottom: none;
-      background: #23232366;
+      background: rgb(35 35 35 / 8%);
       margin-bottom: 2px;
       transition: .3s;
 
@@ -631,7 +650,8 @@ header {
         display: block;
         transition: .3s;
       }
-      span:nth-child(3){width: 70%; margin-right: 30%;}
+      span:nth-child(2){width: 80%; margin-right: 20%;}
+      span:nth-child(3){width: 60%; margin-right: 40%;}
     }
     .bx-x{
       &::before{display: none;}
@@ -645,21 +665,27 @@ header {
         margin: unset !important;
       }
       span{
-        width: 100%;
+        width: 80%;
         height: 3px !important;
         background-color: var(--text-color);
         display: block;
         transition: .3s;
         rotate: 45deg;
+        box-shadow: 0 0 10px var(--text-color);
       }
       span:nth-child(2){
+        width: 80%;
+
         position: relative;
-        top: -7px;
-        left: -3px;
+        top: -9px;
+        left: 0;
+        transform: rotate(-45deg) !important ;
+        color: white;
+        opacity: .1;
       }
       span:nth-child(3){
         rotate: -45deg;
-        width: 100%;
+        width: 80%;
         top: -19px;
         position: relative;
       }
@@ -1181,6 +1207,7 @@ footer {
     min-height: 1000px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 100px 0;
+    @media (max-width:700px) { padding: 30px 0; }
     position: relative;
     background-color: #222;
     
@@ -1262,6 +1289,7 @@ footer {
     min-height: 1000px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 100px 0;
+    @media (max-width:700px) { padding: 30px 0; }
     .h1-head{margin-bottom: -30px;}
     .images{
       display: grid;
@@ -1288,9 +1316,10 @@ footer {
   }
 
   .blog {
-    min-height: 800px;
+    min-height: 400px;
     display: flex; flex-direction: column; justify-content: center;
     padding: 100px 0;
+    @media (max-width:700px) { padding: 30px 0 60px; }
     position: relative;
 
     .slick-slide > div {
@@ -1729,7 +1758,8 @@ footer {
           width: 100%;
           height: 100%;
           backdrop-filter: blur(1px);
-          box-shadow: 0 0 10px #333 inset , 0 0 10px #222 ;
+          box-shadow: 0 0 3px var(--text-color) inset ;
+          border: 1px solid #333;
         }
         & * {position: relative; z-index: 10;}
         .h2 , .h { text-align: center;}
@@ -1744,9 +1774,10 @@ footer {
           font-size: 18px;
           margin-bottom: 20px;
           border: 1px solid #333;
-          outline: 1px solid #555;
+          // outline: 1px solid #555;
           padding: 15px 30px 15px 15px  !important;
           width: 100%!important;  
+          box-shadow: 0  0 3px var(--text-color) inset ;
           &::placeholder{ color:white ;}
           font-family: 'Montserrat' , Arial !important;
         }
@@ -2125,6 +2156,7 @@ footer {
     min-height: 200px;
     // display: flex; flex-direction: column; justify-content: center;
     padding: 150px 0;
+    @media (max-width:700px) { padding: 50px 0; }
 
     .container{
       display: grid;
@@ -2151,6 +2183,7 @@ footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        z-index: 10;
         img{
           width: 100%;
           height: 100%;
@@ -2434,7 +2467,7 @@ footer {
     @media (max-width: 1200px) { width: 95% !important; }
     @media (max-width: 800px) {
       grid-template-columns: 1fr;
-      .coverImg{ height: fit-content !important; img{height: 100% !important;}}
+      .coverImg{ height: 300px !important; img{height: 100% !important;}}
       form{
         padding: 20px 20px !important;
         label{display: none;}
@@ -2459,6 +2492,7 @@ footer {
       background-color: #2e2e2e69;
       backdrop-filter: blur(4px);
       position: relative;
+      box-shadow: 0 0 3px var(--text-color);
       &::after{
         content: '';
         position: absolute;
@@ -2480,20 +2514,18 @@ footer {
         height: 100%;
         padding: 20px 50px;
         input , textarea , .bt{
-          backdrop-filter: blur(5px);
+          // backdrop-filter: blur(5px);
           background-color: rgba(85, 83, 83, 0.06);
-          border: 2px dotted rgba(0, 0, 0, 0);
           border-radius: 0 !important;
-          box-shadow: 0 0 10px #181818;
           color: #fff;
           font-size: 18px;
           margin-bottom: 10px;
           outline: none;
-          outline: 2px solid rgba(52, 50, 50, 0.569);
           padding: 15px 30px 15px 15px !important;
           width: 100% !important;
-          box-shadow: 0 0 1px 1px var(--text-color) inset;
+          box-shadow: 0 0 3px  var(--text-color) inset;
           &::placeholder{opacity: 0 ;}
+          border: 1px solid #333;
         }
         textarea{ height: 150px;}
         label{
@@ -2520,9 +2552,10 @@ footer {
 
 
 .Testimonials{
-  min-height: 1000px;
+  min-height: 700px;
   display: flex; align-items: center; flex-direction: column;
   padding: 60px 0;
+  @media (max-width:700px) { padding: 30px 0; }
   position: relative;
   .container{
     .slick-slide > div {
@@ -2792,13 +2825,12 @@ footer {
     font-size: 30px;
     border-radius: 50%;
     font-size: 30px;
-    border-radius: unset !important;
-    border: 2px solid black;
-    outline: 2px solid var(--text-color);
     width: 50px;
     height: 50px;
     margin-left: 5px;
     margin-top: 10px;
+    border-radius: 4px !important;
+    -webkit-text-stroke: .6px black;
     
     @media(max-width:600px){
       font-size: 20px;
@@ -2894,8 +2926,8 @@ footer {
 }
 
 .qoutation{
-  min-height: 1000px;
-  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  min-height: 300px;
+  display: flex;  justify-content: center; flex-direction: column;
   padding: 50px 0;
   position: relative;
 
@@ -2930,6 +2962,9 @@ footer {
       box-shadow: 0 0 30px #222;
       padding: 30px 10px;
       background-color: white;
+      @media (max-width:700px) {
+        padding: 15px 5px ;
+      }
       &:hover{
         width: calc(100% + 200px);
       }
@@ -3006,82 +3041,11 @@ footer {
   
 }
 
-// .Divider{
-//   height: 10px !important;
-//   position: relative;
-//   // box-shadow: 0 100px 10px #222 inset;
-//   // background: var(--gradient);
-
-//   &::after , &::before {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 3px; 
-//     top: 0;
-//     left: 0;
-//     background-color: #333;
-//     border: 2px solid #888 ;
-//     outline: 2px solid #888 ;
-//   }
-//   &::before {
-//     top: unset;
-//     bottom: 0;
-//     left: 0;
-//   }
-
-//   span{
-//     width: 20px;
-//     height: 20px;
-//     display: block;
-//     background-color: var(--text-color);
-//     border: 1px solid #333;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50% , -50%);
-//     position: absolute;
-//     z-index: 100;
-//   }
-//   span:nth-child(2){
-//     left: calc(50% - 22px);
-//     width: 20px;
-//     height: 20px;
-//   }
-//   span:nth-child(3){
-//     left: calc(50% + 20px);
-//     width: 15px;
-//     height: 15px;
-//   }
-//   span:nth-child(4){
-//     left: calc(50% - 42px);
-//     width: 15px;
-//     height: 15px;
-//   }
-//   span:nth-child(5){
-//     left: calc(50% - 57px);
-//     width: 10px ;
-//     height: 10px;
-//   }
-//   span:nth-child(6){
-//     left: calc(50% + 35px);
-//     width: 10px ;
-//     height: 10px;
-  
-//   }
-//   span:nth-child(7){
-//     left: calc(50% - 67px);
-//     width: 6px;
-//     height: 6px;
-//   }
-//   span:nth-child(8){
-//     left: calc(50% + 45px);
-//     width: 6px;
-//     height: 6px;
-//   }
-
-// }
-
 .Divider{
   min-height: 20px;
+  @media (max-width:700px) {
+    min-height: 10px;
+  }
   background: linear-gradient(to bottom , #0000 0% , rgba(255, 217, 0, 0.419) 80% ,#0000 100% );
   position: relative;
   z-index: 10;

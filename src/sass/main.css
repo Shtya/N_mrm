@@ -279,12 +279,17 @@ header section video {
   transition: 0.3s;
   left: 0;
   line-height: 40px;
-  background-color: #181818;
+  background-color: rgba(24, 24, 24, 0.368627451);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 2;
   transition: 0.3s;
   top: 70px;
+}
+@media (min-width: 800px) {
+  .Navbar nav .navbar .links li .sub-menu {
+    background-color: #1b1b18;
+  }
 }
 .Navbar nav .navbar .links li:hover .htmlCss-sub-menu,
 .Navbar nav .navbar .links li:hover .js-sub-menu {
@@ -305,11 +310,18 @@ header section video {
   background-color: #222;
 }
 .Navbar .navbar .links li .sub-menu a {
-  color: #fff;
+  color: #e3e1e1;
   font-size: 20px;
   text-transform: capitalize;
   cursor: pointer;
   width: 100%;
+  text-align: left;
+  font-family: "Montserrat";
+}
+.Navbar .navbar .links li .sub-menu a::first-letter {
+  color: #fff !important;
+  font-size: 21px;
+  margin-right: 2px;
 }
 .Navbar .navbar .links li .sub-menu .more-arrow {
   line-height: 40px;
@@ -448,34 +460,38 @@ header section video {
     padding: 20px 0;
     background-color: rgba(34, 34, 34, 0.4039215686);
     box-shadow: 0 0 2px 1px var(--text-color) inset;
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
   }
-  .Navbar .links::after, .Navbar .links::before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 20px);
-    background-color: var(--text-color);
-    top: 50%;
-    transform: translateY(-50%);
-    right: 5px;
-    opacity: 0.7;
+}
+@media (max-width: 800px) and (max-width: 700px) {
+  .Navbar .links {
+    box-shadow: unset;
+    background-color: unset;
   }
-  .Navbar .links::before {
-    right: 10px;
-    height: calc(100% - 40px);
-    opacity: 0.5;
-  }
+}
+@media (max-width: 800px) {
   .Navbar .nav-links {
     background-color: unset !important;
     background-image: url("../assets//bg//23.webp") !important;
+  }
+  .Navbar .nav-links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: -1;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
   }
   .Navbar nav .navbar .links li .arrow {
     line-height: 40px;
     font-size: 20px;
     position: relative;
-    right: -61%;
+    right: -53%;
     top: 3px;
     cursor: pointer;
     transition: 0.3s;
@@ -493,11 +509,24 @@ header section video {
     padding: 15px 50px;
     transition: 0.3s;
   }
+}
+@media (max-width: 800px) and (max-width: 600px) {
+  .Navbar nav .navbar .links li {
+    padding: 5px !important;
+    font-size: 20px !important;
+  }
+  .Navbar nav .navbar .links li a {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
   .Navbar nav .navbar .links li:hover {
     background: rgba(34, 34, 34, 0.51);
     width: 98%;
     transform: translateX(1%);
   }
+}
+@media (max-width: 800px) {
   .Navbar nav .navbar .links li .sub-menu {
     position: relative;
     top: 0;
@@ -506,7 +535,7 @@ header section video {
   }
   .Navbar nav .navbar .links li .sub-menu li {
     border-bottom: none;
-    background: rgba(35, 35, 35, 0.4);
+    background: rgba(35, 35, 35, 0.08);
     margin-bottom: 2px;
     transition: 0.3s;
   }
@@ -584,9 +613,13 @@ header section video {
     display: block;
     transition: 0.3s;
   }
+  .Navbar .bx-menu span:nth-child(2) {
+    width: 80%;
+    margin-right: 20%;
+  }
   .Navbar .bx-menu span:nth-child(3) {
-    width: 70%;
-    margin-right: 30%;
+    width: 60%;
+    margin-right: 40%;
   }
   .Navbar .bx-x {
     background-color: unset !important;
@@ -605,21 +638,26 @@ header section video {
     margin: unset !important;
   }
   .Navbar .bx-x span {
-    width: 100%;
+    width: 80%;
     height: 3px !important;
     background-color: var(--text-color);
     display: block;
     transition: 0.3s;
     rotate: 45deg;
+    box-shadow: 0 0 10px var(--text-color);
   }
   .Navbar .bx-x span:nth-child(2) {
+    width: 80%;
     position: relative;
-    top: -7px;
-    left: -3px;
+    top: -9px;
+    left: 0;
+    transform: rotate(-45deg) !important;
+    color: white;
+    opacity: 0.1;
   }
   .Navbar .bx-x span:nth-child(3) {
     rotate: -45deg;
-    width: 100%;
+    width: 80%;
     top: -19px;
     position: relative;
   }
@@ -1163,6 +1201,11 @@ footer .bottom .last a {
   position: relative;
   background-color: #222;
 }
+@media (max-width: 700px) {
+  .Home .services {
+    padding: 30px 0;
+  }
+}
 .Home .services .header {
   margin-top: -30px;
 }
@@ -1247,6 +1290,11 @@ footer .bottom .last a {
   justify-content: center;
   padding: 100px 0;
 }
+@media (max-width: 700px) {
+  .Home .gallery {
+    padding: 30px 0;
+  }
+}
 .Home .gallery .h1-head {
   margin-bottom: -30px;
 }
@@ -1276,12 +1324,17 @@ footer .bottom .last a {
   scale: 1.04;
 }
 .Home .blog {
-  min-height: 800px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 100px 0;
   position: relative;
+}
+@media (max-width: 700px) {
+  .Home .blog {
+    padding: 30px 0 60px;
+  }
 }
 .Home .blog .slick-slide > div {
   width: calc(100% - 10px);
@@ -1790,7 +1843,8 @@ footer .bottom .last a {
   height: 100%;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  box-shadow: 0 0 10px #333 inset, 0 0 10px #222;
+  box-shadow: 0 0 3px var(--text-color) inset;
+  border: 1px solid #333;
 }
 .contact-us .container .contact-form form * {
   position: relative;
@@ -1813,9 +1867,9 @@ footer .bottom .last a {
   font-size: 18px;
   margin-bottom: 20px;
   border: 1px solid #333;
-  outline: 1px solid #555;
   padding: 15px 30px 15px 15px !important;
   width: 100% !important;
+  box-shadow: 0 0 3px var(--text-color) inset;
   font-family: "Montserrat", Arial !important;
 }
 .contact-us .container .contact-form form input::-moz-placeholder, .contact-us .container .contact-form form .bt::-moz-placeholder, .contact-us .container .contact-form form textarea::-moz-placeholder {
@@ -2204,6 +2258,11 @@ footer .bottom .last a {
   min-height: 200px;
   padding: 150px 0;
 }
+@media (max-width: 700px) {
+  .Services-Page .why {
+    padding: 50px 0;
+  }
+}
 .Services-Page .why .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -2237,6 +2296,7 @@ footer .bottom .last a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 10;
 }
 .Services-Page .why .container .coverImg img {
   width: 100%;
@@ -2554,8 +2614,7 @@ footer .bottom .last a {
     grid-template-columns: 1fr;
   }
   .contact .container .coverImg {
-    height: -moz-fit-content !important;
-    height: fit-content !important;
+    height: 300px !important;
   }
   .contact .container .coverImg img {
     height: 100% !important;
@@ -2592,6 +2651,7 @@ footer .bottom .last a {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   position: relative;
+  box-shadow: 0 0 3px var(--text-color);
 }
 .contact .container .box::after {
   content: "";
@@ -2611,20 +2671,16 @@ footer .bottom .last a {
   padding: 20px 50px;
 }
 .contact .container .box form input, .contact .container .box form textarea, .contact .container .box form .bt {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   background-color: rgba(85, 83, 83, 0.06);
-  border: 2px dotted rgba(0, 0, 0, 0);
   border-radius: 0 !important;
-  box-shadow: 0 0 10px #181818;
   color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
   outline: none;
-  outline: 2px solid rgba(52, 50, 50, 0.569);
   padding: 15px 30px 15px 15px !important;
   width: 100% !important;
-  box-shadow: 0 0 1px 1px var(--text-color) inset;
+  box-shadow: 0 0 3px var(--text-color) inset;
+  border: 1px solid #333;
 }
 .contact .container .box form input::-moz-placeholder, .contact .container .box form textarea::-moz-placeholder, .contact .container .box form .bt::-moz-placeholder {
   opacity: 0;
@@ -2656,12 +2712,17 @@ footer .bottom .last a {
 }
 
 .Testimonials {
-  min-height: 1000px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 60px 0;
   position: relative;
+}
+@media (max-width: 700px) {
+  .Testimonials {
+    padding: 30px 0;
+  }
 }
 .Testimonials .container .slick-slide > div {
   width: calc(100% - 10px);
@@ -2944,13 +3005,12 @@ footer .bottom .last a {
   font-size: 30px;
   border-radius: 50%;
   font-size: 30px;
-  border-radius: unset !important;
-  border: 2px solid black;
-  outline: 2px solid var(--text-color);
   width: 50px;
   height: 50px;
   margin-left: 5px;
   margin-top: 10px;
+  border-radius: 4px !important;
+  -webkit-text-stroke: 0.6px black;
 }
 @media (max-width: 600px) {
   .Up .fa-arrow-up {
@@ -3041,9 +3101,8 @@ footer .bottom .last a {
 }
 
 .qoutation {
-  min-height: 1000px;
+  min-height: 300px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 50px 0;
@@ -3081,6 +3140,11 @@ footer .bottom .last a {
   box-shadow: 0 0 30px #222;
   padding: 30px 10px;
   background-color: white;
+}
+@media (max-width: 700px) {
+  .qoutation .container img {
+    padding: 15px 5px;
+  }
 }
 .qoutation .container img:hover {
   width: calc(100% + 200px);
@@ -3179,6 +3243,11 @@ footer .bottom .last a {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 217, 0, 0.419) 80%, rgba(0, 0, 0, 0) 100%);
   position: relative;
   z-index: 10;
+}
+@media (max-width: 700px) {
+  .Divider {
+    min-height: 10px;
+  }
 }
 
 .f-dir {
