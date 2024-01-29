@@ -38,7 +38,7 @@ const UP = memo(() => {
 
   return (
     <div  className='Up' style={{display : "flex" , bottom: isFooterVisible }}>
-      <a  style={{display:"flex" }} target='_black' href={Social_Media[3]} className='active'> <i  className={`fa-brands fa-whatsapp whatsapp ${top ? "show-btn":""}`}></i> <div className="pop">Need Help? Chat With Us</div> </a>
+      <a className="whatsi"  style={{display:"flex" }} target='_black' href={Social_Media[3]} > <i  className={`fa-brands fa-whatsapp whatsapp ${top ? "show-btn":""}`}></i> <div className="pop">Need Help? Chat With Us</div> </a>
       <a  href='#' style={{display:`${top ? "flex" : "none"}`}} className='UpIcon'  > <i onClick={handleScroll} className={`fa-solid fa-arrow-up floatIcon ${top ? "show-btn":""}`}></i> </a>
     </div>
   )

@@ -23,6 +23,8 @@ const About = () => {
         effect:"coverflow",
         pagination : {   clickable: true, } ,
         modules : [Mousewheel, Pagination , EffectCoverflow],
+        allowTouchMove : true,
+        freeMode : true ,
         mousewheel: {
             releaseOnEdges: true,
             forceToAxis: true,
@@ -33,6 +35,7 @@ const About = () => {
     <div className='about f-dir'>
         <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
 
+        <div className="responsive">
         <Swiper {...settings}  className="container" >
             <SwiperSlide className="boxes">
             <div className="box-inner">{
@@ -58,6 +61,30 @@ const About = () => {
            
 
         </Swiper>
+        </div>
+
+        <div className="responsive2">
+            <div className="container">
+            <div className="boxes">
+                <div className="box-inner">{
+                        data.map((e,index) => ( <div className="box" key={index}> 
+                            <div className="h2"> {e.title}  </div>
+                            <div className="p"> {e.desc} </div>
+                        </div> ))
+                    } </div>
+                <div className="coverImg"> <img src={AboutImg2} alt="" /> </div>
+            </div>
+            <div className="boxes">
+                <div className="box-inner">{
+                        data.map((e,index) => ( <div className="box" key={index}> 
+                            <div className="h2"> {e.title}  </div>
+                            <div className="p"> {e.desc} </div>
+                        </div> ))
+                    } </div>
+                <div className="coverImg"> <img src={AboutImg} alt="" /> </div>
+            </div>
+            </div>
+        </div>
     </div>
   )
 }

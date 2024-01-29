@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import SERVICES_INTRO from '../../assets/GALLWEY/intro.webp' 
 import BlockQoute from '../../components/BlockQoute'
 
-import IMGQoute from "../../assets/bg/33.webp"
+import IMGQoute from "../../assets/bg/8.webp"
+import IMG1 from "../../assets/bg/12.webp"
 import IMG2 from "../../assets/bg/1.webp"
 
 import photoImg1 from '../../assets/GALLWEY/1.webp'
@@ -47,8 +48,9 @@ const [showImg , setshowImg] = useState()
   return (
     <div className='Services1 services-pages'>
         <div className="coverIntro"> <img src={SERVICES_INTRO} alt="" /> </div>
+
         <Divider />
-        <BlockQoute Img2={IMGQoute}  />
+        <BlockQoute classN="bgCover" Img={IMG1} Img2={IMGQoute}  />
 
         <Divider />
         <div className="photography">

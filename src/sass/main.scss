@@ -1089,19 +1089,23 @@ footer {
     position: relative;
     padding: 50px 0;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    @media (max-width:980px) {
-      .container{height: 840px !important;}
+    @media (max-width:900px) {
+      min-height: 100vh;
+
+      height: unset;
+      .container{min-height: 100% !important; height: unset !important;}
+      .coverImg{margin-bottom: 20px; order: -1;}
     }
     .container{
       
       height: 700px;
-      @media (max-width:980px) {
+      @media (max-width:900px) {
         grid-template-columns: 1fr;
-        padding: 30px 0;
+        // padding: 30px 0;
         .coverImg{
           order: -1;
           width: 100% !important;
-          height: 400px !important;
+          height: 250px !important;
         }
         .boxes .box{
           text-align: center !important;
@@ -1121,6 +1125,9 @@ footer {
         display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 20px; 
         @media (max-width:980px) {
           grid-template-columns: 1fr;
+          gap: 0;
+          justify-content: center;
+          align-items: flex-end;
         }
         .box{
           text-align: left;
@@ -1132,12 +1139,18 @@ footer {
             margin-bottom: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            @media (max-width:900px) {
+              font-size: 16px !important;
+            }
           }
           .p{
             line-height: 1.4;
             font-size: 18px !important;
             text-transform: capitalize;
             letter-spacing: 1px;
+            @media (max-width:900px) {
+              font-size: 14px !important;
+            }
           }
         }
       }
@@ -1149,6 +1162,18 @@ footer {
         border-radius: 5px;
         background-color: var(--text-color);
       }
+    }
+
+    @media (min-width:900px) {
+      .responsive2{display: none;}
+    }
+    @media (max-width:900px) {
+      .responsive2{display: block;}
+      .responsive{display: none;}
+    }
+
+    .responsive{
+
     }
   }
 
@@ -2787,6 +2812,8 @@ footer {
     
   }
 
+
+
   .whatsapp {
     background-clip: text;
     -webkit-background-clip: text; /* For Safari/Chrome */
@@ -2871,6 +2898,10 @@ footer {
   display: flex; align-items: center; justify-content: center; flex-direction: column;
   padding: 50px 0;
   position: relative;
+
+  .bgCover{
+    z-index: 0;
+  }
 
   .img{
     background-image: url("../assets/bg/1.webp");
@@ -3051,8 +3082,9 @@ footer {
 
 .Divider{
   min-height: 20px;
-  background: linear-gradient(to bottom , #0000 0% , rgba(255, 217, 0, 0.419) 50% ,#0000 100% );
+  background: linear-gradient(to bottom , #0000 0% , rgba(255, 217, 0, 0.419) 80% ,#0000 100% );
   position: relative;
+  z-index: 10;
 }
 
 
