@@ -41,9 +41,10 @@ const photo = [
 
 const Food = () => {
   const [count , setcount] = useState({from : 0 , to : 10})
-
   // showImage
-const [showImg , setshowImg] = useState()
+  const [showImg , setshowImg] = useState()
+
+  
 
   return (
     <div className='Services1 services-pages'>

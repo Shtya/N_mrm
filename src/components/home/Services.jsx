@@ -42,10 +42,11 @@ const Services = ({FixedImg}) => {
   }
   return (
     <div className='services'>
+
         <div className="bgCover3" style={{background:`url(${FixedImg})`}}> </div>
         <div className="container">
 
-                <div className="h1-head" onClick={_=> navigat("/services")} style={{cursor:"pointer"}}> Our Services </div> 
+                <div className="h1-head" onClick={_=> navigat("/services")}   style={{cursor:"pointer"}}> Our Services </div> 
                 <div className="header"> 
                   <li className={`${type == "photo" ? "active" : ""}`} onClick={_=> handleClick("photo")}>Photography</li>
                   <li className={`${type == "vedio" ? "active" : ""}`} onClick={_=> handleClick("vedio")}>Vediography</li>

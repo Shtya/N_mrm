@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Intro from '../../assets/bg/1.webp'
 import Intro2 from '../../assets/bg/9.webp'
-
+import Parallax from "../Parallax" ;
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay , EffectFade , Navigation , Scrollbar , Pagination , A11y   } from 'swiper/modules';
+import { Autoplay , EffectFade , Navigation , Scrollbar , Pagination , A11y } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -25,25 +25,30 @@ const Hero = () => {
         autoplay:{delay: 8000 , "disableOnInteraction": false} ,
         centeredSlides:"true",
         pagination:{ clickable: true, dynamicBullets: true },
-        slideShadows: false,
         // navigation : true
       }
+
+
   return (
     <div className='hero f-dir'>
+      <Parallax dir="top" Id="text" />
+      <Parallax dir="top" Id="text2" />
+      <Parallax dir="top" Id="bg1" />
+      <Parallax dir="top" Id="bg2" />
         <Swiper  effect='fade'  {...settings} className='swiper '  >
 
             <SwiperSlide className='f-dir'> 
-              <div className="coverImg"> <img src={Intro} alt="" /></div>
+              <div className="coverImg" id='bg1'> <img src={Intro} alt="" /></div>
               <div className="container">
-                <div className="h2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure incidunt animi recusandae. </div>
+                <div className="h2" id='text'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure incidunt animi recusandae. </div>
               </div>
 
             </SwiperSlide>
 
             <SwiperSlide className='f-dir'> 
-              <div className="coverImg"> <img src={Intro2} alt="" /></div>
+              <div className="coverImg" id='bg2'> <img src={Intro2} alt="" /></div>
               <div className="container">
-                <div className="h2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure incidunt animi recusandae. </div>
+                <div className="h2"  id='text2'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure incidunt animi recusandae. </div>
               </div>
 
             </SwiperSlide>

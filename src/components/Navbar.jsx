@@ -47,10 +47,14 @@ const Navbar = memo(() => {
   window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.top = '0' 
-    } else {
-      navbar.style.top = `-${navbar.offsetHeight}px` 
+    if(navbar){
+
+      if (prevScrollPos > currentScrollPos) {
+        navbar.style.top = '0' 
+      } else {
+        navbar.style.top = `-${navbar.offsetHeight}px` 
+      }
+
     }
     prevScrollPos = currentScrollPos;
   }

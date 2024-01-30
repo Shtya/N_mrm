@@ -13,6 +13,7 @@ import Divider from '../components/Divider'
 
 
 const Home = () => {
+    
   return (
     <div className='Home'>
       <Hero />
