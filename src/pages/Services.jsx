@@ -12,6 +12,8 @@ import Why from '../components/services/Why'
 import Contact from '../components/home/Contact-us'
 import Testimonials from '../components/home/Testimonials'
 
+import IMGQoute from "../assets/bg/8.webp"
+
 
     const photo = [
       { img: photoImg1  , title:"Events photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
@@ -40,7 +42,7 @@ const Services = () => {
         <div className="coverIntro"> <img src={Intro} alt="" /> </div>
         <Divider />
 
-        <BlockQoute  />
+        <BlockQoute  classN=""  alt={true} Img2={IMGQoute}   />
         <Divider />
 
         <div className="photography">
