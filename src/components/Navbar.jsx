@@ -6,15 +6,15 @@ import { useTranslation } from 'react-i18next';
 
 
 
-// Vediography
-// title:"Exhibitions, Conference & Trade Show Filming" 
-// title:"Corporate Films"                              
-// title:"Event Filming"                                
-// title:"Behind-the Scene Videos"                      
-// title:"Fashion Videography"                          
-// title:"Promotional Videos for Product & Brand"       
-// title:"YouTube/Facebook/Instagram Short Ads"         
-// title:"Real Estate Product Demo"     
+// vediography
+// exhibitions-conference
+// corporate-films
+// event-filming
+// behind-the-scene-videos
+// fashion-videography
+// promotional-videos
+// short-ads
+// real-estate-product 
 
 
 // photography 
@@ -59,6 +59,7 @@ const Navbar = memo(() => {
 
   const navigate = useNavigate()
   const [top , settop] = useState(false)
+
   useEffect(_=>{
     const handelScroll =  _=> window.scrollY > 50 ? settop("up-anything") : settop("")
     window.addEventListener("scroll" , handelScroll)
@@ -76,8 +77,14 @@ const Navbar = memo(() => {
       navLinks.style.left = "-100%";
       }
 
+
   let htmlcssArrow = document.querySelector(".Navbar .htmlcss-arrow");
   htmlcssArrow.onclick = function() {
+  navLinks.classList.toggle("show1");
+  }
+
+  let jsArrow = document.querySelector(".Navbar .js-arrow");
+  jsArrow.onclick = function() {
   navLinks.classList.toggle("show1");
   }
 
@@ -111,10 +118,10 @@ const Navbar = memo(() => {
           
           <ul className="links">
             <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/")}><Link className={pathname == "/" ? "active":""} to="/">   {t("Nav.li1")}  </Link></li>
-            <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li>
+            {/* <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li> */}
             
             
-            <li data-aos="fade-down" data-aos-delay="300" ><Link  >Photography</Link>
+            <li data-aos="fade-down" className='html' data-aos-delay="300" ><Link  >Photography</Link>
               <i className='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
               <ul className="htmlCss-sub-menu sub-menu">
                 <li   onClick={_=> Navigate("/events-photography")}><Link className={pathname == "/events-photography" ? "active":""}    to="/events-photography">  events photography </Link></li>
@@ -126,6 +133,21 @@ const Navbar = memo(() => {
                 <li   onClick={_=> Navigate("/hospitality-photography")}><Link className={pathname == "/hospitality-photography" ? "active":""}    to="/hospitality-photography">  hospitality photography </Link></li>
                 <li   onClick={_=> Navigate("/real-Estate-photography")}><Link className={pathname == "/real-Estate-photography" ? "active":""}    to="/real-Estate-photography">  real Estate photography </Link></li>
                 <li   onClick={_=> Navigate("/trade-Shows-photography")}><Link className={pathname == "/trade-Shows-photography" ? "active":""}    to="/trade-Shows-photography">  trade Shows photography </Link></li>
+
+              </ul>
+            </li>
+
+            <li data-aos="fade-down" className='js' data-aos-delay="300" ><Link  >Videography</Link>
+              <i className='bx bxs-chevron-down js-arrow arrow '></i>
+              <ul className="js-sub-menu sub-menu">
+                <li   onClick={_=> Navigate("/exhibitions-conference" )}>  <Link className={pathname == "/exhibitions-conference" ? "active":""}    to="/exhibitions-conference" >   Exhibitions Conference </Link></li>
+                <li   onClick={_=> Navigate("/corporate-films"        )}>         <Link className={pathname == "/corporate-films" ? "active":""}    to="/corporate-films" >   Corporate Films </Link></li>
+                <li   onClick={_=> Navigate("/event-filming"          )}>           <Link className={pathname == "/event-filming" ? "active":""}    to="/event-filming" >   Event Filming </Link></li>
+                <li   onClick={_=> Navigate("/behind-the-scene-videos")}> <Link className={pathname == "/behind-the-scene-videos" ? "active":""}    to="/behind-the-scene-videos" >   Behind-the Scene Videos </Link></li>
+                <li   onClick={_=> Navigate("/fashion-videography"    )}>     <Link className={pathname == "/fashion-videography" ? "active":""}    to="/fashion-videography" >   Fashion Videography </Link></li>
+                <li   onClick={_=> Navigate("/promotional-videos"     )}>      <Link className={pathname == "/promotional-videos" ? "active":""}    to="/promotional-videos" >   Promotional Videos </Link></li>
+                <li   onClick={_=> Navigate("/short-ads"              )}>               <Link className={pathname == "/short-ads" ? "active":""}    to="/short-ads" >   Short Ads </Link></li>
+                <li   onClick={_=> Navigate("/real-estate-product"    )}>    <Link className={pathname == "/real-estate-product" ? "active":""}    to="/real-estate-product" >   Real Estate Product  </Link></li>
 
               </ul>
             </li>

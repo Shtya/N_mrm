@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import FixedImg from "../../assets/bg/33.webp"
 
 import photoImg4 from '../../assets/services/4.webp'
+import { useNavigate } from 'react-router'
 
 
 
@@ -33,6 +34,8 @@ import photoImg4 from '../../assets/services/4.webp'
 const Services = ({FixedImg}) => {
   const [data , setdata] = useState(photo)
   const [type , settype ]= useState("photo")
+  const navigat = useNavigate() ;
+
   const handleClick = (e)=>{
     e == "photo" ? setdata(photo) : setdata(vedio) ;
     settype(e)
@@ -42,7 +45,7 @@ const Services = ({FixedImg}) => {
         <div className="bgCover3" style={{background:`url(${FixedImg})`}}> </div>
         <div className="container">
 
-                <div className="h1-head"> Our Services </div> 
+                <div className="h1-head" onClick={_=> navigat("/services")} style={{cursor:"pointer"}}> Our Services </div> 
                 <div className="header"> 
                   <li className={`${type == "photo" ? "active" : ""}`} onClick={_=> handleClick("photo")}>Photography</li>
                   <li className={`${type == "vedio" ? "active" : ""}`} onClick={_=> handleClick("vedio")}>Vediography</li>
@@ -61,6 +64,7 @@ const Services = ({FixedImg}) => {
                 </div>
 
         </div>
+        <div className="bt" onClick={_=> navigat("/services")}> see more </div>
     </div>
   )
 }

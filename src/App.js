@@ -40,6 +40,14 @@ const App = () => {
         <Route  path='/real-Estate-photography'    element={<Food />} />                           
         <Route  path='/trade-Shows-photography'    element={<Food />} />                           
 
+        <Route  path="/exhibitions-conference"     element={<Food />} />                           
+        <Route  path="/corporate-films"            element={<Food />} />                           
+        <Route  path="/event-filming"              element={<Food />} />                           
+        <Route  path="/behind-the-scene-videos"    element={<Food />} />                           
+        <Route  path="/fashion-videography"        element={<Food />} />                           
+        <Route  path="/promotional-videos"         element={<Food />} />                           
+        <Route  path="/short-ads"                  element={<Food />} />                           
+        <Route  path="/real-estate-product"        element={<Food />} />                           
       </Routes>
       <Footer />
     </div>
