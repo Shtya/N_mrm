@@ -942,6 +942,37 @@ footer .bottom .last a {
   overflow: hidden;
   position: relative;
 }
+.Home .Hero2 .list .item:nth-child(1) {
+  z-index: 1;
+}
+.Home .Hero2 .list .item:nth-child(1) .author, .Home .Hero2 .list .item:nth-child(1) .title, .Home .Hero2 .list .item:nth-child(1) .topic, .Home .Hero2 .list .item:nth-child(1) .des, .Home .Hero2 .list .item:nth-child(1) .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear forwards;
+}
+.Home .Hero2 .list .item:nth-child(1) .author.autor, .Home .Hero2 .list .item:nth-child(1) .title.autor, .Home .Hero2 .list .item:nth-child(1) .topic.autor, .Home .Hero2 .list .item:nth-child(1) .des.autor, .Home .Hero2 .list .item:nth-child(1) .buttons.autor {
+  animation-delay: 1.2s;
+}
+.Home .Hero2 .list .item:nth-child(1) .author.title, .Home .Hero2 .list .item:nth-child(1) .title.title, .Home .Hero2 .list .item:nth-child(1) .topic.title, .Home .Hero2 .list .item:nth-child(1) .des.title, .Home .Hero2 .list .item:nth-child(1) .buttons.title {
+  animation-delay: 1.4s;
+}
+.Home .Hero2 .list .item:nth-child(1) .author.topic, .Home .Hero2 .list .item:nth-child(1) .title.topic, .Home .Hero2 .list .item:nth-child(1) .topic.topic, .Home .Hero2 .list .item:nth-child(1) .des.topic, .Home .Hero2 .list .item:nth-child(1) .buttons.topic {
+  animation-delay: 1.6s;
+}
+.Home .Hero2 .list .item:nth-child(1) .author.des, .Home .Hero2 .list .item:nth-child(1) .title.des, .Home .Hero2 .list .item:nth-child(1) .topic.des, .Home .Hero2 .list .item:nth-child(1) .des.des, .Home .Hero2 .list .item:nth-child(1) .buttons.des {
+  animation-delay: 1.8s;
+}
+.Home .Hero2 .list .item:nth-child(1) .author.buttons, .Home .Hero2 .list .item:nth-child(1) .title.buttons, .Home .Hero2 .list .item:nth-child(1) .topic.buttons, .Home .Hero2 .list .item:nth-child(1) .des.buttons, .Home .Hero2 .list .item:nth-child(1) .buttons.buttons {
+  animation-delay: 2s;
+}
+@keyframes showContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
 .Home .Hero2 .list .item {
   position: absolute;
   inset: 0 0 0 0;
@@ -994,6 +1025,69 @@ footer .bottom .last a {
   background-color: transparent;
   color: #eee;
   border: 1px solid #eee;
+}
+.Home .Hero2 .thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+.Home .Hero2 .thumbnail .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+.Home .Hero2 .thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.Home .Hero2 .thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.Home .Hero2 .thumbnail .item .content .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.Home .Hero2 .arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Home .Hero2 .arrows div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(238, 238, 238, 0.2666666667);
+  font-family: monospace;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transform: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Home .Hero2 .arrows div:hover {
+  background-color: #eee;
+  color: #555;
 }
 .Home .hero {
   max-height: 100vh;
@@ -2081,7 +2175,6 @@ footer .bottom .last a {
   position: relative;
   background-color: var(--main);
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -2098,15 +2191,35 @@ footer .bottom .last a {
 .portfolio .project .container .box {
   width: 100%;
   height: 900px;
-  background-color: rgba(0, 0, 0, 0.5333333333);
+  background-color: rgba(0, 0, 0, 0.263);
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  transition: 0.3s;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+@media (max-width: 1400px) {
+  .portfolio .project .container .box {
+    height: 800px;
+  }
+}
+@media (max-width: 1100px) {
+  .portfolio .project .container .box {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio .project .container .box {
+    margin-bottom: 10px;
+  }
 }
 .portfolio .project .container .box .coverImg {
   width: 100%;
   height: 100%;
   border: 2px solid rgba(255, 255, 255, 0.12);
   position: relative;
+  transition: 0.3s;
 }
 .portfolio .project .container .box .coverImg::after {
   content: "";
@@ -2133,6 +2246,12 @@ footer .bottom .last a {
 .portfolio .project .container .box .coverImg .layout {
   width: 100%;
   height: 100%;
+  transition: 0.3s;
+}
+@media (max-width: 1100px) {
+  .portfolio .project .container .box .coverImg .layout {
+    padding-bottom: 70px;
+  }
 }
 .portfolio .project .container .box .coverImg .layout .img {
   width: 100%;
@@ -2140,12 +2259,21 @@ footer .bottom .last a {
   -o-object-fit: cover;
      object-fit: cover;
   transform: 0.3s;
+  margin-bottom: -5px;
 }
 .portfolio .project .container .box .coverImg .text {
   position: absolute;
   top: 50px;
   left: 50px;
   z-index: 12;
+}
+@media (max-width: 900px) {
+  .portfolio .project .container .box .coverImg .text .h5 {
+    font-size: 14px !important;
+  }
+  .portfolio .project .container .box .coverImg .text .h6 {
+    font-size: 20px !important;
+  }
 }
 .portfolio .project .container .box .coverImg .text * {
   font-family: "Poppins", sans-serif !important;
@@ -2183,6 +2311,12 @@ footer .bottom .last a {
   transition: 0.3s;
   border-top: 1px solid rgba(255, 255, 255, 0.024);
 }
+@media (max-width: 1100px) {
+  .portfolio .project .container .box .coverImg .allImg {
+    bottom: 10px !important;
+    gap: 5px;
+  }
+}
 .portfolio .project .container .box .coverImg .allImg:hover {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -2191,6 +2325,30 @@ footer .bottom .last a {
   width: 190px;
   height: 220px;
   border-radius: unset;
+}
+@media (max-width: 1400px) {
+  .portfolio .project .container .box .coverImg .allImg:hover img {
+    width: 150px;
+    height: 180px;
+  }
+}
+@media (max-width: 1100px) {
+  .portfolio .project .container .box .coverImg .allImg:hover img {
+    width: 100px;
+    height: 120px;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio .project .container .box .coverImg .allImg:hover img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 800px) {
+  .portfolio .project .container .box .coverImg .allImg:hover img {
+    width: 50px;
+    height: 50px;
+  }
 }
 .portfolio .project .container .box .coverImg .allImg img {
   width: 100px;
@@ -2201,6 +2359,12 @@ footer .bottom .last a {
      object-fit: cover;
   transition: 0.3s;
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  .portfolio .project .container .box .coverImg .allImg img {
+    width: 50px;
+    height: 50px;
+  }
 }
 .portfolio .project .container .box .coverImg .allImg img:hover {
   opacity: 0.6;
