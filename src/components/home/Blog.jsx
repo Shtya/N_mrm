@@ -44,7 +44,6 @@ const blog = [
 
 
 const Blog = () => {
-  const Navigate = useNavigate() ;
   
   return (
     <div className="blog ">

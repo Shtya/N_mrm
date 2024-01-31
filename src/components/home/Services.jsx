@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import photoImg4 from '../../assets/services/4.webp'
 import { useNavigate } from 'react-router'
+import Parallax from '../Parallax'
 
 
 
@@ -42,8 +43,7 @@ const Services = ({FixedImg}) => {
   }
   return (
     <div className='services'>
-
-        <div className="bgCover3" style={{background:`url(${FixedImg})`}}> </div>
+        <div className="bgCover3"  style={{background:`url(${FixedImg})`}}> </div>
         <div className="container">
 
                 <div className="h1-head" onClick={_=> navigat("/services")}   style={{cursor:"pointer"}}> Our Services </div> 

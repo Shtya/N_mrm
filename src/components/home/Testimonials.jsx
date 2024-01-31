@@ -6,16 +6,21 @@ import Slider from "react-slick";
 var settings = {
   dots: true,
   infinite: true,
-  speed: 1500,
-  autoplaySpeed: 0 ,
+  speed: 2000,
+  autoplaySpeed: 10000 ,
   slidesToShow: 2,
   slidesToScroll: 1 , 
-//   autoplay:true ,
+  autoplay:true ,
+  
+
 responsive: [{
       breakpoint: 800,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1 ,
+        fade: true,
+        autoplaySpeed: 5000 ,
+
       }
     },
 ]

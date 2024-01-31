@@ -90,20 +90,24 @@ const Services = () => {
 
         </div>
         <Divider />
-        
 
-        <Why />
+
+        <Testimonials classN="bgCover" />
         <Divider />
-
+        
         <BlockQoute classN="bgCover2" Img={FixedImg} />
         <Divider />
 
 
-        <Contact FixedImg={FixedImg1} classN="bgCover" />
+        <Why />
         <Divider />
 
+        
 
-        <Testimonials FixedImg={FixedImg} classN="bgCover2" />
+
+        <Contact FixedImg={FixedImg} classN="bgCover2" notbg={false} />
+
+
 
 
 

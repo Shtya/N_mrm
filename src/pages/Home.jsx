@@ -10,12 +10,14 @@ import Contact from '../components/home/Contact-us'
 // import FixedImg from "../assets/bg/21.webp"
 import FixedImg from "../assets/bg/3.webp"
 import Divider from '../components/Divider'
+import Hero2 from '../components/Hero2'
 
 
 const Home = () => {
     
   return (
     <div className='Home'>
+      <Hero2 />
       <Hero />
       <Divider />
 

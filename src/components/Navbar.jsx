@@ -92,10 +92,6 @@ const Navbar = memo(() => {
   navLinks.classList.toggle("show1");
   }
 
-  // let PhotoArrow = document.querySelector(".Navbar .htmlcss-arrow");
-  // PhotoArrow.onclick = function() {
-  // navLinks.classList.toggle("show2");
-  // }
     } ,[])
 
     const Navigate = (path)=>{
@@ -122,6 +118,7 @@ const Navbar = memo(() => {
           
           <ul className="links">
             <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/")}><Link className={pathname == "/" ? "active":""} to="/">   {t("Nav.li1")}  </Link></li>
+            <li data-aos="fade-down" data-aos-delay="200" onClick={_=> Navigate("/portfolio")}><Link className={pathname == "/portfolio" ? "active":""} to="/portfolio">  portfolio </Link></li>
             {/* <li data-aos="fade-down" data-aos-delay="250" onClick={_=> Navigate("/services")}><Link className={pathname == "/services" ? "active":""} to="/services"> Services </Link></li> */}
             
             
