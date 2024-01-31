@@ -3690,72 +3690,6 @@ footer .bottom .last a {
   display: flex !important;
 }
 
-.bgCover3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-}
-.bgCover3::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.379);
-}
-
-.bgCover2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.bgCover2::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.267);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.bgCover2 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.bgCover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% + 10px);
-  height: 100vh;
-  z-index: -1;
-  left: -5px;
-}
-.bgCover::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.378);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-}
-.bgCover img {
-  width: 100%;
-  height: 100%;
-}
-
 .qoutation {
   min-height: 300px;
   display: flex;
@@ -3890,6 +3824,135 @@ footer .bottom .last a {
   .qoutation .container .text * {
     text-align: center;
   }
+}
+
+.HeroComponent {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.HeroComponent .bgCover3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  inset: 0 0 0 0;
+}
+.HeroComponent .swiper_container {
+  position: relative;
+}
+.HeroComponent .swiper-slide {
+  width: 500px;
+  height: 600px;
+  position: relative;
+  border: 1px solid;
+}
+@media (max-width: 700px) {
+  .HeroComponent .swiper-slide {
+    width: 300px;
+    height: 450px;
+  }
+}
+.HeroComponent .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.HeroComponent .swiper-slide-shadow-left,
+.HeroComponent .swiper-slide-shadow-right {
+  display: none;
+}
+.HeroComponent .slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HeroComponent .swiper-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+}
+.HeroComponent .swiper-pagination .swiper-pagination-bullet {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  transition: 0.3s;
+}
+.HeroComponent .swiper-pagination .swiper-pagination-bullet:hover {
+  scale: 1.3;
+}
+.HeroComponent .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--text-color);
+}
+
+.bgCover3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.bgCover3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.379);
+}
+
+.bgCover2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bgCover2::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.267);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.bgCover2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bgCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% + 10px);
+  height: 100vh;
+  z-index: -1;
+  left: -5px;
+}
+.bgCover::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.378);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.bgCover img {
+  width: 100%;
+  height: 100%;
 }
 
 .Divider {

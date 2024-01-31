@@ -13,6 +13,7 @@ import P_Imgmain6 from  "../assets/portfolio/1.jpg"
 
 import { Link } from 'react-router-dom'
 import Divider from '../components/Divider';
+import HeroComponent from '../components/HeroComponent';
 
 
 const Projects = () => {
@@ -41,15 +42,12 @@ const Projects = () => {
   setProjects(updatedProjects)
   }
 
-  const Pagination = (data) =>{
-    Setnext(data)
-    window.scrollTo({ top: 600, behavior: 'smooth' });
-  }
-
 
   return (
     <div className='portfolio' >
-      <div className="coverIntro "> <img src={ImgIntro} alt="intro page contains word 'about us '" /></div>
+      <HeroComponent />
+
+      {/* <div className="coverIntro "> <img src={ImgIntro} alt="intro page contains word 'about us '" /></div> */}
         <Divider />
       <div className="project">
       <div className="h1-head">OUR PORTFOLIO</div>
