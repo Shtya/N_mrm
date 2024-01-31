@@ -1077,7 +1077,7 @@ footer {
     display: flex;
     gap: 10px;
     align-items: center;
-    
+    z-index: 1000;
     div{
       width: 40px;
       height: 40px;
@@ -1093,6 +1093,26 @@ footer {
       &:hover{
         background-color: #eee;
         color: #555;
+      }
+    }
+   }
+
+   .carousel.next .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImg .5s linear 1 forwards;
+
+    @keyframes showImg{
+      to{
+        width:100% ;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border: 0;
       }
     }
    }

@@ -1069,6 +1069,7 @@ footer .bottom .last a {
   display: flex;
   gap: 10px;
   align-items: center;
+  z-index: 1000;
 }
 .Home .Hero2 .arrows div {
   width: 40px;
@@ -1088,6 +1089,24 @@ footer .bottom .last a {
 .Home .Hero2 .arrows div:hover {
   background-color: #eee;
   color: #555;
+}
+.Home .Hero2 .carousel.next .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: showImg 0.5s linear 1 forwards;
+}
+@keyframes showImg {
+  to {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border: 0;
+  }
 }
 .Home .hero {
   max-height: 100vh;
