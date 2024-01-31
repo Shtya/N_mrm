@@ -13,6 +13,7 @@ import Error from './pages/Error.jsx'
 import Food from './pages/video/Food.jsx'
 import CircleMouseTracker from './components/Circle.jsx'
 import Portfolio from './pages/Portfolio.jsx'
+import Blog_Details from './components/Blog_Details.jsx'
 
 export const Social_Media = ["https://www.facebook.com/MRMadvertisingDubai" , "https://www.instagram.com/mrmadvertising/" , "https://www.linkedin.com/company/mrm-advertising-media" , "https://api.whatsapp.com/send?phone=+971561384496&text=Hello%2C%20world!"]
 export const Animate = "zoom-in"
@@ -30,6 +31,7 @@ const App = () => {
         <Route  path='/about-us'    element={<About />} />                           
         <Route  path='/contact-us'    element={<Contact />} />                           
         <Route  path='/blogs'    element={<Blogs />} />                           
+        <Route  path='/blogs/:id'    element={<Blog_Details />} />                           
         <Route  path='/services'    element={<Services />} />                           
         <Route  path='/portfolio'    element={<Portfolio />} />                           
         <Route  path='*'    element={<Error />} />                           

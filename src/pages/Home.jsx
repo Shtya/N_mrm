@@ -12,6 +12,16 @@ import FixedImg from "../assets/bg/3.webp"
 import Divider from '../components/Divider'
 import Hero2 from '../components/Hero2'
 
+import Imgblog from "../assets/home/test/  (7).webp"
+
+const blog = [
+  {img : Imgblog ,  title:"Events photography" , desc:"From corporate gatherings to unique celebrations, we capture the essence of your events, ensuring that every moment is preserved." , data:"15" , data2:"May"},
+  {img : Imgblog ,  title:"Fashion photography" , desc:"Our fashion photography services offer high-quality images that showcase your products or the latest trends." , data:"16" , data2:"May"},
+  {img : Imgblog ,  title:"Business Portraits & Headshots" , desc:"Make a lasting impression with professional headshots and portraits that reflect the essence of your business." , data:"17" , data2:"May"},
+  {img : Imgblog ,  title:"Food photography" , desc:"Showcase your culinary creations with mouthwatering food photography that entices your audience." , data:"18" , data2:"May"},
+  {img : Imgblog ,  title:"Product photography" , desc:"Highlight the details and features of your products with our product photography services." , data:"17" , data2:"May"},
+  {img : Imgblog ,  title:"Automotive photography" , desc:"From sleek cars to rugged vehicles, our automotive photography captures the beauty and power of automobiles." , data:"18" , data2:"May"},
+]
 
 const Home = () => {
     
@@ -37,7 +47,7 @@ const Home = () => {
       <Divider />
 
 
-      <Blog />
+      <Blog blog={blog} title="Latest Blogs" />
       <Divider />
 
       

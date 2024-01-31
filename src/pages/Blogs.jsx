@@ -3,6 +3,7 @@ import Imgblog from "../assets/blogs/cover2.webp"
 import BlogIntro from "../assets/contact/intro.webp"
 import FixedImg from "../assets/bg/34.webp"
 import Divider from '../components/Divider'
+import { useNavigate } from 'react-router'
 
 const blog = [
     {img : Imgblog ,  title:"Lorem ipsum sit, amet consectetur adipisicing elit. Obcaecati, vel." , desc:"From corporate gatherings to unique celebrations, we capture the essence of your events, ensuring that every moment is preserved." , data:"15" , data2:"May"},
@@ -25,6 +26,8 @@ const blog = [
 
 
 const Blogs = () => {
+    const navigate = useNavigate()
+
     const [Next , Setnext] =  useState({from:0 , to:6})
     const Pagination = (data) =>{
         Setnext(data)
@@ -54,6 +57,7 @@ const Blogs = () => {
             <div className="text">
               <div className="h3"> {e.title} </div>
               <div className="p"> {e.desc} </div>
+              <div className="bt" onClick={_=> navigate("/blogs/id")} >More</div>
             </div>
           </div>
             )) }
