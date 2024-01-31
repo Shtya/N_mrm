@@ -17,8 +17,8 @@ const Home = () => {
     
   return (
     <div className='Home'>
-      {/* <Hero2 /> */}
-      <Hero />
+      <Hero2 />
+      {/* <Hero /> */}
       <Divider />
 
       

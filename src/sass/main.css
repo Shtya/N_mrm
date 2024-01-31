@@ -941,49 +941,32 @@ footer .bottom .last a {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  /* thumbail */
+  /* arrows */
+  /* animation */
+  /* create animation when next click */
+  /* running time */
+  /* prev click */
 }
-.Home .Hero2 .list .item:nth-child(1) {
-  z-index: 1;
+.Home .Hero2 .carousel {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.Home .Hero2 .list .item:nth-child(1) .author, .Home .Hero2 .list .item:nth-child(1) .title, .Home .Hero2 .list .item:nth-child(1) .topic, .Home .Hero2 .list .item:nth-child(1) .des, .Home .Hero2 .list .item:nth-child(1) .buttons {
-  transform: translateY(50px);
-  filter: blur(20px);
-  opacity: 0;
-  animation: showContent 0.5s 1s linear forwards;
-}
-.Home .Hero2 .list .item:nth-child(1) .author.autor, .Home .Hero2 .list .item:nth-child(1) .title.autor, .Home .Hero2 .list .item:nth-child(1) .topic.autor, .Home .Hero2 .list .item:nth-child(1) .des.autor, .Home .Hero2 .list .item:nth-child(1) .buttons.autor {
-  animation-delay: 1.2s;
-}
-.Home .Hero2 .list .item:nth-child(1) .author.title, .Home .Hero2 .list .item:nth-child(1) .title.title, .Home .Hero2 .list .item:nth-child(1) .topic.title, .Home .Hero2 .list .item:nth-child(1) .des.title, .Home .Hero2 .list .item:nth-child(1) .buttons.title {
-  animation-delay: 1.4s;
-}
-.Home .Hero2 .list .item:nth-child(1) .author.topic, .Home .Hero2 .list .item:nth-child(1) .title.topic, .Home .Hero2 .list .item:nth-child(1) .topic.topic, .Home .Hero2 .list .item:nth-child(1) .des.topic, .Home .Hero2 .list .item:nth-child(1) .buttons.topic {
-  animation-delay: 1.6s;
-}
-.Home .Hero2 .list .item:nth-child(1) .author.des, .Home .Hero2 .list .item:nth-child(1) .title.des, .Home .Hero2 .list .item:nth-child(1) .topic.des, .Home .Hero2 .list .item:nth-child(1) .des.des, .Home .Hero2 .list .item:nth-child(1) .buttons.des {
-  animation-delay: 1.8s;
-}
-.Home .Hero2 .list .item:nth-child(1) .author.buttons, .Home .Hero2 .list .item:nth-child(1) .title.buttons, .Home .Hero2 .list .item:nth-child(1) .topic.buttons, .Home .Hero2 .list .item:nth-child(1) .des.buttons, .Home .Hero2 .list .item:nth-child(1) .buttons.buttons {
-  animation-delay: 2s;
-}
-@keyframes showContent {
-  to {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-  }
-}
-.Home .Hero2 .list .item {
+.Home .Hero2 .carousel .list .item {
+  width: 100%;
+  height: 100%;
   position: absolute;
   inset: 0 0 0 0;
 }
-.Home .Hero2 .list .item img {
+.Home .Hero2 .carousel .list .item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.Home .Hero2 .list .item .content {
+.Home .Hero2 .carousel .list .item .content {
   position: absolute;
   top: 20%;
   width: 1140px;
@@ -991,40 +974,40 @@ footer .bottom .last a {
   left: 50%;
   transform: translateX(-50%);
   padding-right: 30%;
-  text-shadow: 0 5px 10px #004;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2666666667);
 }
-.Home .Hero2 .list .item .content .author {
+.Home .Hero2 .carousel .list .item .content .title, .Home .Hero2 .carousel .list .item .content .topic {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+.Home .Hero2 .carousel .list .item .content .author {
   font-weight: bold;
   letter-spacing: 10px;
 }
-.Home .Hero2 .list .item .content .title, .Home .Hero2 .list .item .content .topic {
-  font-weight: bold;
-  font-size: 5em;
-  list-style: 1.3em;
-  text-transform: uppercase;
-}
-.Home .Hero2 .list .item .content .title.topic, .Home .Hero2 .list .item .content .topic.topic {
+.Home .Hero2 .carousel .list .item .content .topic {
   color: var(--text-color);
 }
-.Home .Hero2 .list .item .content .buttons {
+.Home .Hero2 .carousel .list .item .buttons {
   display: grid;
   grid-template-columns: repeat(2, 130px);
-  justify-content: center;
-  grid-template-columns: 40px;
+  grid-template-rows: 40px;
   gap: 5px;
   margin-top: 20px;
 }
-.Home .Hero2 .list .item .content .buttons button {
+.Home .Hero2 .carousel .list .item .buttons button {
   border: none;
   background-color: #eee;
   letter-spacing: 3px;
-  font-weight: 500;
   font-family: Poppins;
+  font-weight: 500;
 }
-.Home .Hero2 .list .item .content .buttons .bt1:nth-child(2) {
+.Home .Hero2 .carousel .list .item .buttons button:nth-child(2) {
   background-color: transparent;
+  border: 1px solid #fff;
   color: #eee;
-  border: 1px solid #eee;
 }
 .Home .Hero2 .thumbnail {
   position: absolute;
@@ -1042,70 +1025,185 @@ footer .bottom .last a {
   flex-shrink: 0;
   position: relative;
 }
-.Home .Hero2 .thumbnail .item img {
+.Home .Hero2 .thumbnail img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
 }
-.Home .Hero2 .thumbnail .item .content {
+.Home .Hero2 .thumbnail .content {
+  color: #fff;
   position: absolute;
   bottom: 10px;
   left: 10px;
   right: 10px;
 }
-.Home .Hero2 .thumbnail .item .content .title {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--text-color);
+.Home .Hero2 .thumbnail .content .title {
+  font-weight: 500;
+}
+.Home .Hero2 .thumbnail .content .description {
+  font-weight: 300;
 }
 .Home .Hero2 .arrows {
   position: absolute;
   top: 80%;
   right: 52%;
+  z-index: 100;
   width: 300px;
   max-width: 30%;
   display: flex;
   gap: 10px;
   align-items: center;
-  z-index: 1000;
 }
-.Home .Hero2 .arrows div {
+.Home .Hero2 .arrows button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(238, 238, 238, 0.2666666667);
-  font-family: monospace;
+  border: none;
   color: #fff;
+  font-family: monospace;
   font-weight: bold;
-  font-size: 20px;
-  transform: 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: 0.5s;
   cursor: pointer;
 }
-.Home .Hero2 .arrows div:hover {
-  background-color: #eee;
-  color: #555;
+.Home .Hero2 .arrows button:hover {
+  background-color: #fff;
+  color: #000;
 }
-.Home .Hero2 .carousel.next .item:nth-child(1) img {
+.Home .Hero2 .carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+.Home .Hero2 .carousel .list .item:nth-child(1) .author, .Home .Hero2 .carousel .list .item:nth-child(1) .title, .Home .Hero2 .carousel .list .item:nth-child(1) .topic, .Home .Hero2 .carousel .list .item:nth-child(1) .des {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+.Home .Hero2 .carousel .list .item:nth-child(1) .author.title, .Home .Hero2 .carousel .list .item:nth-child(1) .title.title, .Home .Hero2 .carousel .list .item:nth-child(1) .topic.title, .Home .Hero2 .carousel .list .item:nth-child(1) .des.title {
+  animation-delay: 1s !important;
+}
+.Home .Hero2 .carousel .list .item:nth-child(1) .author.topic, .Home .Hero2 .carousel .list .item:nth-child(1) .title.topic, .Home .Hero2 .carousel .list .item:nth-child(1) .topic.topic, .Home .Hero2 .carousel .list .item:nth-child(1) .des.topic {
+  animation-delay: 1.2s !important;
+}
+.Home .Hero2 .carousel .list .item:nth-child(1) .author.des, .Home .Hero2 .carousel .list .item:nth-child(1) .title.des, .Home .Hero2 .carousel .list .item:nth-child(1) .topic.des, .Home .Hero2 .carousel .list .item:nth-child(1) .des.des {
+  animation-delay: 1.4s !important;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.Home .Hero2 .carousel.next .list .item:nth-child(1) img {
   width: 150px;
   height: 220px;
   position: absolute;
-  left: 50%;
   bottom: 50px;
-  border-radius: 20px;
-  animation: showImg 0.5s linear 1 forwards;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage 0.5s linear 1 forwards;
 }
-@keyframes showImg {
+@keyframes showImage {
   to {
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    left: 0;
-    bottom: 0;
-    border: 0;
+    border-radius: 0;
+  }
+}
+.Home .Hero2 .carousel.next .thumbnail .item:nth-last-child(1) {
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.Home .Hero2 .carousel.prev .list .item img {
+  z-index: 100;
+}
+@keyframes showThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+.Home .Hero2 .carousel.next .thumbnail {
+  animation: effectNext 0.5s linear 1 forwards;
+}
+@keyframes effectNext {
+  from {
+    transform: translateX(150px);
+  }
+}
+.Home .Hero2 .carousel .time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: var(--text-color);
+  left: 0;
+  top: 0;
+}
+.Home .Hero2 .carousel.next .time,
+.Home .Hero2 .carousel.prev .time {
+  animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) img {
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+}
+.Home .Hero2 .carousel.prev .thumbnail .item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.Home .Hero2 .carousel.next .arrows button,
+.Home .Hero2 .carousel.prev .arrows button {
+  pointer-events: none;
+}
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .author,
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .title,
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .topic,
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .des,
+.Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .buttons {
+  animation: contentOut 1.5s linear 1 forwards !important;
+}
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .Home .Hero2 .carousel .list .item .content {
+    padding-right: 0;
+  }
+  .Home .Hero2 .carousel .list .item .content .title {
+    font-size: 30px;
   }
 }
 .Home .hero {
