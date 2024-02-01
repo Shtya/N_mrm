@@ -25,10 +25,10 @@ const CircleMouseTracker = () => {
           width: '40px',
           height: '40px',
           borderRadius: '50%',
-          border: '2px solid #333',
-          boxShadow:"0 0 10px #444",
+          border: '2px solid #111',
+          boxShadow:"0 0 10px #222",
           userSelect:"unset",
-          touchAction:"none",
+          pointerEvents:"none",
         }}
       ></div>
     </div>

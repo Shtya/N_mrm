@@ -25,7 +25,7 @@ const App = () => {
     <div className='App'>
       <UP  />
       <Navbar />
-      {/* <CircleMouseTracker /> */}
+      <CircleMouseTracker />
       <Routes>
         <Route  path='/'    element={<Home />} />                           
         <Route  path='/about-us'    element={<About />} />                           

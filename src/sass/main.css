@@ -2986,28 +2986,6 @@ footer .bottom .last a {
      object-fit: cover;
 }
 
-.animation_text {
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100000000;
-  animation: Opacity2 3s linear infinite;
-}
-@keyframes Opacity2 {
-  0% {
-    background-color: black;
-  }
-  50% {
-    background-color: rgba(0, 0, 0, 0.528);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.152);
-  }
-}
-
 .services-pages {
   position: relative;
 }
@@ -3172,6 +3150,37 @@ footer .bottom .last a {
   top: 20px;
   font-weight: 700 !important;
   background-color: gold;
+}
+
+.animation_text {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000;
+  animation: Opacity2 2s ease-in-out forwards;
+  background-color: black;
+  -webkit-clip-path: circle(200% at 50% 50%);
+          clip-path: circle(200% at 50% 50%);
+}
+@keyframes Opacity2 {
+  0% {
+    background-color: black;
+    -webkit-clip-path: circle(200% at 50% 50%);
+            clip-path: circle(200% at 50% 50%);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.431);
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
 }
 
 .showImagePreview {
