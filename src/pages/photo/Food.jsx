@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import SERVICES_INTRO from '../../assets/GALLWEY/intro.webp' 
 import BlockQoute from '../../components/BlockQoute'
 
 import IMGQoute from "../../assets/bg/8.webp"
@@ -15,39 +14,39 @@ import Testimonials from '../../components/home/Testimonials'
 import FixedImg from "../../assets/bg/34.webp" ;
 import Divider from '../../components/Divider'
 import HeroComponent from '../../components/HeroComponent'
+import slide_image_1 from '../../assets/portfolio/img1.jpg';
+import slide_image_2 from '../../assets/portfolio/img2.jpg';
+import slide_image_3 from '../../assets/portfolio/img3.jpg';
+import slide_image_4 from '../../assets/portfolio/img4.jpg';
+import slide_image_5 from '../../assets/portfolio/img1.jpg';
+import slide_image_6 from '../../assets/portfolio/img3.jpg';
+import slide_image_7 from '../../assets/portfolio/img4.jpg';
+const HeroImages = [ {img : slide_image_1 }, {img : slide_image_2 }, {img : slide_image_3 }, {img : slide_image_4 }, {img : slide_image_5 }, {img : slide_image_6 }, {img : slide_image_7 },
+]
 
-import vedio1 from "../../assets/vediography/(1).jpg" ;
-import vedio2 from "../../assets/vediography/(2).jpg" ;
-import vedio3 from "../../assets/vediography/(3).jpg" ;
-import vedio4 from "../../assets/vediography/(4).jpg" ;
-import vedio5 from "../../assets/vediography/(5).jpg" ;
-import vedio6 from "../../assets/vediography/(6).jpg" ;
-import vedio7 from "../../assets/vediography/(7).jpg" ;
-import vedio8 from "../../assets/vediography/(8).jpg" ;
 
 const photo = [
-    { img: vedio1 , id:"1" },
-    { img: vedio2 , id:"2" },
-    { img: vedio3 , id:"3" },
-    { img: vedio4 , id:"4" },
-    { img: vedio5 , id:"5" },
-    { img: vedio6 , id:"6" },
-    { img: vedio7 , id:"7" },
-    { img: vedio8 , id:"8" },
-    { img: vedio1 , id:"9" },
-    { img: vedio2 , id:"10" },
-    { img: vedio3 , id:"11" },
-    { img: vedio4 , id:"12" },
-    { img: vedio1 , id:"13" },
-    { img: vedio2 , id:"14" },
-    { img: vedio3 , id:"15" },
-    { img: vedio4 , id:"16" },
-    { img: vedio5 , id:"17" },
-    { img: vedio6 , id:"18" },
-    { img: vedio7 , id:"19" },
-    { img: vedio8 , id:"20" },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
+    { img: photoImg1 },
+    { img: photoImg2 },
   ]
-
 
 
 const Food = () => {
@@ -59,8 +58,8 @@ const Food = () => {
 
   return (
     <div className='Services1 services-pages'>
-        {/* <div className="coverIntro"> <img src={SERVICES_INTRO} alt="" /> </div> */}
-        <HeroComponent images={photo} />
+        <HeroComponent images={HeroImages} />
+
 
         {/* <Divider /> */}
         <BlockQoute classN="bgCover" Img={IMG1} Img2={IMGQoute}  />
@@ -72,7 +71,7 @@ const Food = () => {
             <div className="h1-head"> Our Fashion Work </div> 
             <div className="boxes">
                 {photo.slice(count.from , count.to).map((e,index)=> (
-                    <div className="box" key={index} id={e.id}> 
+                    <div className="box" key={index}> 
                     <span></span>
                     <span></span>
                         <div className="innerImg"> <img onClick={_=> setshowImg(e.img)}  src={e.img} alt="" /> </div>

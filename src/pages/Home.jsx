@@ -13,7 +13,6 @@ import Divider from '../components/Divider'
 import Hero2 from '../components/Hero2'
 
 import Imgblog from "../assets/home/test/  (7).webp"
-import HeroComponent2 from '../components/HeroComponent2'
 
 const blog = [
   {img : Imgblog ,  title:"Events photography" , desc:"From corporate gatherings to unique celebrations, we capture the essence of your events, ensuring that every moment is preserved." , data:"15" , data2:"May"},
@@ -28,13 +27,15 @@ const Home = () => {
     
   return (
     <div className='Home'>
-            
+      {/* <HeroComponent3 /> */}
+
+
       <Hero2 />
       <Divider />
 
       
-      {/* <About /> */}
-      {/* <Divider /> */}
+      <About />
+      <Divider />
 
       <Services FixedImg={FixedImg} />
       <Divider />

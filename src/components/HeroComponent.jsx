@@ -8,16 +8,11 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation , Autoplay } from 'swiper/modules';
 
-import slide_image_1 from '../assets/portfolio/img1.jpg';
-import slide_image_2 from '../assets/portfolio/img2.jpg';
-import slide_image_3 from '../assets/portfolio/img3.jpg';
-import slide_image_4 from '../assets/portfolio/img4.jpg';
-import slide_image_5 from '../assets/portfolio/img1.jpg';
-import slide_image_6 from '../assets/portfolio/img3.jpg';
-import slide_image_7 from '../assets/portfolio/img4.jpg';
-
 import FixedImg from "../assets/bg/4.webp"
-function HeroComponent() {
+import { useNavigate } from 'react-router';
+function HeroComponent({images}) {
+    const navigate = useNavigate()
+
     const setting = {
         effect : 'coverflow' ,
         grabCursor : true ,
@@ -41,15 +36,12 @@ function HeroComponent() {
     <div className="container">
 
       <Swiper {...setting}  >
-        <SwiperSlide> <img src={slide_image_1} alt="slide_image" /> </SwiperSlide>
-        <SwiperSlide> <img src={slide_image_2} alt="slide_image" /> </SwiperSlide>
-        <SwiperSlide> <img src={slide_image_3} alt="slide_image" /> </SwiperSlide>
-        <SwiperSlide> <img src={slide_image_4} alt="slide_image" /> </SwiperSlide>
-        <SwiperSlide> <img src={slide_image_5} alt="slide_image" /> </SwiperSlide>
-        <SwiperSlide> <img src={slide_image_6} alt="slide_image" /> </SwiperSlide>
-        
-        
+        {
+          images?.slice(0 , 7)?.map((e,index)=>(
+            <SwiperSlide key={index}> <a href={`#${e.id}`}>  <img src={e.img}  alt="slide_image" />  </a>  </SwiperSlide>
+          ))
 
+        }
         <div className="slider-controler"> <div className="swiper-pagination"></div> </div>
       </Swiper>
     </div>

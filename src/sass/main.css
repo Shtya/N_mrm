@@ -45,10 +45,11 @@ body {
   color: white;
   background-color: #181818;
   font-family: "Open Sans", Arial;
+  scroll-behavior: smooth !important;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 .container, .container1 {
@@ -1213,6 +1214,7 @@ footer .bottom .last a {
   }
 }
 .Home .about {
+  height: 800px;
   position: relative;
   padding: 50px 0;
   display: flex;
@@ -1220,15 +1222,15 @@ footer .bottom .last a {
   align-items: center;
   justify-content: center;
 }
+.Home .about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
 @media (max-width: 900px) {
-  .Home .about {
-    min-height: 100vh;
-    height: unset;
-  }
-  .Home .about .container {
-    min-height: 100% !important;
-    height: unset !important;
-  }
   .Home .about .coverImg {
     margin-bottom: 20px;
     order: -1;
@@ -1243,8 +1245,10 @@ footer .bottom .last a {
   }
   .Home .about .container .coverImg {
     order: -1;
-    width: 100% !important;
-    height: 250px !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: 300px !important;
+    margin: 0 auto 10px;
   }
   .Home .about .container .boxes .box {
     text-align: center !important;
@@ -1314,12 +1318,24 @@ footer .bottom .last a {
   }
 }
 @media (max-width: 900px) {
+  .Home .about {
+    min-height: 100vh;
+    align-items: unset;
+    justify-content: unset;
+    height: unset !important;
+  }
+  .Home .about .container {
+    height: 100%;
+  }
   .Home .about .responsive2 {
     display: block;
   }
   .Home .about .responsive {
     display: none;
   }
+}
+.Home .about .responsive2 {
+  min-height: 100vh;
 }
 .Home .services {
   min-height: 1000px;
@@ -1437,14 +1453,14 @@ footer .bottom .last a {
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: 20px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .Home .gallery .images {
     grid-template-columns: 1fr;
   }
 }
 .Home .gallery .images img {
   width: 100%;
-  height: 350px;
+  height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #333;

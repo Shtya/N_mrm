@@ -15,6 +15,15 @@ import { Link } from 'react-router-dom'
 import Divider from '../components/Divider';
 import HeroComponent from '../components/HeroComponent';
 
+import slide_image_1 from '../assets/portfolio/img1.jpg';
+import slide_image_2 from '../assets/portfolio/img2.jpg';
+import slide_image_3 from '../assets/portfolio/img3.jpg';
+import slide_image_4 from '../assets/portfolio/img4.jpg';
+import slide_image_5 from '../assets/portfolio/img1.jpg';
+import slide_image_6 from '../assets/portfolio/img3.jpg';
+import slide_image_7 from '../assets/portfolio/img4.jpg';
+const HeroImages = [ {img : slide_image_1 }, {img : slide_image_2 }, {img : slide_image_3 }, {img : slide_image_4 }, {img : slide_image_5 }, {img : slide_image_6 }, {img : slide_image_7 },
+]
 
 const Projects = () => {
   const [id , setid] = useState()
@@ -45,7 +54,7 @@ const Projects = () => {
 
   return (
     <div className='portfolio' >
-      <HeroComponent />
+      <HeroComponent images={HeroImages} />
 
         <Divider />
       <div className="project">

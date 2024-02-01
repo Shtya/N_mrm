@@ -4,8 +4,6 @@ import photoImg2 from '../assets/services/2.webp'
 
 
 import FixedImg from '../assets/bg/40.webp'
-import FixedImg1 from '../assets/bg/34.webp'
-import Intro from "../assets/services/intro.webp"
 import BlockQoute from '../components/BlockQoute'
 import Divider from '../components/Divider'
 import Why from '../components/services/Why'
@@ -14,6 +12,7 @@ import Testimonials from '../components/home/Testimonials'
 
 import IMGQoute from "../assets/bg/8.webp"
 import HeroComponent2 from '../components/HeroComponent2'
+
 
 
     const photo = [
