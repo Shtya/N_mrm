@@ -16,7 +16,7 @@ const CircleMouseTracker = () => {
   }, []);
 
   return (
-    <div style={{position:"fixed" , top:'0' , zIndex:"30"}} >
+    <div style={{position:"fixed" , top:'0' , zIndex:"30"}} className='circlemouce' >
       <div
         style={{
           position: 'absolute',

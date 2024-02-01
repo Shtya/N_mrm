@@ -33,8 +33,8 @@ const Home = () => {
       <Divider />
 
       
-      <About />
-      <Divider />
+      {/* <About /> */}
+      {/* <Divider /> */}
 
       <Services FixedImg={FixedImg} />
       <Divider />

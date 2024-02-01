@@ -117,8 +117,8 @@ function showSlider(type){
 
 
         <div className="arrows">
-            <button id="prev"> {`<`} </button>
-            <button id="next"> {`>`} </button>
+            <button id="prev"> <i class="fa-solid fa-chevron-left"></i> </button>
+            <button id="next"> <i class="fa-solid fa-chevron-right"></i> </button>
         </div>
 
         <div className="time"></div>

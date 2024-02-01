@@ -1190,10 +1190,6 @@ footer .bottom .last a {
   opacity: 0;
   animation: showThumbnail 0.5s linear 1 forwards;
 }
-.Home .Hero2 .carousel.next .arrows button,
-.Home .Hero2 .carousel.prev .arrows button {
-  pointer-events: none;
-}
 .Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .author,
 .Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .title,
 .Home .Hero2 .carousel.prev .list .item:nth-child(2) .content .topic,
@@ -3195,6 +3191,12 @@ footer .bottom .last a {
   top: 20px;
   font-weight: 700 !important;
   background-color: gold;
+}
+
+@media (max-width: 900px) {
+  .circlemouce {
+    display: none !important;
+  }
 }
 
 .animation_text {
