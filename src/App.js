@@ -28,12 +28,12 @@ const App = () => {
       <CircleMouseTracker />
       <Routes>
         <Route  path='/'    element={<Home />} />                           
+        <Route  path='/portfolio'    element={<Portfolio />} />                           
+        <Route  path='/blogs'    element={<Blogs />} />                           
         <Route  path='/about-us'    element={<About />} />                           
         <Route  path='/contact-us'    element={<Contact />} />                           
-        <Route  path='/blogs'    element={<Blogs />} />                           
         <Route  path='/blogs/:id'    element={<Blog_Details />} />                           
         <Route  path='/services'    element={<Services />} />                           
-        <Route  path='/portfolio'    element={<Portfolio />} />                           
         <Route  path='*'    element={<Error />} />                           
 
         <Route  path='/events-photography'    element={<Food />} />                           

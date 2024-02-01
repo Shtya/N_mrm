@@ -14,6 +14,7 @@ import Testimonials from '../../components/home/Testimonials'
 
 import FixedImg from "../../assets/bg/34.webp" ;
 import Divider from '../../components/Divider'
+import HeroComponent from '../../components/HeroComponent'
 
 const photo = [
     { img: photoImg1 },
@@ -48,9 +49,10 @@ const Food = () => {
 
   return (
     <div className='Services1 services-pages'>
-        <div className="coverIntro"> <img src={SERVICES_INTRO} alt="" /> </div>
+        {/* <div className="coverIntro"> <img src={SERVICES_INTRO} alt="" /> </div> */}
+        <HeroComponent />
 
-        <Divider />
+        {/* <Divider /> */}
         <BlockQoute classN="bgCover" Img={IMG1} Img2={IMGQoute}  />
 
         <Divider />

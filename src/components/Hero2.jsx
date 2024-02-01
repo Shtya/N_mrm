@@ -32,8 +32,11 @@ let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 let timeDom = document.querySelector('.carousel .time');
 
-thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
+if(thumbnailBorderDom){
+    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+}
+
+let timeRunning = 7000;
 let timeAutoNext = 7000;
 
 nextDom.onclick = function(){
@@ -76,18 +79,18 @@ function showSlider(type){
 
   return (
     <div className='Hero2'> 
-        <div class="carousel">
+        <div className="carousel">
 
-        <div class="list">
+        <div className="list">
             {
                 itmes.map((e,index)=>(
-                     <div class="item" key={index}>
+                     <div className="item" key={index}>
                         <img src={e.img} />
-                        <div class="content">
-                            <div class="author">{e.h1}</div>
-                            <div class="title">{e.h2} </div>
-                            <div class="topic">{e.h3}</div>
-                            <div class="des"> {e.desc} </div>
+                        <div className="content">
+                            <div className="author">{e.h1}</div>
+                            <div className="title">{e.h2} </div>
+                            <div className="topic">{e.h3}</div>
+                            <div className="des"> {e.desc} </div>
                         </div>
                     </div>
                 ))
@@ -96,14 +99,14 @@ function showSlider(type){
                  
         </div>
 
-        <div class="thumbnail">
+        <div className="thumbnail">
             {
                 thumbnail.map((e,index)=>(
-                    <div class="item" key={index}>
+                    <div className="item" key={index}>
                         <img src={e.img} />
-                        <div class="content">
-                            <div class="title"> {e.h1}</div>
-                            <div class="description"> {e.h2} </div>
+                        <div className="content">
+                            <div className="title"> {e.h1}</div>
+                            <div className="description"> {e.h2} </div>
                         </div>
                     </div>
                 ))
@@ -113,12 +116,12 @@ function showSlider(type){
         </div>
 
 
-        <div class="arrows">
+        <div className="arrows">
             <button id="prev"> {`<`} </button>
             <button id="next"> {`>`} </button>
         </div>
 
-        <div class="time"></div>
+        <div className="time"></div>
     </div>
     </div>
   )

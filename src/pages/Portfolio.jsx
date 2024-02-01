@@ -47,7 +47,6 @@ const Projects = () => {
     <div className='portfolio' >
       <HeroComponent />
 
-      {/* <div className="coverIntro "> <img src={ImgIntro} alt="intro page contains word 'about us '" /></div> */}
         <Divider />
       <div className="project">
       <div className="h1-head">OUR PORTFOLIO</div>

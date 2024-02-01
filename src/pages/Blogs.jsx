@@ -4,6 +4,7 @@ import BlogIntro from "../assets/contact/intro.webp"
 import FixedImg from "../assets/bg/34.webp"
 import Divider from '../components/Divider'
 import { useNavigate } from 'react-router'
+import HeroComponent from '../components/HeroComponent'
 
 const blog = [
     {img : Imgblog ,  title:"Lorem ipsum sit, amet consectetur adipisicing elit. Obcaecati, vel." , desc:"From corporate gatherings to unique celebrations, we capture the essence of your events, ensuring that every moment is preserved." , data:"15" , data2:"May"},
@@ -35,9 +36,12 @@ const Blogs = () => {
       }
     
   return (
-    <div className="blogs">
-      <div className="coverIntro"> <img src={BlogIntro} alt="" /> </div>
+    <>
+    <HeroComponent />
       <Divider />
+    
+    <div className="blogs">
+      
 
         <div className="h1-head"> Latest Blogs</div>
         <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
@@ -64,17 +68,8 @@ const Blogs = () => {
           
         </div>
 
-        <div className="pagination">
-              <button   onClick={_=> Pagination({from:0 , to:6})}  className={`btn-nav left-btn `} >   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="left-icon">     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />   </svg> </button>
-              <div className="page-numbers">
-                <button  onClick={_=> Pagination({from:0 , to:6})}  className={`btn-page ${Next.from == 0 ? "btn-selected" : ""} `}    > 1</button>
-                <button  onClick={_=> Pagination({from:6 , to:12})}  className={`btn-page ${Next.from == 6 ? "btn-selected" : ""} `}    > 2</button>
-                <button  onClick={_=> Pagination({from:12 , to:18})}  className={`btn-page ${Next.from == 12 ? "btn-selected" : ""} `}    > 3</button>
-              </div>
-              <button onClick={_=>  Pagination({from:12 , to:18}) }  className={`btn-nav right-btn `}  > <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="right-icon"> <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /> </svg> </button>
-            </div>
-
   </div>
+  </>
   )
 }
 

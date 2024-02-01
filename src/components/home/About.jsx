@@ -35,7 +35,7 @@ const About = () => {
     <div className='about f-dir'>
         <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
 
-        <div className="responsive">
+        <div className="responsiveTT">
         <Swiper {...settings}  className="container" >
             <SwiperSlide className="boxes">
             <div className="box-inner">{
@@ -62,7 +62,7 @@ const About = () => {
 
         </Swiper>
         </div>
-
+{/* 
         <div className="responsive2">
             <div className="container">
             <div className="boxes">
@@ -84,7 +84,7 @@ const About = () => {
                 <div className="coverImg"> <img src={AboutImg} alt="" /> </div>
             </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

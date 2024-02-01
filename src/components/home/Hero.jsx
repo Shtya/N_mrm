@@ -32,9 +32,7 @@ const Hero = () => {
   return (
     <div className='hero f-dir'>
       <Parallax dir="top" Id="text" />
-      <Parallax dir="top" Id="text2" />
-      <Parallax dir="top" Id="bg1" />
-      <Parallax dir="top" Id="bg2" />
+
         <Swiper  effect='fade'  {...settings} className='swiper '  >
 
             <SwiperSlide className='f-dir'> 

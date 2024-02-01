@@ -13,6 +13,7 @@ import Contact from '../components/home/Contact-us'
 import Testimonials from '../components/home/Testimonials'
 
 import IMGQoute from "../assets/bg/8.webp"
+import HeroComponent2 from '../components/HeroComponent2'
 
 
     const photo = [
@@ -39,7 +40,9 @@ import IMGQoute from "../assets/bg/8.webp"
 const Services = () => {
   return (
     <div className='Services-Page'>
-        <div className="coverIntro"> <img src={Intro} alt="" /> </div>
+        {/* <div className="coverIntro"> <img src={Intro} alt="" /> </div> */}
+        <HeroComponent2 />
+
         <Divider />
 
         <BlockQoute  classN=""  alt={true} Img2={IMGQoute}   />
