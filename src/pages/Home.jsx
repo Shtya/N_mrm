@@ -29,7 +29,6 @@ const Home = () => {
     <div className='Home'>
       {/* <HeroComponent3 /> */}
 
-
       <Hero2 />
       <Divider />
 

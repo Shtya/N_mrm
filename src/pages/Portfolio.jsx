@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ImgIntro from "../assets/portfolio/intro.jpg"
 import { motion , AnimatePresence } from "framer-motion";
 
 
@@ -11,7 +10,6 @@ import P_Imgmain4 from  "../assets/portfolio/5.jpg"
 import P_Imgmain5 from  "../assets/portfolio/intro.jpg"
 import P_Imgmain6 from  "../assets/portfolio/1.jpg"
 
-import { Link } from 'react-router-dom'
 import Divider from '../components/Divider';
 import HeroComponent from '../components/HeroComponent';
 
@@ -56,7 +54,7 @@ const Projects = () => {
     <div className='portfolio' >
       <HeroComponent images={HeroImages} />
 
-        <Divider />
+
       <div className="project">
       <div className="h1-head">OUR PORTFOLIO</div>
 

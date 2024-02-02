@@ -30,7 +30,7 @@ const UP = memo(() => {
         const footerPosition = footer.getBoundingClientRect();
         footerPosition.top < window.innerHeight ?  setIsFooterVisible(300) :setIsFooterVisible(30);
       } 
-    }
+}
     window.addEventListener('scroll', handleScroll);
     return () =>  window.removeEventListener('scroll', handleScroll); 
   }, []);

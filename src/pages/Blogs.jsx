@@ -48,7 +48,6 @@ const Blogs = () => {
   return (
     <>
     <HeroComponent images={HeroImages} />
-      <Divider />
     
     <div className="blogs">
       

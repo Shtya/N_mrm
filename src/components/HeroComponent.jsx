@@ -6,12 +6,11 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation , Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Pagination , Autoplay } from 'swiper/modules';
 
-import FixedImg from "../assets/bg/4.webp"
-import { useNavigate } from 'react-router';
+import FixedImg from "../assets/bg/bg8.webp"
+import Divider from './Divider';
 function HeroComponent({images}) {
-    const navigate = useNavigate()
 
     const setting = {
         effect : 'coverflow' ,
@@ -31,6 +30,7 @@ function HeroComponent({images}) {
 
 
   return (
+    <>
     <div className="HeroComponent">
         <div className="bgCover3" style={{background:`url(${FixedImg})`}}> </div>
     <div className="container">
@@ -46,6 +46,8 @@ function HeroComponent({images}) {
       </Swiper>
     </div>
     </div>
+    <Divider />
+    </>
   );
 }
 

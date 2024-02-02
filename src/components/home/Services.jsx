@@ -3,31 +3,34 @@ import React, { useState } from 'react'
 
 import photoImg4 from '../../assets/services/4.webp'
 import { useNavigate } from 'react-router'
-import Parallax from '../Parallax'
 
+import Img1 from "../../assets/portfolio/img1.jpg"
+import Img2 from "../../assets/portfolio/img2.jpg"
+import Img3 from "../../assets/portfolio/img3.jpg"
+import Img4 from "../../assets/portfolio/img4.jpg"
 
 
 
     const photo = [
-      { img: photoImg4   , title:"Events photography" },
-      { img: photoImg4   , title:"Fashion photography" },
-      { img: photoImg4   , title:"Business Portraits & Headshots" },
-      { img: photoImg4   , title:"Food photography" },
-      { img: photoImg4   , title:"Product photography" },
-      { img: photoImg4   , title:"Automotive photography" },
-      { img: photoImg4   , title:"Hospitality photography" },
-      { img: photoImg4   , title:"Real Estate photography" },
-      { img: photoImg4   , title:"Real Estate photography" },
+      { img: Img1   , title:"Events photography" },
+      { img: Img2   , title:"Fashion photography" },
+      { img: Img3   , title:"Business Portraits & Headshots" },
+      { img: Img4   , title:"Food photography" },
+      { img: Img1   , title:"Product photography" },
+      { img: Img2   , title:"Automotive photography" },
+      { img: Img3   , title:"Hospitality photography" },
+      { img: Img4   , title:"Real Estate photography" },
+      { img: Img1   , title:"Real Estate photography" },
     ]
     const vedio = [
-      { img: photoImg4   , title:"Events photography" },
-      { img: photoImg4   , title:"Fashion photography" },
-      { img: photoImg4   , title:"Business Portraits & Headshots" },
-      { img: photoImg4   , title:"Food photography" },
-      { img: photoImg4   , title:"Product photography" },
-      { img: photoImg4  , title:"Hospitality photography" },
-      { img: photoImg4  , title:"Real Estate photography" },
-      { img: photoImg4  , title:"Real Estate photography" },
+      { img: Img3   , title:"Events photography" },
+      { img: Img4   , title:"Fashion photography" },
+      { img: Img1   , title:"Business Portraits & Headshots" },
+      { img: Img2   , title:"Food photography" },
+      { img: Img3   , title:"Product photography" },
+      { img: Img4  , title:"Hospitality photography" },
+      { img: Img1  , title:"Real Estate photography" },
+      { img: Img2  , title:"Real Estate photography" },
     ]
 
 

@@ -3,16 +3,16 @@ import { motion , AnimatePresence } from "framer-motion";
 
 
 
-import Img1 from "../../assets/services/_ (1).webp"
-import Img2 from "../../assets/services/_ (2).webp"
-import Img3 from "../../assets/services/_ (3).webp"
-import Img4 from "../../assets/services/_ (4).webp"
-import Img5 from "../../assets/services/_ (5).webp"
-import Img6 from "../../assets/services/_ (6).webp"
-import Img7 from "../../assets/services/_ (7).webp"
-import Img8 from "../../assets/services/_ (8).webp"
-import Img9 from "../../assets/services/_ (5).webp"
-import Header from './Header';
+import Img1 from "../../assets/portfolio/img1.jpg"
+import Img2 from "../../assets/portfolio/img2.jpg"
+import Img3 from "../../assets/portfolio/img3.jpg"
+import Img4 from "../../assets/portfolio/img4.jpg"
+import Img5 from "../../assets/portfolio/img1.jpg"
+import Img6 from "../../assets/portfolio/img2.jpg"
+import Img7 from "../../assets/portfolio/img3.jpg"
+import Img8 from "../../assets/portfolio/img4.jpg"
+import Img9 from "../../assets/portfolio/img1.jpg"
+
 
 const data = [
     {img:Img1 , type:'all Fashion' },

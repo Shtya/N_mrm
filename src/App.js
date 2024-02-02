@@ -4,6 +4,7 @@ import {Routes , Route} from "react-router-dom"
 import Home from "./pages/Home.jsx"
 import UP from './components/UP.jsx'
 import Navbar from "./components/Navbar.jsx"
+import Nav from "./components/Nav.jsx"
 import Footer from "./components/Footer.jsx"
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
@@ -28,7 +29,8 @@ const App = () => {
   return ( 
     <div className='App'>
       <UP  />
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav />
       <CircleMouseTracker />
       <Routes>
         <Route  path='/'    element={<Home />} />                           
