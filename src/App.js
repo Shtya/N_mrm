@@ -19,6 +19,7 @@ import Vedio from './pages/video/Food.jsx'
 import CircleMouseTracker from './components/Circle.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Blog_Details from './components/Blog_Details.jsx'
+import AOS_animation from './components/AOS_animation.jsx'
 
 export const Social_Media = ["https://www.facebook.com/MRMadvertisingDubai" , "https://www.instagram.com/mrmadvertising/" , "https://www.linkedin.com/company/mrm-advertising-media" , "https://api.whatsapp.com/send?phone=+971561384496&text=Hello%2C%20world!"]
 export const Animate = "zoom-in"
@@ -31,6 +32,7 @@ const App = () => {
       <UP  />
       {/* <Navbar /> */}
       <Nav />
+      <AOS_animation />
       <CircleMouseTracker />
       <Routes location={pathname} >
         <Route  path='/'    element={<Home />} />                           
