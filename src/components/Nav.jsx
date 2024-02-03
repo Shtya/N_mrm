@@ -41,8 +41,6 @@ const Nav = () => {
     let bars = document.querySelector(".NAVBAR .fa-bars")
     let nav = document.querySelector(".NAVBAR .Nav")
     let xmark = document.querySelector(".NAVBAR .fa-xmark")
-
-
     bars.addEventListener("click" , _=> {
       nav.style.left = "0"
     })
@@ -50,13 +48,19 @@ const Nav = () => {
       nav.style.left = "-100%"
     })
 
+    let Show1 = document.querySelector(".NAVBAR .ul1 .show2 ")
+    let Show2 = document.querySelector(".NAVBAR .ul1 .show3 ")
+
+    Show1.onclick = function() { Show1.classList.toggle("appear") }
+    Show2.onclick = function() { Show2.classList.toggle("appear2") }
+
+
   },[])
 
 
   const {pathname} = useLocation() ;
 
   const handleClose = (e)=>{
-    console.log(pathname)
     let nav = document.querySelector(".NAVBAR .Nav")
     if(e) nav.style.left="-100%" 
   }
@@ -78,7 +82,7 @@ const Nav = () => {
                 <i class="fa-solid fa-xmark"></i>
           {
 
-            data.map((ele , index)=> (  <Link className='a1' to={ele?.path} key={index} > 
+            data.map((ele , index)=> (  <Link className={`a1 ${ele.path ? "" : "show"+index }`} to={ele?.path} key={index} > 
                 
                 <div className={`li ${pathname == ele.path ? "activeColor" : ""}`} onClick={_=>handleClose(ele.path)}   > 
                   {ele.name}

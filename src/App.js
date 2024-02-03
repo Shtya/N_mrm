@@ -1,5 +1,5 @@
 import React  from 'react'
-import {Routes , Route} from "react-router-dom"
+import {Routes , Route, useLocation} from "react-router-dom"
 
 import Home from "./pages/Home.jsx"
 import UP from './components/UP.jsx'
@@ -25,14 +25,14 @@ export const Animate = "zoom-in"
 
 
 const App = () => {
-
+  const {pathname} = useLocation() ;
   return ( 
     <div className='App'>
       <UP  />
       {/* <Navbar /> */}
       <Nav />
       <CircleMouseTracker />
-      <Routes>
+      <Routes location={pathname} >
         <Route  path='/'    element={<Home />} />                           
         <Route  path='/portfolio'    element={<Portfolio />} />                           
         <Route  path='/blogs'    element={<Blogs />} />                           

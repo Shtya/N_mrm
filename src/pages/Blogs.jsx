@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import Imgblog from "../assets/blogs/cover2.webp"
-import BlogIntro from "../assets/contact/intro.webp"
 import FixedImg from "../assets/bg/34.webp"
-import Divider from '../components/Divider'
 import { useNavigate } from 'react-router'
-import HeroComponent from '../components/HeroComponent'
 
 import slide_image_1 from '../assets/portfolio/img1.jpg';
 import slide_image_2 from '../assets/portfolio/img2.jpg';
@@ -13,6 +10,8 @@ import slide_image_4 from '../assets/portfolio/img4.jpg';
 import slide_image_5 from '../assets/portfolio/img1.jpg';
 import slide_image_6 from '../assets/portfolio/img3.jpg';
 import slide_image_7 from '../assets/portfolio/img4.jpg';
+import HeroBlog from '../components/HeroBlog'
+import Divider from '../components/Divider';
 const HeroImages = [ {img : slide_image_1 }, {img : slide_image_2 }, {img : slide_image_3 }, {img : slide_image_4 }, {img : slide_image_5 }, {img : slide_image_6 }, {img : slide_image_7 },
 ]
 
@@ -37,26 +36,22 @@ const blog = [
 
 
 const Blogs = () => {
-    const navigate = useNavigate()
-
-    const [Next , Setnext] =  useState({from:0 , to:6})
-    const Pagination = (data) =>{
-        Setnext(data)
-        window.scrollTo({ top: 600, behavior: 'smooth' });
-      }
+  const navigate = useNavigate()
+    // const [Next , Setnext] =  useState({from:0 , to:6})
     
   return (
     <>
-    <HeroComponent images={HeroImages} />
+    <HeroBlog />
+    <Divider />
     
-    <div className="blogs">
+    <div className="blogs" id='next'>
       
 
         <div className="h1-head"> Latest Blogs</div>
         <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
         <div  className="container" >
           {
-            blog.slice(Next.from , Next.to).map((e,index)=> (
+            blog.map((e,index)=> (
           <div className="box" key={index}>
 
             <div className="coverImg">
