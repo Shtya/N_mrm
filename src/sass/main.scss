@@ -2412,7 +2412,7 @@ footer {
         .box{
           width: 100%;
           height: 97vh;
-          display: grid; grid-template-columns: 30% 1fr;
+          display: grid; grid-template-columns: 1fr 1fr;
           border: 1px solid var(--text-color);
           align-items: center;  
           margin-bottom: 20px;
@@ -2424,19 +2424,12 @@ footer {
             height: 1300px;
             
           }
-          @media (max-width:1600px) {
-            grid-template-columns: 40% 1fr;
-          }
-          @media (max-width:1200px) {
-            .text {
-              .p{font-size: 15px !important;}
-            }
-          }
-          @media (max-width:900px) {
+          @media (max-width:1000px) {
             display: flex !important;
             flex-direction: column;
             .text{height: fit-content !important; padding: 20px 10px !important; order: 3 !important;}
             .coverImg{
+              .allImg{left:-10px !important;}
               .coverImgMain{
                 width: 70px !important;
                 height: 70px !important;
@@ -2461,9 +2454,11 @@ footer {
           }
 
           .text{
-            background:url("../assets/bg-texture-00.svg");
+            background:url("../assets/bg/bg5.webp");
             background-color: rgba(255, 255, 255, 0.081);
+            // background-color: rgba(255, 255, 255, 0.951);
             padding: 20px;
+            padding-right: 80px;
             backdrop-filter: blur(4px);
             height: 100%;
             display: flex; flex-direction: column; justify-content: center;
@@ -2477,11 +2472,12 @@ footer {
             }
             .p{
               text-wrap: balance;
-              font-size: 18px;
-              line-height: 1.3;
+              font-size: 20px;
+              line-height: 1.4;
               text-align: center;
               text-transform: capitalize !important;
-              letter-spacing: 1px !important;
+              letter-spacing: 2px !important;
+              // color: black;
             }
           }
           
@@ -2510,7 +2506,7 @@ footer {
               position: absolute;
               top: 50%;
               transform: translateY(-50%);
-              left: calc(100% - 120px);
+              left: -60px;
               width: 120px;
               z-index: 10;
               padding: 0;
