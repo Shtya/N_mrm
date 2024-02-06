@@ -2496,11 +2496,58 @@ footer .bottom .last a {
   margin-bottom: 20px;
   transition: 0.3s;
   position: relative;
+  margin-bottom: 30px;
 }
 @media (min-height: 1300px) {
   .Projects-page .project-component .container .box {
     min-height: unset;
     height: 1300px;
+  }
+}
+@media (max-width: 1600px) {
+  .Projects-page .project-component .container .box {
+    grid-template-columns: 40% 1fr;
+  }
+}
+@media (max-width: 1200px) {
+  .Projects-page .project-component .container .box .text .p {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 900px) {
+  .Projects-page .project-component .container .box {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .Projects-page .project-component .container .box .text {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding: 20px 10px !important;
+    order: 3 !important;
+  }
+  .Projects-page .project-component .container .box .coverImg .coverImgMain {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
+@media (max-width: 650px) {
+  .Projects-page .project-component .container .box .coverImg .allImg {
+    left: calc(100% - 90px) !important;
+  }
+  .Projects-page .project-component .container .box .coverImg .coverImgMain {
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-clip-path: unset !important;
+            clip-path: unset !important;
+  }
+  .Projects-page .project-component .container .box .coverImg .coverImgMain img {
+    width: calc(100% - 4px) !important;
+    height: calc(100% - 4px) !important;
+    -webkit-clip-path: unset !important;
+            clip-path: unset !important;
+  }
+  .Projects-page .project-component .container .box .text .p {
+    font-size: 13px !important;
   }
 }
 .Projects-page .project-component .container .box .text {
@@ -2532,7 +2579,7 @@ footer .bottom .last a {
 }
 .Projects-page .project-component .container .box .coverImg {
   width: 100%;
-  height: 97vh;
+  height: 100%;
   position: relative;
   transition: 0.3s;
   position: relative;
@@ -2544,6 +2591,9 @@ footer .bottom .last a {
      object-fit: cover;
   transform: 0.3s;
   margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .Projects-page .project-component .container .box .coverImg .allImg {
   display: flex;
@@ -2558,10 +2608,6 @@ footer .bottom .last a {
   z-index: 10;
   padding: 0;
   transition: 0.3s;
-}
-.Projects-page .project-component .container .box .coverImg .allImg:hover {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 .Projects-page .project-component .container .box .coverImg .allImg:hover .coverImgMain, .Projects-page .project-component .container .box .coverImg .allImg:hover img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
