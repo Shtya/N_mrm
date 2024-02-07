@@ -1,18 +1,18 @@
 import React from 'react'
 import VedioTestimonials from "../assets/projects/testimonials.mp4"
 import Qoute from "../assets/projects/qoute.png"
-import Img1 from "../assets/projects/1 (1).webp"
-import Img2 from "../assets/projects/1 (2).webp"
-import Img3 from "../assets/projects/1 (3).webp"
-import Img4 from "../assets/projects/1 (4).webp"
-import Img7 from "../assets/projects/1 (7).webp"
+import Img1 from "../assets/projects/1 (1).jpg"
+import Img2 from "../assets/projects/1 (2).jpg"
+import Img3 from "../assets/projects/1 (3).jpg"
+import Img4 from "../assets/projects/1 (4).jpg"
+import Img7 from "../assets/projects/1 (7).jpg"
 import Img8 from "../assets/projects/1 (8).webp"
 import Intro from "../assets/projects/events.jpg"
-import IMG1 from "../assets/bg/2.webp" 
+import IMG1 from "../assets/bg/34.webp" 
+import IMG2 from "../assets/bg/1.webp" 
 
 import FixedImg from "../assets/bg/1.webp"
 import GalleryOFportfolio from '../components/GalleryOfProject'
-// import Contact from './Contact'
 import PersonImg from "../assets/projects/person.jpg"
 import Divider from '../components/Divider'
 
@@ -86,7 +86,7 @@ const Projects = () => {
         <Divider  />
 
         <div className="events">
-            <div className="bgCover2"> <img src={FixedImg} alt="" /> </div>
+            <div className="bgCover4" style={{background:`url(${IMG2})`}} />
             <div className="container">
             <div className="h1"> Event Services </div>
             <div className="boxes">
@@ -110,7 +110,7 @@ const Projects = () => {
 
 
         <div className="qoutation2">
-        <div className="bgCover2"  >  <img src={IMG1} alt="contact"  /> </div>      
+        <div className="bgCover2"  >  <img src={IMG2} alt="contact"  /> </div>      
             <div className="container">
             <div className="coverImg"> <img src={Img7} alt="" /> </div>
 
@@ -124,7 +124,7 @@ const Projects = () => {
         <Divider  />
 
         <div className="testimonials">
-            <div className="bgCover"> <img src={FixedImg} alt="" /></div>
+            {/* <div className="bgCover"> <img src={FixedImg} alt="" /></div> */}
             <Slider {...settings} className="container">
                 {reviews.map((e,index)=>(
                     <div className={`box ${e.vedio ? "box-vedio":""}`} key={index}>
@@ -146,7 +146,7 @@ const Projects = () => {
         </div>
         <Divider  />
 
-        <Contact notbg={false} />
+        <Contact FixedImg={IMG2} notbg={true} />
 
     </div>
   )

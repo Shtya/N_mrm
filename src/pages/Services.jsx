@@ -4,13 +4,15 @@ import photoImg2 from '../assets/services/2.webp'
 
 
 import FixedImg from '../assets/bg/40.webp'
+import IMG1 from '../assets/bg/34.webp'
+import IMG2 from '../assets/bg/3.webp'
 import BlockQoute from '../components/BlockQoute'
 import Divider from '../components/Divider'
 import Why from '../components/services/Why'
 import Contact from '../components/home/Contact-us'
 import Testimonials from '../components/home/Testimonials'
 
-import IMGQoute from "../assets/bg/8.webp"
+import IMGQoute from "../assets/bg/bg5.webp"
 import HeroComponent2 from '../components/HeroComponent2'
 
 
@@ -36,6 +38,7 @@ import HeroComponent2 from '../components/HeroComponent2'
         { img: photoImg1  , title:"Hospitality photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
         { img: photoImg2  , title:"Real Estate photography" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet fugit magni nemo quia ratione molestias, nostrum minima officia aut iure quaerat quos expedita pariatur ad! Harum optio cumque nostrum." },
       ]
+      
 const Services = () => {
   return (
     <div className='Services-Page'>
@@ -44,11 +47,11 @@ const Services = () => {
 
         <Divider />
 
-        <BlockQoute  classN=""  alt={true} Img2={IMGQoute}   />
+        <BlockQoute Img={IMG1}  classN=""  alt={false} Img2={IMGQoute}   />
         <Divider />
 
         <div className="photography">
-        <div className="bgCover2"><img src={FixedImg} alt="" /></div>
+        <div className="bgCover4" style={{background:`url(${IMG2})`}}/>
         <div className="container">
             <div className="h1-head"> Our photography Services </div> 
             <div className="boxes">
@@ -71,7 +74,7 @@ const Services = () => {
         <Divider />
 
         <div className="video">
-        <div className="bgCover2"><img src={FixedImg} alt="" /></div>
+        <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
         <div className="container">
             <div className="h1-head"> Our Videography Services </div> 
             <div className="boxes">
@@ -94,10 +97,10 @@ const Services = () => {
         <Divider />
 
 
-        <Testimonials classN="bgCover" />
+        <Testimonials  FixedImg={IMG2} />
         <Divider />
         
-        <BlockQoute classN="bgCover2" Img={FixedImg} />
+        <BlockQoute  Img2={IMGQoute} />
         <Divider />
 
 
@@ -107,11 +110,7 @@ const Services = () => {
         
 
 
-        <Contact FixedImg={FixedImg} classN="bgCover2" notbg={false} />
-
-
-
-
+        <Contact FixedImg={FixedImg} classN="bgCover2" notbg={true} />
 
     </div>
   )

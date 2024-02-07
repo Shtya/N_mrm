@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageWhy from "../../assets/services/1.webp" ;
+import ImageWhy from "../../assets/bg/test/1.jpg" ;
 import FixedImg from "../../assets/bg/33.webp"
 
 const data = [
@@ -11,7 +11,7 @@ const data = [
 const Why = () => {
   return (
     <div className='why'>
-        <div className="bgCover"><img src={FixedImg} alt="" /></div>
+        <div className="bgCover2"><img src={FixedImg} alt="" /></div>
         <div className="h1-head"> Why Choose us?</div>
         <div className="container">
             <div className='boxes'>   {   data.slice(0,2).map((e,index)=>(

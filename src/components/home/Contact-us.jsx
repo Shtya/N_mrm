@@ -8,7 +8,9 @@ const Contact = ({FixedImg , classN , notbg}) => {
 
   return (
     <div className='contact'>
-              {notbg == false ? <div className={classN || "bgCover2"}><img src={FixedImg} alt="" /></div> : ""}
+              {notbg == false 
+              ? <div className={classN || "bgCover2"}><img src={FixedImg} alt="" /></div> 
+              : <div className="bgCover4" style={{background:`url(${FixedImg})`}}/> }
         <div className="h1-head">Contact US</div>
         <div className="container">
             <div className="coverImg"> <img src={ContactImg} alt="" /> </div>

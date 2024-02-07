@@ -1368,12 +1368,6 @@ footer .bottom .last a {
     padding: 30px 0;
   }
 }
-@media (max-width: 700px) {
-  .Home .services .bgCover3 {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-}
 .Home .services .header {
   margin-top: -30px;
 }
@@ -1761,6 +1755,7 @@ footer .bottom .last a {
   padding: 30px 0 5px 0;
   min-height: 800px;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1873,6 +1868,7 @@ footer .bottom .last a {
 }
 .about-us .vission {
   padding: 30px 0 50px 0;
+  position: relative;
 }
 .about-us .vission .container {
   display: flex;
@@ -3393,8 +3389,8 @@ footer .bottom .last a {
   .Project-page2 .testimonials .container .img {
     position: absolute !important;
     z-index: 1000;
-    width: 100px !important;
-    height: 100px !important;
+    width: 130px !important;
+    height: 130px !important;
     right: 10px;
     top: 10px;
     border-radius: 50% !important;
@@ -3818,13 +3814,19 @@ footer .bottom .last a {
 }
 .portfolio .project .container .box {
   width: 100%;
-  height: 900px;
+  height: 96vh;
   background-color: rgba(0, 0, 0, 0.263);
   align-items: center;
   margin-bottom: 40px;
   transition: 0.3s;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+}
+@media (min-height: 1200px) {
+  .portfolio .project .container .box {
+    min-height: unset;
+    height: 1200px;
+  }
 }
 @media (max-width: 1400px) {
   .portfolio .project .container .box {
@@ -4168,7 +4170,8 @@ footer .bottom .last a {
 }
 .Services-Page .why {
   min-height: 200px;
-  padding: 150px 0;
+  position: relative;
+  padding: 50px 0;
 }
 @media (max-width: 700px) {
   .Services-Page .why {
@@ -4205,10 +4208,11 @@ footer .bottom .last a {
 }
 .Services-Page .why .container .coverImg {
   width: 100%;
-  height: 100%;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 10;
+  border: 2px solid white;
 }
 .Services-Page .why .container .coverImg img {
   width: 100%;
@@ -4233,7 +4237,7 @@ footer .bottom .last a {
      object-fit: cover;
 }
 .services-pages .photography {
-  padding: 100px 0 50px;
+  padding: 50px 0 50px;
   position: relative;
 }
 @media (max-width: 700px) {
@@ -4974,16 +4978,21 @@ footer .bottom .last a {
   margin: auto;
 }
 .Testimonials .container .slick-prev, .Testimonials .container .slick-next {
-  bottom: 5px;
+  bottom: 10px;
   top: unset;
-  right: 30px !important;
+  right: 35px !important;
   left: unset !important;
 }
 .Testimonials .container .slick-prev::before, .Testimonials .container .slick-next::before {
+  box-shadow: 0 0 1px 1px gold;
   font-size: 30px !important;
+  font-family: math;
+  color: white;
+  background: black;
+  padding: 5px 10px;
 }
 .Testimonials .container .slick-prev {
-  right: 65px !important;
+  right: 85px !important;
   z-index: 10;
 }
 .Testimonials .container .slick-dots {
@@ -5278,15 +5287,11 @@ footer .bottom .last a {
   padding: 50px 0;
   position: relative;
 }
-.qoutation .bgCover {
-  z-index: 0;
-}
 .qoutation .img {
   background-image: url("../assets/bg/1.webp");
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: red;
 }
 .qoutation .container {
   height: 100%;
@@ -5365,7 +5370,7 @@ footer .bottom .last a {
 @media (max-width: 950px) {
   .qoutation .container {
     gap: 10px;
-    padding: 0 0 50px 0;
+    padding: 0;
   }
   .qoutation .container img {
     left: 0;
@@ -5494,9 +5499,10 @@ footer .bottom .last a {
   align-items: center;
   gap: 10px;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .HeroComponent2 .wrapper .slider {
     flex-direction: column;
+    width: 100%;
   }
   .HeroComponent2 .wrapper .slider .slide {
     height: 70px !important;
@@ -5510,26 +5516,26 @@ footer .bottom .last a {
   cursor: pointer;
   transition: 0.7s ease;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1170px) {
   .HeroComponent2 .wrapper .slider .slide {
     width: 100px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .HeroComponent2 .wrapper .slider .slide {
-    width: 50px;
+    width: 80px;
   }
   .HeroComponent2 .wrapper .slider .slide:first-child, .HeroComponent2 .wrapper .slider .slide:last-child {
-    height: 200px;
+    height: 150px;
   }
   .HeroComponent2 .wrapper .slider .slide:nth-child(2), .HeroComponent2 .wrapper .slider .slide:nth-child(6) {
-    height: 300px;
+    height: 200px;
   }
   .HeroComponent2 .wrapper .slider .slide:nth-child(3), .HeroComponent2 .wrapper .slider .slide:nth-child(4), .HeroComponent2 .wrapper .slider .slide:nth-child(5) {
-    height: 400px;
+    height: 250px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .HeroComponent2 .wrapper .slider .slide {
     width: 50px;
   }
@@ -5554,23 +5560,6 @@ footer .bottom .last a {
   border-radius: 2px;
   border: 1px solid #444;
 }
-.HeroComponent2 .wrapper .slider .slide h1 {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  white-space: nowrap;
-  letter-spacing: 1px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%, -50%) rotate(270deg);
-  left: -12px;
-  transition: 0.7s ease;
-}
-.HeroComponent2 .wrapper .slider .slide.active h1 {
-  display: none;
-}
 .HeroComponent2 .wrapper .slider .slide.active {
   width: 400px !important;
   height: 600px !important;
@@ -5579,13 +5568,13 @@ footer .bottom .last a {
   .HeroComponent2 .wrapper .slider .slide.active {
     width: 300px;
     height: 400px;
+    margin: auto;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .HeroComponent2 .wrapper .slider .slide.active {
-    width: 95% !important;
-    height: 300px !important;
-    margin: auto;
+    height: 200px !important;
+    width: 98% !important;
   }
 }
 .HeroComponent2 .wrapper .slider .slide.active img {
@@ -5730,7 +5719,7 @@ footer .bottom .last a {
   font-size: 40px;
   position: absolute;
   display: block;
-  left: 60%;
+  left: 50%;
   bottom: 40px;
   transform: translateX(-50%);
   animation: up-down 1.5s ease-in-out infinite;
@@ -5753,13 +5742,41 @@ footer .bottom .last a {
   }
 }
 
+.bgCover4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+}
+.bgCover4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
 .bgCover3 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: contain !important;
+}
+@media (max-width: 800px) {
+  .bgCover3 {
+    background-size: contain !important;
+  }
+  .bgCover3::after {
+    -webkit-backdrop-filter: blur(1px) !important;
+            backdrop-filter: blur(1px) !important;
+  }
 }
 .bgCover3::after {
   content: "";
@@ -5768,8 +5785,8 @@ footer .bottom .last a {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(2px) !important;
-          backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 .bgCover2 {
@@ -5799,7 +5816,7 @@ footer .bottom .last a {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% + 10px);
+  width: 100%;
   height: 100vh;
   z-index: -1;
   left: -5px;
@@ -5818,19 +5835,21 @@ footer .bottom .last a {
 .bgCover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 .Divider {
-  min-height: 20px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 217, 0, 0.538) 80%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: 0 0 10px black inset, 0 0 1px white inset;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(255, 215, 0, 0.0588235294) -43%, rgba(255, 217, 0, 0.538) 80%, rgba(255, 215, 0, 0.0588235294) 152%);
   position: relative;
   z-index: 10;
 }
 @media (max-width: 700px) {
   .Divider {
-    min-height: 10px;
+    height: 10px;
+    box-shadow: unset !important;
   }
 }
 
@@ -6039,7 +6058,8 @@ footer .bottom .last a {
   color: black;
   box-shadow: 0 0 2px var(--text-color);
   font-weight: 600;
-  font-family: "Open Sans";
+  font-family: "Noto Sans";
+  letter-spacing: 2px;
   border: 2px solid var(--text-color);
 }
 .bt::after {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion , AnimatePresence } from "framer-motion";
 
-
+import IMG1 from "../assets/bg/bg2.webp"
 import P_ImgCover1 from "../assets/portfolio/1.jpg"
 import P_Imgmain1 from  "../assets/portfolio/2.jpg"
 import P_Imgmain2 from  "../assets/portfolio/3.jpg"
@@ -56,6 +56,7 @@ const Projects = () => {
 
 
       <div className="project">
+        <div className="bgCover"> <img src={IMG1} alt="" /> </div>
       <div className="h1-head">OUR PORTFOLIO</div>
 
         <div className="container">

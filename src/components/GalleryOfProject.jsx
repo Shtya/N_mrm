@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import FixedImg from "../assets/bg/1.webp"
-import Img1 from "../assets/projects/1 (1).webp"
-import Img2 from "../assets/projects/1 (2).webp"
-import Img3 from "../assets/projects/1 (3).webp"
-import Img4 from "../assets/projects/1 (4).webp"
-import Img5 from "../assets/projects/1 (5).webp"
-import Img6 from "../assets/projects/1 (6).webp"
-import Img7 from "../assets/projects/1 (7).webp"
+import FixedImg from "../assets/bg/33.webp"
+import Img1 from "../assets/projects/1 (1).jpg"
+import Img2 from "../assets/projects/1 (2).jpg"
+import Img3 from "../assets/projects/1 (3).jpg"
+import Img4 from "../assets/projects/1 (4).jpg"
+import Img5 from "../assets/projects/1 (5).jpg"
+import Img6 from "../assets/projects/1 (6).jpg"
+import Img7 from "../assets/projects/1 (7).jpg"
 import Img8 from "../assets/projects/1 (8).webp"
 
 import { Link } from 'react-router-dom'

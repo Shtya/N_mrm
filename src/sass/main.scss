@@ -1374,12 +1374,6 @@ footer {
     @media (max-width:700px) { padding: 30px 0; }
     position: relative;
     background-color: #222;
-    @media (max-width:700px) {
-      .bgCover3{
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-      }
-    }
     .header{
       margin-top: -30px;
     }
@@ -1747,6 +1741,7 @@ footer {
     padding: 30px 0 5px 0;
     min-height: 800px;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1841,6 +1836,7 @@ footer {
 
   .vission {
     padding: 30px 0 50px 0;
+    position: relative;
     .container{
       display: flex; align-items: center; justify-content: center;
       gap: 20px;
@@ -3246,8 +3242,8 @@ footer {
       .img{
         position: absolute !important;
         z-index: 1000;
-        width: 100px !important;
-        height: 100px !important;
+        width: 130px !important;
+        height: 130px !important;
         right: 10px;
         top: 10px;
         border-radius: 50% !important;
@@ -3651,12 +3647,17 @@ footer {
       
         .box{
           width: 100%;
-          height: 900px ;
+          height: 96vh ;
           background-color: rgba(0, 0, 0, 0.263);
           align-items: center;
           margin-bottom: 40px;
           transition: .3s;
           backdrop-filter: blur(2px);
+          @media (min-height:1200px) {
+            min-height: unset;
+            height: 1200px;
+            
+          }
           @media (max-width:1400px) {
             height: 800px;
           }
@@ -3965,8 +3966,8 @@ footer {
   
   .why{
     min-height: 200px;
-    // display: flex; flex-direction: column; justify-content: center;
-    padding: 150px 0;
+    position: relative;
+    padding: 50px 0;
     @media (max-width:700px) { padding: 50px 0; }
 
     .container{
@@ -3992,9 +3993,10 @@ footer {
       }
       .coverImg{
         width: 100%;
-        height: 100%;
+        height: 600px;
         object-fit: cover;
         z-index: 10;
+        border: 2px solid white;
         img{
           width: 100%;
           height: 100%;
@@ -4022,7 +4024,7 @@ footer {
   }
 
   .photography{
-    padding: 100px 0 50px;
+    padding: 50px 0 50px;
     position: relative;
     @media (max-width:700px) {
       padding: 50px 0 !important;
@@ -4616,7 +4618,6 @@ footer {
         height: 100%;
         padding: 20px 50px;
         input , textarea , .bt{
-          // backdrop-filter: blur(5px);
           background-color: rgba(85, 83, 83, 0.06);
           border-radius: 0 !important;
           color: #fff;
@@ -4664,14 +4665,21 @@ footer {
       margin: auto;
     }
     .slick-prev, .slick-next{
-      bottom: 5px;
+      bottom: 10px;
       top: unset;
-      right: 30px !important;
+      right: 35px !important;
       left: unset !important;
-      &::before{font-size: 30px !important;}
+      &::before{
+        box-shadow: 0 0  1px 1px  gold ;
+        font-size: 30px !important;
+        font-family: math;
+        color: white;
+        background: black;
+        padding: 5px 10px;
+      }
     }
     .slick-prev{
-      right: 65px !important  ;
+      right: 85px !important  ;
       z-index: 10;
     }
     .slick-dots{
@@ -4967,9 +4975,6 @@ footer {
   padding: 50px 0;
   position: relative;
 
-  .bgCover{
-    z-index: 0;
-  }
 
   .img{
     background-image: url("../assets/bg/1.webp");
@@ -4977,7 +4982,6 @@ footer {
     // background-size: contain;
     width: 100%;
     height: 100%;
-    background-color: red;
   }
   .container{
     height: 100%;
@@ -5051,7 +5055,7 @@ footer {
     @media (max-width:950px) {
     
       gap: 10px;
-      padding: 0 0 50px 0;
+      padding: 0;
       img{
         left: 0;
         height: 500px !important;
@@ -5169,8 +5173,9 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    @media (max-width:700px) {
+    @media (max-width:900px) {
       flex-direction: column;
+      width: 100%;
       .slide{
         height: 70px !important;
         width: 92% !important;
@@ -5183,18 +5188,19 @@ footer {
       cursor: pointer;
       transition: 0.7s ease;
 
-      @media (max-width:1400px) {
+      @media (max-width:1170px) {
         width:100px ;
       }
-      @media (max-width:1100px) {
-        width:50px ;
-        &:first-child, &:last-child { height: 200px; }
-        &:nth-child(2), &:nth-child(6) { height: 300px; }
-        &:nth-child(3), &:nth-child(4), &:nth-child(5) { height: 400px; }
+      @media (max-width:1000px) {
+        width:80px ;
+        &:first-child, &:last-child { height: 150px; }
+        &:nth-child(2), &:nth-child(6) { height: 200px; }
+        &:nth-child(3), &:nth-child(4), &:nth-child(5) { height: 250px; }
       }
-      @media (max-width:800px) {
+      @media (max-width:900px) {
         width:50px ;
         &:first-child, &:last-child { display: none; }
+        
       }
 
 
@@ -5209,34 +5215,15 @@ footer {
         border: 1px solid #444;
 
       }
-      h1 {
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-        white-space: nowrap;
-        letter-spacing: 1px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-20% , -50%) rotate(270deg);
-        left: -12px;
-        transition: 0.7s ease;
-      }
-      &.active h1 {display: none; }
-      
       &.active {
         width: 400px !important;
         height: 600px !important; 
         @media (max-width:1100px) {
           width: 300px;
           height: 400px;
-        }
-        @media (max-width:1100px) {
-          width: 95% !important;
-          height: 300px !important;
           margin: auto;
         }
+        @media (max-width:900px) { height: 200px !important; width: 98% !important; }
         img{
           border: 1px solid var(--text-color);
         }
@@ -5381,7 +5368,7 @@ footer {
       font-size: 40px;
       position: absolute;
       display: block;
-      left: 60%;
+      left: 50%;
       bottom: 40px;
       transform: translateX(-50%);
       animation: up-down 1.5s ease-in-out infinite ;
@@ -5396,24 +5383,46 @@ footer {
     }
   }
 }
-.bgCover3{
+.bgCover4{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain;
-  &::after{
+  background-size: contain !important;
+    &::after{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(2px) !important;
-    // background-color: rgba(0, 0, 0, 0.026);
+    backdrop-filter: blur(1px) ;
   }
 }
+
+.bgCover3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  @media (max-width:800px){
+     background-size: contain !important;
+      &::after{    backdrop-filter: blur(1px) !important ;      }
+    }
+    &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px) ;
+  }
+}
+
 
 .bgCover2{
   position: absolute;
@@ -5442,7 +5451,7 @@ footer {
   position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% + 10px );
+    width: 100%;
     height: 100vh;
     z-index: -1;
     left: -5px;
@@ -5459,16 +5468,18 @@ footer {
   img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover !important;
   }
 }
 
 .Divider{
-  min-height: 20px;
   @media (max-width:700px) {
-    min-height: 10px;
+    height: 10px;
+    box-shadow: unset !important;
   }
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 217, 0, 0.538) 80%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: 0 0 10px black inset, 0 0 1px white inset;
+  height: 20px;
+  background: linear-gradient(to bottom, #ffd7000f -43%, rgba(255, 217, 0, 0.538) 80%, #ffd7000f 152%);
   position: relative;
   z-index: 10;
 }
@@ -5662,7 +5673,8 @@ footer {
   color: black;
   box-shadow: 0 0 2px var(--text-color);
   font-weight: 600;
-  font-family: 'Open Sans';
+  font-family: 'Noto Sans';
+  letter-spacing: 2px;
   border: 2px solid var(--text-color);
   &::after{
     content: "\f061";

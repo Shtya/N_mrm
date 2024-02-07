@@ -3,7 +3,7 @@ import Img1 from "../assets/portfolio/img1.jpg"
 import Blog from "./home/Blog" ;
 
 import Imgblog from "../assets/home/test/  (7).webp"
-import FixedImg2 from "../assets/bg/4.webp"
+import IMG1 from "../assets/bg/bg3.webp"
 
 
 import FixedImg from "../assets/bg/3.webp"
@@ -56,7 +56,7 @@ const Blog_Details = () => {
 
 
         <Divider />
-        <Blog Img={FixedImg2} blog={blog} title="Related Blogs" />
+        <Blog Img={IMG1} blog={blog} title="Related Blogs" />
 
     </div>
   )

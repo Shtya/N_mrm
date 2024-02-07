@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import BlockQoute from '../../components/BlockQoute'
 
-import IMGQoute from "../../assets/bg/8.webp"
-import IMG1 from "../../assets/bg/12.webp"
+import IMGQoute from "../../assets/bg/bg5.webp"
+import IMG1 from "../../assets/bg/34.webp"
 import IMG2 from "../../assets/bg/1.webp"
 
 import photoImg1 from '../../assets/GALLWEY/1.webp'
@@ -51,22 +51,17 @@ const photo = [
 
 const Food = () => {
   const [count , setcount] = useState({from : 0 , to : 10})
-  // showImage
   const [showImg , setshowImg] = useState()
-
-  
 
   return (
     <div className='Services1 services-pages'>
         <HeroComponent images={HeroImages} />
 
-
-        {/* <Divider /> */}
         <BlockQoute classN="bgCover" Img={IMG1} Img2={IMGQoute}  />
 
         <Divider />
         <div className="photography">
-        <div className="bgCover3" style={{background:`url("${IMG2}")`}} ></div>
+        <div className="bgCover4" style={{background:`url("${IMG2}")`}} ></div>
         <div className="container">
             <div className="h1-head"> Our Fashion Work </div> 
             <div className="boxes">

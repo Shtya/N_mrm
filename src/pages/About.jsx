@@ -2,7 +2,8 @@ import React from 'react'
 import AboutIntro from "../assets/about/about.webp"
 import Img1 from "../assets/about/1.webp"
 import Img2 from "../assets/about/2.webp"
-import FixedImg from "../assets/bg/36.webp"
+import IMG1 from "../assets/bg/35.webp"
+import IMG2 from "../assets/bg/38.webp"
 import Divider from '../components/Divider'
 
 const data = [
@@ -20,7 +21,8 @@ const About = () => {
         <Divider />
 
         <div className="mission">
-            <div className="bgCover"><img src={FixedImg} alt="" /></div>
+            <div className="bgCover3" style={{background:`url(${IMG1})`}}/>
+
             <div className="container">
                 <div className="coverImg"> <img src={Img1} alt="" /> </div>
                 <div className="boxes">
@@ -33,7 +35,7 @@ const About = () => {
         <Divider />
 
         <div className="goals">
-            <div className="bgCover"><img src={FixedImg} alt="" /></div>
+            <div className="bgCover2"><img src={IMG2} alt="" /></div>
             <div className="container">
 
                 {

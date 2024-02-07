@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-import SERVICES_INTRO from '../../assets/GALLWEY/intro.webp' 
 import BlockQoute from '../../components/BlockQoute'
 
-import IMGQoute from "../../assets/bg/8.webp"
+import IMGQoute from "../../assets/bg/bg8.webp"
 import IMG1 from "../../assets/bg/12.webp"
 import IMG2 from "../../assets/bg/1.webp"
 
-import photoImg1 from '../../assets/GALLWEY/1.webp'
-import photoImg2 from '../../assets/GALLWEY/2.webp'
 
 import Contact from '../../components/home/Contact-us'
 import Testimonials from '../../components/home/Testimonials'
@@ -52,7 +49,6 @@ const photo = [
 
 const Food = () => {
   const [count , setcount] = useState({from : 0 , to : 10})
-  // showImage
   const [showImg , setshowImg] = useState()
 
   
@@ -67,7 +63,7 @@ const Food = () => {
 
         <Divider />
         <div className="photography">
-        <div className="bgCover3" style={{background:`url("${IMG2}")`}} ></div>
+        <div className="bgCover4" style={{background:`url("${IMG2}")`}} ></div>
         <div className="container">
             <div className="h1-head"> Our Fashion Work </div> 
             <div className="boxes">
