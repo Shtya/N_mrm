@@ -79,7 +79,7 @@ html {
   }
 
   @media (max-width:768px) {
-    width: 95%;
+    width: 95% ;
   }
 
   margin: auto;
@@ -2867,9 +2867,12 @@ footer {
 
   .project{
     min-height: 50vh;
-    padding: 50px 0;
+    padding: 50px 0 100px;
     display: flex; align-items: center;
     position: relative;
+    @media (max-width:100px) {
+      padding: 50px 0 ;
+    }
     .container{
       
        .box{
@@ -2878,6 +2881,8 @@ footer {
           align-items: center;
           gap: 50px;
           overflow: hidden;
+          width: 95% !important;
+          margin: 0 auto;
           @media (max-width:1300px){ .coverImg >img{height: 500px !important;}}
           @media (max-width:1000px){
             grid-template-columns: 1fr;
@@ -3029,7 +3034,7 @@ footer {
               border-radius: unset !important;
               border: 1px solid #222;
               width: fit-content;
-              @media (max-width:800px) {
+              @media (max-width:1000px) {
                 height:50px;
                 padding-bottom: 15px !important;
                 padding-left: 10px !important;
@@ -3151,12 +3156,14 @@ footer {
         position: relative;
         border: 2px solid gold;
         border-left:unset;
+        background-image: url("../assets/bg/4.webp");
+        background-size:cover ;
 
         &:has(video){ 
           .qoute{
             position: absolute;
             top: 30px;
-            left: 40px;
+            left: 50px ;
 
           }
           .name , .job{
@@ -3261,6 +3268,10 @@ footer {
       }
     }
     @media (max-width:800px){
+      .qoute{
+        left: 20px !important;
+        position: relative;
+      }
       .text{padding: 0 !important;}
       .name{font-size: 24px !important;}
       .job{font-size: 18px !important;}
@@ -3283,14 +3294,14 @@ footer {
     border: none;
     outline: none;
     background: #111;
-    right: 40px;
+    right: 50px;
     z-index: 100;
     @media (max-width:1000px){
       display: none !important;
     }
    &.slick-prev{
      left: unset;
-     right: 85px;
+     right: 103px;
    }
    &:hover{
     scale: .9; 
@@ -3995,9 +4006,6 @@ footer {
   }
 }
 
-
-
-
 .services-pages {
   position: relative;
   
@@ -4552,8 +4560,8 @@ footer {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    @media (max-width: 1800px) { width: 80% !important; }
-    @media (max-width: 1200px) { width: 95% !important; }
+    // @media (max-width: 1800px) { width: 80% !important; }
+    // @media (max-width: 1200px) { width: 95% !important; }
     @media (max-width: 800px) {
       grid-template-columns: 1fr;
       .box{

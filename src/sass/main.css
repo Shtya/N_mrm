@@ -2983,10 +2983,15 @@ footer .bottom .last a {
 }
 .Project-page2 .project {
   min-height: 50vh;
-  padding: 50px 0;
+  padding: 50px 0 100px;
   display: flex;
   align-items: center;
   position: relative;
+}
+@media (max-width: 100px) {
+  .Project-page2 .project {
+    padding: 50px 0;
+  }
 }
 .Project-page2 .project .container .box {
   display: grid !important;
@@ -2994,6 +2999,8 @@ footer .bottom .last a {
   align-items: center;
   gap: 50px;
   overflow: hidden;
+  width: 95% !important;
+  margin: 0 auto;
 }
 @media (max-width: 1300px) {
   .Project-page2 .project .container .box .coverImg > img {
@@ -3162,7 +3169,7 @@ footer .bottom .last a {
   width: -moz-fit-content;
   width: fit-content;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .Project-page2 .project .container .box .text .bt {
     height: 50px;
     padding-bottom: 15px !important;
@@ -3298,11 +3305,13 @@ footer .bottom .last a {
   position: relative;
   border: 2px solid gold;
   border-left: unset;
+  background-image: url("../assets/bg/4.webp");
+  background-size: cover;
 }
 .Project-page2 .testimonials .container .box .text:has(video) .qoute {
   position: absolute;
   top: 30px;
-  left: 40px;
+  left: 50px;
 }
 .Project-page2 .testimonials .container .box .text:has(video) .name, .Project-page2 .testimonials .container .box .text:has(video) .job {
   position: absolute;
@@ -3407,6 +3416,10 @@ footer .bottom .last a {
   }
 }
 @media (max-width: 800px) {
+  .Project-page2 .testimonials .container .qoute {
+    left: 20px !important;
+    position: relative;
+  }
   .Project-page2 .testimonials .container .text {
     padding: 0 !important;
   }
@@ -3436,7 +3449,7 @@ footer .bottom .last a {
   border: none;
   outline: none;
   background: #111;
-  right: 40px;
+  right: 50px;
   z-index: 100;
 }
 @media (max-width: 1000px) {
@@ -3446,7 +3459,7 @@ footer .bottom .last a {
 }
 .Project-page2 .testimonials .slick-prev.slick-prev, .Project-page2 .testimonials .slick-next.slick-prev {
   left: unset;
-  right: 85px;
+  right: 103px;
 }
 .Project-page2 .testimonials .slick-prev:hover, .Project-page2 .testimonials .slick-next:hover {
   scale: 0.9;
@@ -4836,16 +4849,6 @@ footer .bottom .last a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 0 30px rgba(34, 34, 34, 0.5803921569);
-}
-@media (max-width: 1800px) {
-  .contact .container {
-    width: 80% !important;
-  }
-}
-@media (max-width: 1200px) {
-  .contact .container {
-    width: 95% !important;
-  }
 }
 @media (max-width: 800px) {
   .contact .container {
