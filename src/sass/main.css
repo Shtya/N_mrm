@@ -2633,6 +2633,18 @@ footer .bottom .last a {
   scale: 1.2;
 }
 
+@media (max-width: 800px) {
+  .Project-page2 .Divider {
+    display: none !important;
+  }
+  .Project-page2 .bgCover2 {
+    background-color: #181818 !important;
+    background-image: url("../assets/bg-texture-00.svg");
+  }
+  .Project-page2 .bgCover2 img {
+    display: none !important;
+  }
+}
 .Project-page2 .IntroCover {
   min-height: 100vh;
   display: flex;
@@ -2643,7 +2655,7 @@ footer .bottom .last a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 .Project-page2 .IntroCover .coverIntro::after {
   content: "";
@@ -2786,7 +2798,7 @@ footer .bottom .last a {
   }
 }
 .Project-page2 .events {
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 50px 0;
   display: flex;
   align-items: center;
@@ -2882,6 +2894,9 @@ footer .bottom .last a {
 @media (max-width: 700px) {
   .Project-page2 .events .container .boxes {
     grid-template-columns: 1fr;
+  }
+  .Project-page2 .events .container .boxes .box {
+    height: 300px !important;
   }
   .Project-page2 .events .container .boxes .box:hover .coverImg {
     top: -70px;
@@ -3220,7 +3235,7 @@ footer .bottom .last a {
 }
 .Project-page2 .testimonials {
   padding: 50px 0;
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -3270,7 +3285,7 @@ footer .bottom .last a {
      object-fit: cover;
 }
 .Project-page2 .testimonials .container .box .text {
-  height: 100%;
+  min-height: 500px;
   width: 100%;
   padding: 0 0 0 0;
   display: flex;
@@ -3278,7 +3293,7 @@ footer .bottom .last a {
   justify-content: center;
   gap: 10px;
   position: relative;
-  border: 4px solid gold;
+  border: 2px solid gold;
   border-left: unset;
 }
 .Project-page2 .testimonials .container .box .text:has(video) .qoute {
@@ -3347,13 +3362,12 @@ footer .bottom .last a {
 }
 .Project-page2 .testimonials .container .box-vedio .text {
   border: 2px solid gold;
-  outline: 2px solid #444;
 }
 .Project-page2 .testimonials .container .box-vedio .text video {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  height: 500px;
   max-height: 500px;
+  min-height: 400px;
   border: 2px solid gold;
   outline: 2px solid #444;
 }
@@ -3365,7 +3379,19 @@ footer .bottom .last a {
     grid-template-columns: 1fr;
   }
   .Project-page2 .testimonials .container .img {
-    height: 350px !important;
+    position: absolute !important;
+    z-index: 1000;
+    width: 100px !important;
+    height: 100px !important;
+    right: 10px;
+    top: 10px;
+    border-radius: 50% !important;
+    overflow: hidden;
+    padding: unset !important;
+    border: 1px solid gold !important;
+  }
+  .Project-page2 .testimonials .container .img::after {
+    display: none !important;
   }
   .Project-page2 .testimonials .container .text {
     border-left: 4px solid gold !important;
@@ -3374,11 +3400,22 @@ footer .bottom .last a {
   .Project-page2 .testimonials .container video {
     border: unset !important;
     outline: unset !important;
+    height: 500px;
   }
 }
 @media (max-width: 800px) {
+  .Project-page2 .testimonials .container .text {
+    padding: 0 !important;
+  }
+  .Project-page2 .testimonials .container .name {
+    font-size: 24px !important;
+  }
+  .Project-page2 .testimonials .container .job {
+    font-size: 18px !important;
+  }
   .Project-page2 .testimonials .container .desc {
-    font-size: 20px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
   }
 }
 .Project-page2 .testimonials .slick-prev, .Project-page2 .testimonials .slick-next {
@@ -3390,13 +3427,13 @@ footer .bottom .last a {
   width: 50px;
   height: 50px;
   padding: 0;
-  bottom: 0;
+  bottom: 10px;
   cursor: pointer;
   color: transparent;
   border: none;
   outline: none;
   background: #111;
-  right: 30px;
+  right: 40px;
   z-index: 100;
 }
 @media (max-width: 1000px) {
@@ -3429,6 +3466,7 @@ footer .bottom .last a {
 }
 .Project-page2 .testimonials .slick-dots {
   bottom: -90px;
+  position: relative;
 }
 @media (min-width: 1300px) {
   .Project-page2 .testimonials .slick-dots {

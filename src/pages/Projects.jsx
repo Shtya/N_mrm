@@ -74,7 +74,7 @@ const Projects = () => {
               ))
             }
 
-             {/* {Next.to == 8 ? "" : <div className="bt" onClick={_=> Setnext({from:0 , to : 8})}>see more</div>} */}
+             <div className="bt">see more</div>
             </div>
         </div>
     </div>

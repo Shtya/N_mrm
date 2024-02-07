@@ -86,7 +86,7 @@ const Projects = () => {
         <Divider  />
 
         <div className="events">
-            <div className="bgCover"> <img src={FixedImg} alt="" /> </div>
+            <div className="bgCover2"> <img src={FixedImg} alt="" /> </div>
             <div className="container">
             <div className="h1"> Event Services </div>
             <div className="boxes">
@@ -110,7 +110,7 @@ const Projects = () => {
 
 
         <div className="qoutation2">
-        <div className="bgCover"  >  <img src={IMG1} alt="contact"  /> </div>      
+        <div className="bgCover2"  >  <img src={IMG1} alt="contact"  /> </div>      
             <div className="container">
             <div className="coverImg"> <img src={Img7} alt="" /> </div>
 
@@ -129,6 +129,7 @@ const Projects = () => {
                 {reviews.map((e,index)=>(
                     <div className={`box ${e.vedio ? "box-vedio":""}`} key={index}>
                         <div className="img"> <img  src={e.img} alt="" /> </div>
+                        
                         <div className="text">
                             <img src={Qoute} alt="" className="qoute" />
                             { e.vedio 
@@ -145,7 +146,7 @@ const Projects = () => {
         </div>
         <Divider  />
 
-        <Contact />
+        <Contact notbg={false} />
 
     </div>
   )
