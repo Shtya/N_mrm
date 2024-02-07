@@ -2635,11 +2635,14 @@ footer .bottom .last a {
 
 @media (max-width: 800px) {
   .Project-page2 .Divider {
-    display: none !important;
+    height: 10px !important;
+    min-height: unset !important;
   }
   .Project-page2 .bgCover2 {
-    background-color: #181818 !important;
+    background-color: rgba(24, 24, 24, 0.8117647059) !important;
     background-image: url("../assets/bg-texture-00.svg");
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
   }
   .Project-page2 .bgCover2 img {
     display: none !important;
@@ -2979,7 +2982,7 @@ footer .bottom .last a {
   }
 }
 .Project-page2 .project {
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 50px 0;
   display: flex;
   align-items: center;

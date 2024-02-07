@@ -2545,10 +2545,14 @@ footer {
 .Project-page2{
 
   @media (max-width:800px) {
-    .Divider{display: none !important;}
+    .Divider{
+      height: 10px !important;
+      min-height: unset !important;
+    }
     .bgCover2{
-      background-color: #181818 !important;
+      background-color: #181818cf !important;
       background-image: url("../assets/bg-texture-00.svg");
+      backdrop-filter: blur(3px);
       
       img{ display: none !important;}
     }
@@ -2862,7 +2866,7 @@ footer {
   }
 
   .project{
-    min-height: 70vh;
+    min-height: 50vh;
     padding: 50px 0;
     display: flex; align-items: center;
     position: relative;
