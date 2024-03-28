@@ -5,29 +5,6 @@ import Animation from './Animation';
 import { useTranslation } from 'react-i18next';
 
 
-
-// vediography
-// exhibitions-conference
-// corporate-films
-// event-filming
-// behind-the-scene-videos
-// fashion-videography
-// promotional-videos
-// short-ads
-// real-estate-product 
-
-
-// photography 
-// events-photography
-// fashion-photography
-// business-Portraits&Headshots
-// food-photography
-// product-photography
-// automotive-photography
-// hospitality-photography
-// real Estate-photography
-// trade Shows-photography
-
 const Navbar = memo(() => {
   const {pathname} =useLocation() ;
 

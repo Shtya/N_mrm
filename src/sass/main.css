@@ -2424,45 +2424,15 @@ footer .bottom .last a {
   padding-bottom: 30px;
 }
 .Projects-page .IntroCover .container .coverImg {
-  flex: 1;
-  height: 100%;
+  height: 80vh;
   width: 100%;
+  border: 1px solid #888;
 }
 .Projects-page .IntroCover .container .coverImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.Projects-page .IntroCover .container .text {
-  flex: 1;
-}
-.Projects-page .IntroCover .container .text .h1 {
-  font-size: 1.7rem !important;
-  text-align: left;
-}
-.Projects-page .IntroCover .container .text .h2 {
-  color: white !important;
-}
-@media (max-width: 1000px) {
-  .Projects-page .IntroCover .container .text .h1 {
-    font-size: 1.4rem !important;
-  }
-  .Projects-page .IntroCover .container .text .h2 {
-    font-size: 1.2rem !important;
-  }
-}
-@media (max-width: 800px) {
-  .Projects-page .IntroCover .container {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .Projects-page .IntroCover .container .text .h1 {
-    font-size: 1.4rem !important;
-  }
-  .Projects-page .IntroCover .container .text .h2 {
-    font-size: 1.2rem !important;
-  }
 }
 .Projects-page .project-component {
   padding: 50px 0;
@@ -2489,10 +2459,9 @@ footer .bottom .last a {
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--text-color);
   align-items: center;
-  margin-bottom: 20px;
   transition: 0.3s;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 @media (min-height: 1300px) {
   .Projects-page .project-component .container .box {

@@ -9,7 +9,6 @@ import Imgmain2 from  "../assets/bg/test/3.jpg"
 import Imgmain3 from  "../assets/bg/test/4.jpg"
 import Imgmain4 from  "../assets/bg/test/5.jpg"
 import Imgmain5 from  "../assets/bg/test/6.jpg"
-import Imgmain6 from  "../assets/bg/test/1.jpg"
 
 import Divider from '../components/Divider';
 
@@ -42,10 +41,6 @@ const Projects = () => {
              <div className="coverIntro"> <img className='cover' src={Fixedimg1} alt="" />  </div>
             <div className="container">
                 <div className="coverImg"> <img src={Main} alt="" /> </div>
-                <div className="text">
-                    <div className="h1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-                    <div className="h2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio commodi fugiat qui, nobis consequatur quis laboriosam saepe molestiae aliquam. </div>
-                </div>
             </div>
         </div>
         <Divider />
